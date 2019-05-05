@@ -1,1131 +1,2457 @@
 rem
-rem Header: oe_p_inv.sql 09-jan-01
+rem Header: oe_p_us.sql 07feb01
 rem
 rem Copyright (c) 2001, 2002, Oracle Corporation.  All rights reserved.  
 rem
 rem Owner  : ahunold
 rem
 rem NAME
-rem   oe_p_inv.sql - populate OE Common Schema
+rem   oe_p_us.sql  populate OE Common Schema
 rem
 rem DESCRIPTON
-rem   Table inventories
+rem   Table product_descriptions
 rem
 rem MODIFIED   (MM/DD/YY)
-rem   hyeh      08/29/02 - hyeh_mv_comschema_to_rdbms
-rem   ahunold   01/09/01 - checkin ADE
+rem   hyeh      08/29/02  hyeh_mv_comschema_to_rdbms
+rem   ahunold   02/08/01  Merged ahunold_globalization
+rem   ttanaka   02/07/01  creation, contents are based on oe_p_pi.sql
+rem
+rem
+rem TRANSLATION INSTRUCTIONS
+rem
+rem 1. Copy this file to oe_p_xxx.sql file, where xxx is Oracle's language
+rem    abbreviation (one, two, or three letters).  Use lowercase letters
+rem    for file names.
+rem
+rem 2. Now you have oe_p_xxx.sql file for each language.
+rem
+rem 3. In each oe_p_xxx.sql file, change all occurrences of the line
+rem             , 'US'
+rem    to the line
+rem             , 'XXX'
+rem    where XXX is Oracle's language abbreviation.  It must be uppercase.
+rem    If you are using 'vi' editor, the command
+rem             :1,$s/^, 'US'$/, 'XXX'/
+rem    can be used, where XXX (uppercase) is Oracle's language abbreviation.
+rem
+rem 4. Translate character strings in the UNISTR() functions.
+rem    These character strings are quoted by the singlequote.
+rem    There are two UNISTR() functions in each INSERT command, and there
+rem    are currently 288 INSERT commands in this file.  Therefore you need
+rem    to translate 576 character strings in this file for each language.
+rem    Please note that '' (hyphen, or minus) at the end of line indicates
+rem    that the SQL command continues to the next line.
+rem
+rem 5. Once the character strings in the UNISTR() functions are translated,
+rem    make sure that the character strings are quoted by the singlequote.
+rem    Also, please make sure that you haven't modified any other parts of
+rem    SQL commands (except the modification in the step #3 above).
+rem
+rem 6. Convert the file into ASCII file with Unicode escape sequence.
+rem    You can copy oe_p_xxx.sql file to xxx.sql file, and then
+rem             native2ascii encoding FILE_ENCODING xxx.sql > oe_p_xxx.sql
+rem    where FILE_ENCODING is Java's encoding name for the character
+rem    encoding which you used for the translated character strings.
+rem
+rem 7. Change all '\u' to '\'.
+rem    If you are using 'vi' editor, the command
+rem             :1,$s/\\u/\\/g
+rem    can be used.
+rem    This step is necessary because of UNISTR() function's syntax.
+rem
+rem 8. For the portability to various platforms (operating systems),
+rem    all lines need to be less than 80 bytes.  You can separate the lines
+rem    between \1234 and \5678 (for example), but don't separate lines in
+rem    the middle of \9abc (for example).  You need to use '' (hyphen, or
+rem    minus) at the end of line when the SQL command is continuing.
+rem
+rem 9. Now the translated oe_p_xxx.sql files are ready for the testing.
+rem    If they work fine, you are now ready to deliver the translated
+rem    oe_p_xxx.sql files.
+rem
+rem
+rem    Oracle's                 Oracle's
+rem    language name            language abbreviation
+rem    ======================   =====================
+rem    American                 us
+rem    Arabic                   ar
+rem    Brazilian Portuguese     ptb
+rem    Canadian French          frc
+rem    Czech                    cs
+rem    Danish                   dk
+rem    Dutch                    nl
+rem    Finnish                  sf
+rem    French                   f
+rem    German                   d
+rem    Greek                    el
+rem    Hebrew                   iw
+rem    Hungarian                hu
+rem    Italian                  i
+rem    Japanese                 ja
+rem    Korean                   ko
+rem    Latin American Spanish   esa
+rem    Norwegian                n
+rem    Polish                   pl
+rem    Portuguese               pt
+rem    Romanian                 ro
+rem    Russian                  ru
+rem    Simplified Chinese       zhs
+rem    Slovak                   sk
+rem    Spanish                  e
+rem    Swedish                  s
+rem    Thai                     th
+rem    Traditional Chinese      zht
+rem    Turkish                  tr
+rem
+rem
 
-INSERT INTO inventories VALUES(1733,1,106); 
-INSERT INTO inventories VALUES(1734,1,106); 
-INSERT INTO inventories VALUES(1737,1,106); 
-INSERT INTO inventories VALUES(1738,1,107); 
-INSERT INTO inventories VALUES(1745,1,108); 
-INSERT INTO inventories VALUES(1748,1,108); 
-INSERT INTO inventories VALUES(2278,1,125); 
-INSERT INTO inventories VALUES(2316,1,131); 
-INSERT INTO inventories VALUES(2319,1,117); 
-INSERT INTO inventories VALUES(2322,1,118); 
-INSERT INTO inventories VALUES(2323,1,118); 
-INSERT INTO inventories VALUES(2370,1,125); 
-INSERT INTO inventories VALUES(2373,1,126); 
-INSERT INTO inventories VALUES(2377,1,126); 
-INSERT INTO inventories VALUES(2380,1,127); 
-INSERT INTO inventories VALUES(2387,1,128); 
-INSERT INTO inventories VALUES(2408,1,131); 
-INSERT INTO inventories VALUES(2418,1,133); 
-INSERT INTO inventories VALUES(2419,1,133); 
-INSERT INTO inventories VALUES(2457,1,89); 
-INSERT INTO inventories VALUES(2638,1,132); 
-INSERT INTO inventories VALUES(2878,1,170); 
-INSERT INTO inventories VALUES(2879,1,170); 
-INSERT INTO inventories VALUES(3000,1,175); 
-INSERT INTO inventories VALUES(3003,1,175); 
-INSERT INTO inventories VALUES(3004,1,176); 
-INSERT INTO inventories VALUES(3099,1,205); 
-INSERT INTO inventories VALUES(3124,1,209); 
-INSERT INTO inventories VALUES(3134,1,196); 
-INSERT INTO inventories VALUES(3139,1,197); 
-INSERT INTO inventories VALUES(3140,1,197); 
-INSERT INTO inventories VALUES(3143,1,197); 
-INSERT INTO inventories VALUES(3204,1,221); 
-INSERT INTO inventories VALUES(3300,1,222); 
-INSERT INTO inventories VALUES(3301,1,222); 
-INSERT INTO inventories VALUES(3391,1,251); 
-INSERT INTO inventories VALUES(1733,2,96); 
-INSERT INTO inventories VALUES(1734,2,96); 
-INSERT INTO inventories VALUES(1737,2,96); 
-INSERT INTO inventories VALUES(1738,2,96); 
-INSERT INTO inventories VALUES(1739,2,97); 
-INSERT INTO inventories VALUES(1740,2,97); 
-INSERT INTO inventories VALUES(1742,2,97); 
-INSERT INTO inventories VALUES(1745,2,98); 
-INSERT INTO inventories VALUES(1748,2,98); 
-INSERT INTO inventories VALUES(1749,2,98); 
-INSERT INTO inventories VALUES(1750,2,98); 
-INSERT INTO inventories VALUES(1755,2,99); 
-INSERT INTO inventories VALUES(1763,2,100); 
-INSERT INTO inventories VALUES(1768,2,101); 
-INSERT INTO inventories VALUES(1769,2,101); 
-INSERT INTO inventories VALUES(1770,2,104); 
-INSERT INTO inventories VALUES(1772,2,105); 
-INSERT INTO inventories VALUES(1774,2,114); 
-INSERT INTO inventories VALUES(1775,2,114); 
-INSERT INTO inventories VALUES(1778,2,115); 
-INSERT INTO inventories VALUES(1779,2,115); 
-INSERT INTO inventories VALUES(1780,2,115); 
-INSERT INTO inventories VALUES(1781,2,106); 
-INSERT INTO inventories VALUES(1787,2,107); 
-INSERT INTO inventories VALUES(1788,2,107); 
-INSERT INTO inventories VALUES(1794,2,117); 
-INSERT INTO inventories VALUES(1799,2,118); 
-INSERT INTO inventories VALUES(1801,2,118); 
-INSERT INTO inventories VALUES(1803,2,119); 
-INSERT INTO inventories VALUES(1804,2,119); 
-INSERT INTO inventories VALUES(1805,2,119); 
-INSERT INTO inventories VALUES(1806,2,119); 
-INSERT INTO inventories VALUES(1808,2,119); 
-INSERT INTO inventories VALUES(1820,2,122); 
-INSERT INTO inventories VALUES(1822,2,122); 
-INSERT INTO inventories VALUES(1825,2,122); 
-INSERT INTO inventories VALUES(2005,2,117); 
-INSERT INTO inventories VALUES(2058,2,110); 
-INSERT INTO inventories VALUES(2243,2,149); 
-INSERT INTO inventories VALUES(2245,2,149); 
-INSERT INTO inventories VALUES(2255,2,154); 
-INSERT INTO inventories VALUES(2257,2,154); 
-INSERT INTO inventories VALUES(2259,2,154); 
-INSERT INTO inventories VALUES(2260,2,155); 
-INSERT INTO inventories VALUES(2261,2,155); 
-INSERT INTO inventories VALUES(2262,2,155); 
-INSERT INTO inventories VALUES(2264,2,111); 
-INSERT INTO inventories VALUES(2266,2,111); 
-INSERT INTO inventories VALUES(2270,2,112); 
-INSERT INTO inventories VALUES(2274,2,113); 
-INSERT INTO inventories VALUES(2276,2,113); 
-INSERT INTO inventories VALUES(2278,2,113); 
-INSERT INTO inventories VALUES(2316,2,119); 
-INSERT INTO inventories VALUES(2319,2,167); 
-INSERT INTO inventories VALUES(2322,2,167); 
-INSERT INTO inventories VALUES(2323,2,167); 
-INSERT INTO inventories VALUES(2335,2,91); 
-INSERT INTO inventories VALUES(2350,2,94); 
-INSERT INTO inventories VALUES(2351,2,94); 
-INSERT INTO inventories VALUES(2359,2,173); 
-INSERT INTO inventories VALUES(2370,2,178); 
-INSERT INTO inventories VALUES(2371,2,81); 
-INSERT INTO inventories VALUES(2373,2,178); 
-INSERT INTO inventories VALUES(2374,2,178); 
-INSERT INTO inventories VALUES(2375,2,178); 
-INSERT INTO inventories VALUES(2377,2,179); 
-INSERT INTO inventories VALUES(2378,2,179); 
-INSERT INTO inventories VALUES(2380,2,179); 
-INSERT INTO inventories VALUES(2387,2,180); 
-INSERT INTO inventories VALUES(2394,2,181); 
-INSERT INTO inventories VALUES(2395,2,182); 
-INSERT INTO inventories VALUES(2396,2,182); 
-INSERT INTO inventories VALUES(2402,2,183); 
-INSERT INTO inventories VALUES(2403,2,183); 
-INSERT INTO inventories VALUES(2404,2,183); 
-INSERT INTO inventories VALUES(2406,2,183); 
-INSERT INTO inventories VALUES(2408,2,184); 
-INSERT INTO inventories VALUES(2409,2,184); 
-INSERT INTO inventories VALUES(2410,2,184); 
-INSERT INTO inventories VALUES(2411,2,184); 
-INSERT INTO inventories VALUES(2414,2,185); 
-INSERT INTO inventories VALUES(2415,2,185); 
-INSERT INTO inventories VALUES(2416,2,88); 
-INSERT INTO inventories VALUES(2417,2,88); 
-INSERT INTO inventories VALUES(2418,2,185); 
-INSERT INTO inventories VALUES(2419,2,185); 
-INSERT INTO inventories VALUES(2422,2,89); 
-INSERT INTO inventories VALUES(2423,2,89); 
-INSERT INTO inventories VALUES(2424,2,186); 
-INSERT INTO inventories VALUES(2439,2,191); 
-INSERT INTO inventories VALUES(2449,2,93); 
-INSERT INTO inventories VALUES(2452,2,94); 
-INSERT INTO inventories VALUES(2457,2,194); 
-INSERT INTO inventories VALUES(2462,2,95); 
-INSERT INTO inventories VALUES(2464,2,96); 
-INSERT INTO inventories VALUES(2467,2,96); 
-INSERT INTO inventories VALUES(2468,2,96); 
-INSERT INTO inventories VALUES(2470,2,97); 
-INSERT INTO inventories VALUES(2471,2,97); 
-INSERT INTO inventories VALUES(2492,2,101); 
-INSERT INTO inventories VALUES(2493,2,101); 
-INSERT INTO inventories VALUES(2494,2,101); 
-INSERT INTO inventories VALUES(2638,2,120); 
-INSERT INTO inventories VALUES(2752,2,138); 
-INSERT INTO inventories VALUES(2779,2,128); 
-INSERT INTO inventories VALUES(2878,2,158); 
-INSERT INTO inventories VALUES(2879,2,158); 
-INSERT INTO inventories VALUES(3000,2,177); 
-INSERT INTO inventories VALUES(3003,2,178); 
-INSERT INTO inventories VALUES(3004,2,178); 
-INSERT INTO inventories VALUES(3054,2,171); 
-INSERT INTO inventories VALUES(3057,2,172); 
-INSERT INTO inventories VALUES(3060,2,172); 
-INSERT INTO inventories VALUES(3061,2,173); 
-INSERT INTO inventories VALUES(3065,2,173); 
-INSERT INTO inventories VALUES(3071,2,174); 
-INSERT INTO inventories VALUES(3072,2,174); 
-INSERT INTO inventories VALUES(3077,2,175); 
-INSERT INTO inventories VALUES(3082,2,176); 
-INSERT INTO inventories VALUES(3083,2,176); 
-INSERT INTO inventories VALUES(3086,2,176); 
-INSERT INTO inventories VALUES(3088,2,177); 
-INSERT INTO inventories VALUES(3090,2,177); 
-INSERT INTO inventories VALUES(3091,2,177); 
-INSERT INTO inventories VALUES(3099,2,193); 
-INSERT INTO inventories VALUES(3108,2,194); 
-INSERT INTO inventories VALUES(3110,2,195); 
-INSERT INTO inventories VALUES(3112,2,195); 
-INSERT INTO inventories VALUES(3117,2,196); 
-INSERT INTO inventories VALUES(3124,2,197); 
-INSERT INTO inventories VALUES(3129,2,198); 
-INSERT INTO inventories VALUES(3134,2,184); 
-INSERT INTO inventories VALUES(3139,2,185); 
-INSERT INTO inventories VALUES(3140,2,185); 
-INSERT INTO inventories VALUES(3143,2,185); 
-INSERT INTO inventories VALUES(3165,2,189); 
-INSERT INTO inventories VALUES(3167,2,189); 
-INSERT INTO inventories VALUES(3170,2,212); 
-INSERT INTO inventories VALUES(3171,2,213); 
-INSERT INTO inventories VALUES(3172,2,213); 
-INSERT INTO inventories VALUES(3173,2,213); 
-INSERT INTO inventories VALUES(3175,2,213); 
-INSERT INTO inventories VALUES(3176,2,213); 
-INSERT INTO inventories VALUES(3177,2,214); 
-INSERT INTO inventories VALUES(3178,2,214); 
-INSERT INTO inventories VALUES(3179,2,214); 
-INSERT INTO inventories VALUES(3182,2,214); 
-INSERT INTO inventories VALUES(3183,2,214); 
-INSERT INTO inventories VALUES(3204,2,209); 
-INSERT INTO inventories VALUES(3246,2,225); 
-INSERT INTO inventories VALUES(3247,2,225); 
-INSERT INTO inventories VALUES(3248,2,225); 
-INSERT INTO inventories VALUES(3250,2,226); 
-INSERT INTO inventories VALUES(3251,2,226); 
-INSERT INTO inventories VALUES(3252,2,226); 
-INSERT INTO inventories VALUES(3253,2,226); 
-INSERT INTO inventories VALUES(3255,2,226); 
-INSERT INTO inventories VALUES(3256,2,227); 
-INSERT INTO inventories VALUES(3257,2,227); 
-INSERT INTO inventories VALUES(3258,2,227); 
-INSERT INTO inventories VALUES(3260,2,227); 
-INSERT INTO inventories VALUES(3300,2,210); 
-INSERT INTO inventories VALUES(3301,2,210); 
-INSERT INTO inventories VALUES(3331,2,215); 
-INSERT INTO inventories VALUES(3334,2,216); 
-INSERT INTO inventories VALUES(3337,2,264); 
-INSERT INTO inventories VALUES(3350,2,232); 
-INSERT INTO inventories VALUES(3354,2,219); 
-INSERT INTO inventories VALUES(3355,2,219); 
-INSERT INTO inventories VALUES(3359,2,220); 
-INSERT INTO inventories VALUES(3361,2,244); 
-INSERT INTO inventories VALUES(3362,2,244); 
-INSERT INTO inventories VALUES(3391,2,239); 
-INSERT INTO inventories VALUES(3400,2,226); 
-INSERT INTO inventories VALUES(3501,2,353); 
-INSERT INTO inventories VALUES(3502,2,267); 
-INSERT INTO inventories VALUES(3503,2,267); 
-INSERT INTO inventories VALUES(1729,3,100); 
-INSERT INTO inventories VALUES(1733,3,88); 
-INSERT INTO inventories VALUES(1734,3,88); 
-INSERT INTO inventories VALUES(1737,3,89); 
-INSERT INTO inventories VALUES(1738,3,89); 
-INSERT INTO inventories VALUES(1745,3,90); 
-INSERT INTO inventories VALUES(1748,3,90); 
-INSERT INTO inventories VALUES(1912,3,112); 
-INSERT INTO inventories VALUES(1940,3,66); 
-INSERT INTO inventories VALUES(2278,3,101); 
-INSERT INTO inventories VALUES(2316,3,107); 
-INSERT INTO inventories VALUES(2319,3,118); 
-INSERT INTO inventories VALUES(2322,3,118); 
-INSERT INTO inventories VALUES(2323,3,118); 
-INSERT INTO inventories VALUES(2326,3,94); 
-INSERT INTO inventories VALUES(2340,3,69); 
-INSERT INTO inventories VALUES(2365,3,73); 
-INSERT INTO inventories VALUES(2370,3,126); 
-INSERT INTO inventories VALUES(2373,3,126); 
-INSERT INTO inventories VALUES(2377,3,127); 
-INSERT INTO inventories VALUES(2380,3,127); 
-INSERT INTO inventories VALUES(2387,3,131); 
-INSERT INTO inventories VALUES(2408,3,135); 
-INSERT INTO inventories VALUES(2418,3,136); 
-INSERT INTO inventories VALUES(2419,3,136); 
-INSERT INTO inventories VALUES(2457,3,142); 
-INSERT INTO inventories VALUES(2596,3,87); 
-INSERT INTO inventories VALUES(2631,3,93); 
-INSERT INTO inventories VALUES(2638,3,108); 
-INSERT INTO inventories VALUES(2722,3,107); 
-INSERT INTO inventories VALUES(2878,3,146); 
-INSERT INTO inventories VALUES(2879,3,146); 
-INSERT INTO inventories VALUES(3000,3,245); 
-INSERT INTO inventories VALUES(3003,3,246); 
-INSERT INTO inventories VALUES(3004,3,246); 
-INSERT INTO inventories VALUES(3099,3,181); 
-INSERT INTO inventories VALUES(3124,3,185); 
-INSERT INTO inventories VALUES(3134,3,272); 
-INSERT INTO inventories VALUES(3139,3,273); 
-INSERT INTO inventories VALUES(3140,3,273); 
-INSERT INTO inventories VALUES(3143,3,273); 
-INSERT INTO inventories VALUES(3189,3,181); 
-INSERT INTO inventories VALUES(3191,3,181); 
-INSERT INTO inventories VALUES(3193,3,181); 
-INSERT INTO inventories VALUES(3204,3,197); 
-INSERT INTO inventories VALUES(3300,3,304); 
-INSERT INTO inventories VALUES(3301,3,304); 
-INSERT INTO inventories VALUES(3391,3,227); 
-INSERT INTO inventories VALUES(1733,4,63); 
-INSERT INTO inventories VALUES(1734,4,63); 
-INSERT INTO inventories VALUES(1737,4,63); 
-INSERT INTO inventories VALUES(1738,4,64); 
-INSERT INTO inventories VALUES(1739,4,64); 
-INSERT INTO inventories VALUES(1740,4,67); 
-INSERT INTO inventories VALUES(1742,4,67); 
-INSERT INTO inventories VALUES(1745,4,68); 
-INSERT INTO inventories VALUES(1748,4,68); 
-INSERT INTO inventories VALUES(1749,4,68); 
-INSERT INTO inventories VALUES(1750,4,68); 
-INSERT INTO inventories VALUES(1755,4,69); 
-INSERT INTO inventories VALUES(1763,4,70); 
-INSERT INTO inventories VALUES(1768,4,71); 
-INSERT INTO inventories VALUES(1769,4,71); 
-INSERT INTO inventories VALUES(1770,4,71); 
-INSERT INTO inventories VALUES(1772,4,72); 
-INSERT INTO inventories VALUES(1781,4,73); 
-INSERT INTO inventories VALUES(1787,4,74); 
-INSERT INTO inventories VALUES(1788,4,74); 
-INSERT INTO inventories VALUES(2058,4,88); 
-INSERT INTO inventories VALUES(2243,4,74); 
-INSERT INTO inventories VALUES(2245,4,74); 
-INSERT INTO inventories VALUES(2255,4,76); 
-INSERT INTO inventories VALUES(2257,4,76); 
-INSERT INTO inventories VALUES(2259,4,76); 
-INSERT INTO inventories VALUES(2260,4,76); 
-INSERT INTO inventories VALUES(2261,4,76); 
-INSERT INTO inventories VALUES(2262,4,77); 
-INSERT INTO inventories VALUES(2264,4,87); 
-INSERT INTO inventories VALUES(2266,4,87); 
-INSERT INTO inventories VALUES(2270,4,88); 
-INSERT INTO inventories VALUES(2274,4,89); 
-INSERT INTO inventories VALUES(2276,4,89); 
-INSERT INTO inventories VALUES(2278,4,89); 
-INSERT INTO inventories VALUES(2316,4,95); 
-INSERT INTO inventories VALUES(2319,4,86); 
-INSERT INTO inventories VALUES(2322,4,86); 
-INSERT INTO inventories VALUES(2323,4,86); 
-INSERT INTO inventories VALUES(2359,4,95); 
-INSERT INTO inventories VALUES(2370,4,97); 
-INSERT INTO inventories VALUES(2373,4,97); 
-INSERT INTO inventories VALUES(2374,4,97); 
-INSERT INTO inventories VALUES(2375,4,97); 
-INSERT INTO inventories VALUES(2377,4,98); 
-INSERT INTO inventories VALUES(2378,4,98); 
-INSERT INTO inventories VALUES(2380,4,98); 
-INSERT INTO inventories VALUES(2387,4,99); 
-INSERT INTO inventories VALUES(2394,4,100); 
-INSERT INTO inventories VALUES(2395,4,100); 
-INSERT INTO inventories VALUES(2396,4,101); 
-INSERT INTO inventories VALUES(2402,4,102); 
-INSERT INTO inventories VALUES(2403,4,102); 
-INSERT INTO inventories VALUES(2404,4,102); 
-INSERT INTO inventories VALUES(2406,4,102); 
-INSERT INTO inventories VALUES(2408,4,103); 
-INSERT INTO inventories VALUES(2409,4,103); 
-INSERT INTO inventories VALUES(2410,4,103); 
-INSERT INTO inventories VALUES(2411,4,103); 
-INSERT INTO inventories VALUES(2414,4,103); 
-INSERT INTO inventories VALUES(2415,4,104); 
-INSERT INTO inventories VALUES(2418,4,104); 
-INSERT INTO inventories VALUES(2419,4,104); 
-INSERT INTO inventories VALUES(2424,4,105); 
-INSERT INTO inventories VALUES(2439,4,107); 
-INSERT INTO inventories VALUES(2457,4,110); 
-INSERT INTO inventories VALUES(2638,4,96); 
-INSERT INTO inventories VALUES(2752,4,114); 
-INSERT INTO inventories VALUES(2878,4,134); 
-INSERT INTO inventories VALUES(2879,4,134); 
-INSERT INTO inventories VALUES(3000,4,210); 
-INSERT INTO inventories VALUES(3003,4,211); 
-INSERT INTO inventories VALUES(3004,4,211); 
-INSERT INTO inventories VALUES(3054,4,219); 
-INSERT INTO inventories VALUES(3057,4,219); 
-INSERT INTO inventories VALUES(3060,4,223); 
-INSERT INTO inventories VALUES(3061,4,223); 
-INSERT INTO inventories VALUES(3065,4,223); 
-INSERT INTO inventories VALUES(3071,4,224); 
-INSERT INTO inventories VALUES(3072,4,225); 
-INSERT INTO inventories VALUES(3077,4,225); 
-INSERT INTO inventories VALUES(3082,4,226); 
-INSERT INTO inventories VALUES(3083,4,226); 
-INSERT INTO inventories VALUES(3086,4,227); 
-INSERT INTO inventories VALUES(3088,4,227); 
-INSERT INTO inventories VALUES(3090,4,227); 
-INSERT INTO inventories VALUES(3091,4,228); 
-INSERT INTO inventories VALUES(3099,4,169); 
-INSERT INTO inventories VALUES(3108,4,170); 
-INSERT INTO inventories VALUES(3110,4,171); 
-INSERT INTO inventories VALUES(3112,4,171); 
-INSERT INTO inventories VALUES(3117,4,172); 
-INSERT INTO inventories VALUES(3124,4,173); 
-INSERT INTO inventories VALUES(3129,4,174); 
-INSERT INTO inventories VALUES(3134,4,234); 
-INSERT INTO inventories VALUES(3139,4,235); 
-INSERT INTO inventories VALUES(3140,4,235); 
-INSERT INTO inventories VALUES(3143,4,236); 
-INSERT INTO inventories VALUES(3204,4,185); 
-INSERT INTO inventories VALUES(3300,4,266); 
-INSERT INTO inventories VALUES(3301,4,266); 
-INSERT INTO inventories VALUES(3331,4,271); 
-INSERT INTO inventories VALUES(3334,4,272); 
-INSERT INTO inventories VALUES(3350,4,208); 
-INSERT INTO inventories VALUES(3354,4,275); 
-INSERT INTO inventories VALUES(3355,4,275); 
-INSERT INTO inventories VALUES(3359,4,276); 
-INSERT INTO inventories VALUES(3391,4,215); 
-INSERT INTO inventories VALUES(3400,4,282); 
-INSERT INTO inventories VALUES(1729,5,71); 
-INSERT INTO inventories VALUES(1733,5,46); 
-INSERT INTO inventories VALUES(1734,5,46); 
-INSERT INTO inventories VALUES(1737,5,47); 
-INSERT INTO inventories VALUES(1738,5,47); 
-INSERT INTO inventories VALUES(1745,5,48); 
-INSERT INTO inventories VALUES(1748,5,48); 
-INSERT INTO inventories VALUES(1774,5,73); 
-INSERT INTO inventories VALUES(1775,5,74); 
-INSERT INTO inventories VALUES(1778,5,74); 
-INSERT INTO inventories VALUES(1779,5,74); 
-INSERT INTO inventories VALUES(1780,5,74); 
-INSERT INTO inventories VALUES(1794,5,77); 
-INSERT INTO inventories VALUES(1799,5,77); 
-INSERT INTO inventories VALUES(1801,5,78); 
-INSERT INTO inventories VALUES(1803,5,78); 
-INSERT INTO inventories VALUES(1804,5,78); 
-INSERT INTO inventories VALUES(1805,5,78); 
-INSERT INTO inventories VALUES(1806,5,78); 
-INSERT INTO inventories VALUES(1808,5,79); 
-INSERT INTO inventories VALUES(1820,5,81); 
-INSERT INTO inventories VALUES(1822,5,81); 
-INSERT INTO inventories VALUES(1825,5,82); 
-INSERT INTO inventories VALUES(1912,5,90); 
-INSERT INTO inventories VALUES(1940,5,44); 
-INSERT INTO inventories VALUES(2005,5,69); 
-INSERT INTO inventories VALUES(2278,5,77); 
-INSERT INTO inventories VALUES(2316,5,83); 
-INSERT INTO inventories VALUES(2319,5,62); 
-INSERT INTO inventories VALUES(2322,5,63); 
-INSERT INTO inventories VALUES(2323,5,63); 
-INSERT INTO inventories VALUES(2326,5,70); 
-INSERT INTO inventories VALUES(2335,5,85); 
-INSERT INTO inventories VALUES(2340,5,86); 
-INSERT INTO inventories VALUES(2350,5,88); 
-INSERT INTO inventories VALUES(2351,5,88); 
-INSERT INTO inventories VALUES(2365,5,90); 
-INSERT INTO inventories VALUES(2370,5,73); 
-INSERT INTO inventories VALUES(2371,5,84); 
-INSERT INTO inventories VALUES(2373,5,74); 
-INSERT INTO inventories VALUES(2377,5,74); 
-INSERT INTO inventories VALUES(2380,5,75); 
-INSERT INTO inventories VALUES(2387,5,76); 
-INSERT INTO inventories VALUES(2408,5,79); 
-INSERT INTO inventories VALUES(2416,5,42); 
-INSERT INTO inventories VALUES(2417,5,42); 
-INSERT INTO inventories VALUES(2418,5,81); 
-INSERT INTO inventories VALUES(2419,5,81); 
-INSERT INTO inventories VALUES(2422,5,42); 
-INSERT INTO inventories VALUES(2423,5,43); 
-INSERT INTO inventories VALUES(2449,5,47); 
-INSERT INTO inventories VALUES(2452,5,47); 
-INSERT INTO inventories VALUES(2457,5,87); 
-INSERT INTO inventories VALUES(2462,5,49); 
-INSERT INTO inventories VALUES(2464,5,49); 
-INSERT INTO inventories VALUES(2467,5,50); 
-INSERT INTO inventories VALUES(2468,5,50); 
-INSERT INTO inventories VALUES(2470,5,50); 
-INSERT INTO inventories VALUES(2471,5,50); 
-INSERT INTO inventories VALUES(2492,5,54); 
-INSERT INTO inventories VALUES(2493,5,54); 
-INSERT INTO inventories VALUES(2494,5,54); 
-INSERT INTO inventories VALUES(2596,5,63); 
-INSERT INTO inventories VALUES(2631,5,69); 
-INSERT INTO inventories VALUES(2638,5,84); 
-INSERT INTO inventories VALUES(2722,5,83); 
-INSERT INTO inventories VALUES(2779,5,92); 
-INSERT INTO inventories VALUES(2878,5,122); 
-INSERT INTO inventories VALUES(2879,5,122); 
-INSERT INTO inventories VALUES(3000,5,184); 
-INSERT INTO inventories VALUES(3003,5,184); 
-INSERT INTO inventories VALUES(3004,5,185); 
-INSERT INTO inventories VALUES(3099,5,157); 
-INSERT INTO inventories VALUES(3124,5,161); 
-INSERT INTO inventories VALUES(3134,5,208); 
-INSERT INTO inventories VALUES(3139,5,209); 
-INSERT INTO inventories VALUES(3140,5,209); 
-INSERT INTO inventories VALUES(3143,5,209); 
-INSERT INTO inventories VALUES(3170,5,163); 
-INSERT INTO inventories VALUES(3171,5,163); 
-INSERT INTO inventories VALUES(3172,5,163); 
-INSERT INTO inventories VALUES(3173,5,163); 
-INSERT INTO inventories VALUES(3175,5,164); 
-INSERT INTO inventories VALUES(3176,5,164); 
-INSERT INTO inventories VALUES(3177,5,164); 
-INSERT INTO inventories VALUES(3178,5,164); 
-INSERT INTO inventories VALUES(3179,5,164); 
-INSERT INTO inventories VALUES(3182,5,165); 
-INSERT INTO inventories VALUES(3183,5,165); 
-INSERT INTO inventories VALUES(3189,5,157); 
-INSERT INTO inventories VALUES(3191,5,157); 
-INSERT INTO inventories VALUES(3193,5,157); 
-INSERT INTO inventories VALUES(3204,5,173); 
-INSERT INTO inventories VALUES(3246,5,175); 
-INSERT INTO inventories VALUES(3247,5,175); 
-INSERT INTO inventories VALUES(3248,5,175); 
-INSERT INTO inventories VALUES(3250,5,176); 
-INSERT INTO inventories VALUES(3251,5,176); 
-INSERT INTO inventories VALUES(3252,5,176); 
-INSERT INTO inventories VALUES(3253,5,176); 
-INSERT INTO inventories VALUES(3255,5,176); 
-INSERT INTO inventories VALUES(3256,5,177); 
-INSERT INTO inventories VALUES(3257,5,177); 
-INSERT INTO inventories VALUES(3258,5,177); 
-INSERT INTO inventories VALUES(3260,5,177); 
-INSERT INTO inventories VALUES(3300,5,237); 
-INSERT INTO inventories VALUES(3301,5,237); 
-INSERT INTO inventories VALUES(3337,5,199); 
-INSERT INTO inventories VALUES(3361,5,193); 
-INSERT INTO inventories VALUES(3362,5,194); 
-INSERT INTO inventories VALUES(3391,5,203); 
-INSERT INTO inventories VALUES(3501,5,220); 
-INSERT INTO inventories VALUES(3502,5,216); 
-INSERT INTO inventories VALUES(3503,5,216); 
-INSERT INTO inventories VALUES(1729,6,58); 
-INSERT INTO inventories VALUES(1733,6,29); 
-INSERT INTO inventories VALUES(1734,6,30); 
-INSERT INTO inventories VALUES(1737,6,30); 
-INSERT INTO inventories VALUES(1738,6,30); 
-INSERT INTO inventories VALUES(1739,6,30); 
-INSERT INTO inventories VALUES(1740,6,30); 
-INSERT INTO inventories VALUES(1742,6,31); 
-INSERT INTO inventories VALUES(1745,6,31); 
-INSERT INTO inventories VALUES(1748,6,32); 
-INSERT INTO inventories VALUES(1749,6,32); 
-INSERT INTO inventories VALUES(1750,6,32); 
-INSERT INTO inventories VALUES(1755,6,33); 
-INSERT INTO inventories VALUES(1763,6,34); 
-INSERT INTO inventories VALUES(1768,6,35); 
-INSERT INTO inventories VALUES(1769,6,35); 
-INSERT INTO inventories VALUES(1770,6,35); 
-INSERT INTO inventories VALUES(1772,6,36); 
-INSERT INTO inventories VALUES(1774,6,62); 
-INSERT INTO inventories VALUES(1775,6,62); 
-INSERT INTO inventories VALUES(1778,6,62); 
-INSERT INTO inventories VALUES(1779,6,62); 
-INSERT INTO inventories VALUES(1780,6,63); 
-INSERT INTO inventories VALUES(1781,6,37); 
-INSERT INTO inventories VALUES(1787,6,38); 
-INSERT INTO inventories VALUES(1788,6,38); 
-INSERT INTO inventories VALUES(1791,6,39); 
-INSERT INTO inventories VALUES(1792,6,39); 
-INSERT INTO inventories VALUES(1794,6,65); 
-INSERT INTO inventories VALUES(1797,6,39); 
-INSERT INTO inventories VALUES(1799,6,66); 
-INSERT INTO inventories VALUES(1801,6,66); 
-INSERT INTO inventories VALUES(1803,6,66); 
-INSERT INTO inventories VALUES(1804,6,66); 
-INSERT INTO inventories VALUES(1805,6,66); 
-INSERT INTO inventories VALUES(1806,6,67); 
-INSERT INTO inventories VALUES(1808,6,67); 
-INSERT INTO inventories VALUES(1820,6,69); 
-INSERT INTO inventories VALUES(1822,6,69); 
-INSERT INTO inventories VALUES(1825,6,70); 
-INSERT INTO inventories VALUES(1912,6,29); 
-INSERT INTO inventories VALUES(1940,6,33); 
-INSERT INTO inventories VALUES(2005,6,84); 
-INSERT INTO inventories VALUES(2058,6,66); 
-INSERT INTO inventories VALUES(2093,6,58); 
-INSERT INTO inventories VALUES(2144,6,66); 
-INSERT INTO inventories VALUES(2243,6,30); 
-INSERT INTO inventories VALUES(2245,6,30); 
-INSERT INTO inventories VALUES(2255,6,34); 
-INSERT INTO inventories VALUES(2257,6,35); 
-INSERT INTO inventories VALUES(2259,6,35); 
-INSERT INTO inventories VALUES(2260,6,35); 
-INSERT INTO inventories VALUES(2261,6,35); 
-INSERT INTO inventories VALUES(2262,6,35); 
-INSERT INTO inventories VALUES(2264,6,63); 
-INSERT INTO inventories VALUES(2266,6,63); 
-INSERT INTO inventories VALUES(2270,6,64); 
-INSERT INTO inventories VALUES(2274,6,65); 
-INSERT INTO inventories VALUES(2276,6,65); 
-INSERT INTO inventories VALUES(2278,6,65); 
-INSERT INTO inventories VALUES(2302,6,69); 
-INSERT INTO inventories VALUES(2316,6,71); 
-INSERT INTO inventories VALUES(2319,6,44); 
-INSERT INTO inventories VALUES(2322,6,45); 
-INSERT INTO inventories VALUES(2323,6,45); 
-INSERT INTO inventories VALUES(2326,6,58); 
-INSERT INTO inventories VALUES(2335,6,71); 
-INSERT INTO inventories VALUES(2336,6,60); 
-INSERT INTO inventories VALUES(2337,6,60); 
-INSERT INTO inventories VALUES(2340,6,72); 
-INSERT INTO inventories VALUES(2350,6,73); 
-INSERT INTO inventories VALUES(2351,6,74); 
-INSERT INTO inventories VALUES(2359,6,51); 
-INSERT INTO inventories VALUES(2365,6,76); 
-INSERT INTO inventories VALUES(2370,6,53); 
-INSERT INTO inventories VALUES(2371,6,71); 
-INSERT INTO inventories VALUES(2373,6,53); 
-INSERT INTO inventories VALUES(2374,6,53); 
-INSERT INTO inventories VALUES(2375,6,53); 
-INSERT INTO inventories VALUES(2377,6,54); 
-INSERT INTO inventories VALUES(2378,6,54); 
-INSERT INTO inventories VALUES(2380,6,54); 
-INSERT INTO inventories VALUES(2387,6,55); 
-INSERT INTO inventories VALUES(2394,6,56); 
-INSERT INTO inventories VALUES(2395,6,56); 
-INSERT INTO inventories VALUES(2396,6,57); 
-INSERT INTO inventories VALUES(2402,6,58); 
-INSERT INTO inventories VALUES(2403,6,58); 
-INSERT INTO inventories VALUES(2404,6,58); 
-INSERT INTO inventories VALUES(2406,6,58); 
-INSERT INTO inventories VALUES(2408,6,59); 
-INSERT INTO inventories VALUES(2409,6,59); 
-INSERT INTO inventories VALUES(2410,6,59); 
-INSERT INTO inventories VALUES(2411,6,59); 
-INSERT INTO inventories VALUES(2414,6,59); 
-INSERT INTO inventories VALUES(2415,6,60); 
-INSERT INTO inventories VALUES(2416,6,78); 
-INSERT INTO inventories VALUES(2417,6,29); 
-INSERT INTO inventories VALUES(2418,6,60); 
-INSERT INTO inventories VALUES(2419,6,60); 
-INSERT INTO inventories VALUES(2422,6,29); 
-INSERT INTO inventories VALUES(2423,6,29); 
-INSERT INTO inventories VALUES(2424,6,61); 
-INSERT INTO inventories VALUES(2430,6,65); 
-INSERT INTO inventories VALUES(2439,6,66); 
-INSERT INTO inventories VALUES(2449,6,34); 
-INSERT INTO inventories VALUES(2452,6,34); 
-INSERT INTO inventories VALUES(2453,6,68); 
-INSERT INTO inventories VALUES(2457,6,69); 
-INSERT INTO inventories VALUES(2462,6,36); 
-INSERT INTO inventories VALUES(2464,6,36); 
-INSERT INTO inventories VALUES(2467,6,37); 
-INSERT INTO inventories VALUES(2468,6,37); 
-INSERT INTO inventories VALUES(2470,6,37); 
-INSERT INTO inventories VALUES(2471,6,37); 
-INSERT INTO inventories VALUES(2492,6,41); 
-INSERT INTO inventories VALUES(2493,6,41); 
-INSERT INTO inventories VALUES(2494,6,41); 
-INSERT INTO inventories VALUES(2537,6,42); 
-INSERT INTO inventories VALUES(2596,6,51); 
-INSERT INTO inventories VALUES(2631,6,57); 
-INSERT INTO inventories VALUES(2638,6,72); 
-INSERT INTO inventories VALUES(2722,6,71); 
-INSERT INTO inventories VALUES(2752,6,90); 
-INSERT INTO inventories VALUES(2779,6,80); 
-INSERT INTO inventories VALUES(2783,6,81); 
-INSERT INTO inventories VALUES(2810,6,85); 
-INSERT INTO inventories VALUES(2870,6,94); 
-INSERT INTO inventories VALUES(2878,6,110); 
-INSERT INTO inventories VALUES(2879,6,110); 
-INSERT INTO inventories VALUES(3000,6,163); 
-INSERT INTO inventories VALUES(3003,6,164); 
-INSERT INTO inventories VALUES(3004,6,164); 
-INSERT INTO inventories VALUES(3054,6,172); 
-INSERT INTO inventories VALUES(3057,6,172); 
-INSERT INTO inventories VALUES(3060,6,173); 
-INSERT INTO inventories VALUES(3061,6,173); 
-INSERT INTO inventories VALUES(3065,6,174); 
-INSERT INTO inventories VALUES(3071,6,175); 
-INSERT INTO inventories VALUES(3072,6,175); 
-INSERT INTO inventories VALUES(3077,6,176); 
-INSERT INTO inventories VALUES(3082,6,176); 
-INSERT INTO inventories VALUES(3083,6,177); 
-INSERT INTO inventories VALUES(3086,6,177); 
-INSERT INTO inventories VALUES(3088,6,177); 
-INSERT INTO inventories VALUES(3090,6,178); 
-INSERT INTO inventories VALUES(3091,6,178); 
-INSERT INTO inventories VALUES(3099,6,145); 
-INSERT INTO inventories VALUES(3108,6,146); 
-INSERT INTO inventories VALUES(3110,6,147); 
-INSERT INTO inventories VALUES(3112,6,147); 
-INSERT INTO inventories VALUES(3117,6,148); 
-INSERT INTO inventories VALUES(3124,6,149); 
-INSERT INTO inventories VALUES(3127,6,149); 
-INSERT INTO inventories VALUES(3129,6,150); 
-INSERT INTO inventories VALUES(3134,6,185); 
-INSERT INTO inventories VALUES(3139,6,185); 
-INSERT INTO inventories VALUES(3140,6,186); 
-INSERT INTO inventories VALUES(3143,6,186); 
-INSERT INTO inventories VALUES(3165,6,141); 
-INSERT INTO inventories VALUES(3167,6,141); 
-INSERT INTO inventories VALUES(3170,6,149); 
-INSERT INTO inventories VALUES(3171,6,149); 
-INSERT INTO inventories VALUES(3172,6,150); 
-INSERT INTO inventories VALUES(3173,6,150); 
-INSERT INTO inventories VALUES(3175,6,150); 
-INSERT INTO inventories VALUES(3176,6,150); 
-INSERT INTO inventories VALUES(3177,6,150); 
-INSERT INTO inventories VALUES(3178,6,151); 
-INSERT INTO inventories VALUES(3179,6,151); 
-INSERT INTO inventories VALUES(3182,6,151); 
-INSERT INTO inventories VALUES(3183,6,151); 
-INSERT INTO inventories VALUES(3189,6,145); 
-INSERT INTO inventories VALUES(3191,6,145); 
-INSERT INTO inventories VALUES(3193,6,145); 
-INSERT INTO inventories VALUES(3204,6,161); 
-INSERT INTO inventories VALUES(3209,6,148); 
-INSERT INTO inventories VALUES(3225,6,150); 
-INSERT INTO inventories VALUES(3246,6,161); 
-INSERT INTO inventories VALUES(3247,6,162); 
-INSERT INTO inventories VALUES(3248,6,162); 
-INSERT INTO inventories VALUES(3250,6,162); 
-INSERT INTO inventories VALUES(3251,6,162); 
-INSERT INTO inventories VALUES(3252,6,162); 
-INSERT INTO inventories VALUES(3253,6,163); 
-INSERT INTO inventories VALUES(3255,6,163); 
-INSERT INTO inventories VALUES(3256,6,163); 
-INSERT INTO inventories VALUES(3257,6,163); 
-INSERT INTO inventories VALUES(3258,6,163); 
-INSERT INTO inventories VALUES(3260,6,164); 
-INSERT INTO inventories VALUES(3300,6,214); 
-INSERT INTO inventories VALUES(3301,6,214); 
-INSERT INTO inventories VALUES(3331,6,221); 
-INSERT INTO inventories VALUES(3334,6,222); 
-INSERT INTO inventories VALUES(3337,6,184); 
-INSERT INTO inventories VALUES(3350,6,184); 
-INSERT INTO inventories VALUES(3354,6,225); 
-INSERT INTO inventories VALUES(3355,6,225); 
-INSERT INTO inventories VALUES(3359,6,226); 
-INSERT INTO inventories VALUES(3361,6,180); 
-INSERT INTO inventories VALUES(3362,6,180); 
-INSERT INTO inventories VALUES(3391,6,191); 
-INSERT INTO inventories VALUES(3400,6,232); 
-INSERT INTO inventories VALUES(3501,6,320); 
-INSERT INTO inventories VALUES(3502,6,202); 
-INSERT INTO inventories VALUES(3503,6,203); 
-INSERT INTO inventories VALUES(3511,6,212); 
-INSERT INTO inventories VALUES(3515,6,213); 
-INSERT INTO inventories VALUES(1729,7,46); 
-INSERT INTO inventories VALUES(1733,7,63); 
-INSERT INTO inventories VALUES(1734,7,63); 
-INSERT INTO inventories VALUES(1737,7,63); 
-INSERT INTO inventories VALUES(1738,7,63); 
-INSERT INTO inventories VALUES(1745,7,65); 
-INSERT INTO inventories VALUES(1748,7,65); 
-INSERT INTO inventories VALUES(1774,7,50); 
-INSERT INTO inventories VALUES(1775,7,50); 
-INSERT INTO inventories VALUES(1778,7,50); 
-INSERT INTO inventories VALUES(1779,7,51); 
-INSERT INTO inventories VALUES(1780,7,51); 
-INSERT INTO inventories VALUES(1794,7,53); 
-INSERT INTO inventories VALUES(1799,7,54); 
-INSERT INTO inventories VALUES(1801,7,54); 
-INSERT INTO inventories VALUES(1803,7,55); 
-INSERT INTO inventories VALUES(1804,7,55); 
-INSERT INTO inventories VALUES(1805,7,55); 
-INSERT INTO inventories VALUES(1806,7,55); 
-INSERT INTO inventories VALUES(1808,7,55); 
-INSERT INTO inventories VALUES(1820,7,57); 
-INSERT INTO inventories VALUES(1822,7,58); 
-INSERT INTO inventories VALUES(1825,7,58); 
-INSERT INTO inventories VALUES(1912,7,18); 
-INSERT INTO inventories VALUES(1940,7,22); 
-INSERT INTO inventories VALUES(2005,7,58); 
-INSERT INTO inventories VALUES(2278,7,53); 
-INSERT INTO inventories VALUES(2316,7,59); 
-INSERT INTO inventories VALUES(2319,7,27); 
-INSERT INTO inventories VALUES(2322,7,27); 
-INSERT INTO inventories VALUES(2323,7,27); 
-INSERT INTO inventories VALUES(2326,7,46); 
-INSERT INTO inventories VALUES(2335,7,57); 
-INSERT INTO inventories VALUES(2340,7,58); 
-INSERT INTO inventories VALUES(2350,7,60); 
-INSERT INTO inventories VALUES(2351,7,60); 
-INSERT INTO inventories VALUES(2365,7,62); 
-INSERT INTO inventories VALUES(2370,7,35); 
-INSERT INTO inventories VALUES(2371,7,58); 
-INSERT INTO inventories VALUES(2373,7,35); 
-INSERT INTO inventories VALUES(2377,7,36); 
-INSERT INTO inventories VALUES(2380,7,36); 
-INSERT INTO inventories VALUES(2387,7,37); 
-INSERT INTO inventories VALUES(2408,7,41); 
-INSERT INTO inventories VALUES(2416,7,66); 
-INSERT INTO inventories VALUES(2417,7,66); 
-INSERT INTO inventories VALUES(2418,7,45); 
-INSERT INTO inventories VALUES(2419,7,45); 
-INSERT INTO inventories VALUES(2422,7,17); 
-INSERT INTO inventories VALUES(2423,7,17); 
-INSERT INTO inventories VALUES(2449,7,21); 
-INSERT INTO inventories VALUES(2452,7,21); 
-INSERT INTO inventories VALUES(2457,7,51); 
-INSERT INTO inventories VALUES(2462,7,23); 
-INSERT INTO inventories VALUES(2464,7,23); 
-INSERT INTO inventories VALUES(2467,7,24); 
-INSERT INTO inventories VALUES(2468,7,24); 
-INSERT INTO inventories VALUES(2470,7,24); 
-INSERT INTO inventories VALUES(2471,7,24); 
-INSERT INTO inventories VALUES(2492,7,28); 
-INSERT INTO inventories VALUES(2493,7,28); 
-INSERT INTO inventories VALUES(2494,7,28); 
-INSERT INTO inventories VALUES(2596,7,39); 
-INSERT INTO inventories VALUES(2631,7,45); 
-INSERT INTO inventories VALUES(2638,7,60); 
-INSERT INTO inventories VALUES(2722,7,59); 
-INSERT INTO inventories VALUES(2779,7,68); 
-INSERT INTO inventories VALUES(2878,7,98); 
-INSERT INTO inventories VALUES(2879,7,98); 
-INSERT INTO inventories VALUES(3000,7,143); 
-INSERT INTO inventories VALUES(3003,7,143); 
-INSERT INTO inventories VALUES(3004,7,144); 
-INSERT INTO inventories VALUES(3099,7,133); 
-INSERT INTO inventories VALUES(3124,7,137); 
-INSERT INTO inventories VALUES(3134,7,167); 
-INSERT INTO inventories VALUES(3139,7,168); 
-INSERT INTO inventories VALUES(3140,7,168); 
-INSERT INTO inventories VALUES(3143,7,168); 
-INSERT INTO inventories VALUES(3170,7,136); 
-INSERT INTO inventories VALUES(3171,7,136); 
-INSERT INTO inventories VALUES(3172,7,136); 
-INSERT INTO inventories VALUES(3173,7,137); 
-INSERT INTO inventories VALUES(3175,7,137); 
-INSERT INTO inventories VALUES(3176,7,137); 
-INSERT INTO inventories VALUES(3177,7,137); 
-INSERT INTO inventories VALUES(3189,7,133); 
-INSERT INTO inventories VALUES(3191,7,133); 
-INSERT INTO inventories VALUES(3193,7,133); 
-INSERT INTO inventories VALUES(3204,7,149); 
-INSERT INTO inventories VALUES(3246,7,148); 
-INSERT INTO inventories VALUES(3247,7,148); 
-INSERT INTO inventories VALUES(3248,7,149); 
-INSERT INTO inventories VALUES(3250,7,149); 
-INSERT INTO inventories VALUES(3251,7,149); 
-INSERT INTO inventories VALUES(3252,7,149); 
-INSERT INTO inventories VALUES(3253,7,149); 
-INSERT INTO inventories VALUES(3257,7,150); 
-INSERT INTO inventories VALUES(3258,7,150); 
-INSERT INTO inventories VALUES(3300,7,196); 
-INSERT INTO inventories VALUES(3301,7,196); 
-INSERT INTO inventories VALUES(3337,7,170); 
-INSERT INTO inventories VALUES(3362,7,167); 
-INSERT INTO inventories VALUES(3391,7,179); 
-INSERT INTO inventories VALUES(3501,7,294); 
-INSERT INTO inventories VALUES(3502,7,189); 
-INSERT INTO inventories VALUES(3503,7,189); 
-INSERT INTO inventories VALUES(1729,8,34); 
-INSERT INTO inventories VALUES(1733,8,49); 
-INSERT INTO inventories VALUES(1734,8,49); 
-INSERT INTO inventories VALUES(1737,8,49); 
-INSERT INTO inventories VALUES(1738,8,50); 
-INSERT INTO inventories VALUES(1739,8,50); 
-INSERT INTO inventories VALUES(1740,8,50); 
-INSERT INTO inventories VALUES(1742,8,50); 
-INSERT INTO inventories VALUES(1745,8,51); 
-INSERT INTO inventories VALUES(1748,8,51); 
-INSERT INTO inventories VALUES(1749,8,51); 
-INSERT INTO inventories VALUES(1750,8,51); 
-INSERT INTO inventories VALUES(1755,8,52); 
-INSERT INTO inventories VALUES(1763,8,54); 
-INSERT INTO inventories VALUES(1768,8,54); 
-INSERT INTO inventories VALUES(1769,8,54); 
-INSERT INTO inventories VALUES(1770,8,5); 
-INSERT INTO inventories VALUES(1772,8,5); 
-INSERT INTO inventories VALUES(1774,8,38); 
-INSERT INTO inventories VALUES(1775,8,39); 
-INSERT INTO inventories VALUES(1778,8,39); 
-INSERT INTO inventories VALUES(1779,8,39); 
-INSERT INTO inventories VALUES(1780,8,39); 
-INSERT INTO inventories VALUES(1781,8,6); 
-INSERT INTO inventories VALUES(1787,8,7); 
-INSERT INTO inventories VALUES(1788,8,7); 
-INSERT INTO inventories VALUES(1791,8,8); 
-INSERT INTO inventories VALUES(1792,8,8); 
-INSERT INTO inventories VALUES(1794,8,42); 
-INSERT INTO inventories VALUES(1797,8,9); 
-INSERT INTO inventories VALUES(1799,8,42); 
-INSERT INTO inventories VALUES(1801,8,43); 
-INSERT INTO inventories VALUES(1803,8,43); 
-INSERT INTO inventories VALUES(1804,8,43); 
-INSERT INTO inventories VALUES(1805,8,43); 
-INSERT INTO inventories VALUES(1806,8,44); 
-INSERT INTO inventories VALUES(1808,8,44); 
-INSERT INTO inventories VALUES(1820,8,46); 
-INSERT INTO inventories VALUES(1822,8,46); 
-INSERT INTO inventories VALUES(1825,8,47); 
-INSERT INTO inventories VALUES(1912,8,7); 
-INSERT INTO inventories VALUES(1940,8,11); 
-INSERT INTO inventories VALUES(2005,8,32); 
-INSERT INTO inventories VALUES(2058,8,44); 
-INSERT INTO inventories VALUES(2243,8,47); 
-INSERT INTO inventories VALUES(2245,8,47); 
-INSERT INTO inventories VALUES(2255,8,49); 
-INSERT INTO inventories VALUES(2257,8,49); 
-INSERT INTO inventories VALUES(2259,8,50); 
-INSERT INTO inventories VALUES(2260,8,50); 
-INSERT INTO inventories VALUES(2261,8,50); 
-INSERT INTO inventories VALUES(2262,8,50); 
-INSERT INTO inventories VALUES(2264,8,39); 
-INSERT INTO inventories VALUES(2266,8,39); 
-INSERT INTO inventories VALUES(2270,8,40); 
-INSERT INTO inventories VALUES(2274,8,41); 
-INSERT INTO inventories VALUES(2276,8,41); 
-INSERT INTO inventories VALUES(2278,8,41); 
-INSERT INTO inventories VALUES(2302,8,45); 
-INSERT INTO inventories VALUES(2316,8,47); 
-INSERT INTO inventories VALUES(2319,8,12); 
-INSERT INTO inventories VALUES(2322,8,12); 
-INSERT INTO inventories VALUES(2323,8,13); 
-INSERT INTO inventories VALUES(2326,8,34); 
-INSERT INTO inventories VALUES(2335,8,44); 
-INSERT INTO inventories VALUES(2340,8,45); 
-INSERT INTO inventories VALUES(2350,8,47); 
-INSERT INTO inventories VALUES(2351,8,47); 
-INSERT INTO inventories VALUES(2359,8,18); 
-INSERT INTO inventories VALUES(2365,8,49); 
-INSERT INTO inventories VALUES(2370,8,20); 
-INSERT INTO inventories VALUES(2371,8,46); 
-INSERT INTO inventories VALUES(2373,8,20); 
-INSERT INTO inventories VALUES(2374,8,21); 
-INSERT INTO inventories VALUES(2375,8,21); 
-INSERT INTO inventories VALUES(2377,8,21); 
-INSERT INTO inventories VALUES(2378,8,21); 
-INSERT INTO inventories VALUES(2380,8,22); 
-INSERT INTO inventories VALUES(2387,8,23); 
-INSERT INTO inventories VALUES(2394,8,24); 
-INSERT INTO inventories VALUES(2395,8,24); 
-INSERT INTO inventories VALUES(2396,8,24); 
-INSERT INTO inventories VALUES(2402,8,25); 
-INSERT INTO inventories VALUES(2403,8,25); 
-INSERT INTO inventories VALUES(2404,8,25); 
-INSERT INTO inventories VALUES(2406,8,26); 
-INSERT INTO inventories VALUES(2408,8,26); 
-INSERT INTO inventories VALUES(2409,8,26); 
-INSERT INTO inventories VALUES(2410,8,26); 
-INSERT INTO inventories VALUES(2411,8,26); 
-INSERT INTO inventories VALUES(2414,8,27); 
-INSERT INTO inventories VALUES(2415,8,27); 
-INSERT INTO inventories VALUES(2416,8,53); 
-INSERT INTO inventories VALUES(2417,8,53); 
-INSERT INTO inventories VALUES(2418,8,28); 
-INSERT INTO inventories VALUES(2419,8,28); 
-INSERT INTO inventories VALUES(2422,8,54); 
-INSERT INTO inventories VALUES(2423,8,54); 
-INSERT INTO inventories VALUES(2424,8,28); 
-INSERT INTO inventories VALUES(2430,8,29); 
-INSERT INTO inventories VALUES(2439,8,31); 
-INSERT INTO inventories VALUES(2449,8,8); 
-INSERT INTO inventories VALUES(2452,8,9); 
-INSERT INTO inventories VALUES(2453,8,33); 
-INSERT INTO inventories VALUES(2457,8,34); 
-INSERT INTO inventories VALUES(2462,8,10); 
-INSERT INTO inventories VALUES(2464,8,11); 
-INSERT INTO inventories VALUES(2467,8,11); 
-INSERT INTO inventories VALUES(2468,8,11); 
-INSERT INTO inventories VALUES(2470,8,12); 
-INSERT INTO inventories VALUES(2471,8,12); 
-INSERT INTO inventories VALUES(2492,8,15); 
-INSERT INTO inventories VALUES(2493,8,15); 
-INSERT INTO inventories VALUES(2494,8,15); 
-INSERT INTO inventories VALUES(2596,8,27); 
-INSERT INTO inventories VALUES(2631,8,33); 
-INSERT INTO inventories VALUES(2638,8,48); 
-INSERT INTO inventories VALUES(2722,8,47); 
-INSERT INTO inventories VALUES(2752,8,66); 
-INSERT INTO inventories VALUES(2779,8,56); 
-INSERT INTO inventories VALUES(2878,8,86); 
-INSERT INTO inventories VALUES(2879,8,86); 
-INSERT INTO inventories VALUES(3000,8,128); 
-INSERT INTO inventories VALUES(3003,8,128); 
-INSERT INTO inventories VALUES(3004,8,129); 
-INSERT INTO inventories VALUES(3054,8,137); 
-INSERT INTO inventories VALUES(3057,8,137); 
-INSERT INTO inventories VALUES(3060,8,137); 
-INSERT INTO inventories VALUES(3061,8,138); 
-INSERT INTO inventories VALUES(3065,8,138); 
-INSERT INTO inventories VALUES(3071,8,139); 
-INSERT INTO inventories VALUES(3072,8,139); 
-INSERT INTO inventories VALUES(3077,8,140); 
-INSERT INTO inventories VALUES(3082,8,141); 
-INSERT INTO inventories VALUES(3083,8,141); 
-INSERT INTO inventories VALUES(3086,8,142); 
-INSERT INTO inventories VALUES(3088,8,142); 
-INSERT INTO inventories VALUES(3090,8,142); 
-INSERT INTO inventories VALUES(3091,8,142); 
-INSERT INTO inventories VALUES(3099,8,121); 
-INSERT INTO inventories VALUES(3108,8,122); 
-INSERT INTO inventories VALUES(3110,8,123); 
-INSERT INTO inventories VALUES(3112,8,123); 
-INSERT INTO inventories VALUES(3117,8,124); 
-INSERT INTO inventories VALUES(3124,8,125); 
-INSERT INTO inventories VALUES(3127,8,125); 
-INSERT INTO inventories VALUES(3129,8,126); 
-INSERT INTO inventories VALUES(3134,8,149); 
-INSERT INTO inventories VALUES(3139,8,150); 
-INSERT INTO inventories VALUES(3140,8,150); 
-INSERT INTO inventories VALUES(3143,8,151); 
-INSERT INTO inventories VALUES(3170,8,123); 
-INSERT INTO inventories VALUES(3171,8,124); 
-INSERT INTO inventories VALUES(3172,8,124); 
-INSERT INTO inventories VALUES(3173,8,124); 
-INSERT INTO inventories VALUES(3175,8,124); 
-INSERT INTO inventories VALUES(3176,8,124); 
-INSERT INTO inventories VALUES(3177,8,125); 
-INSERT INTO inventories VALUES(3189,8,121); 
-INSERT INTO inventories VALUES(3191,8,121); 
-INSERT INTO inventories VALUES(3193,8,121); 
-INSERT INTO inventories VALUES(3204,8,137); 
-INSERT INTO inventories VALUES(3246,8,136); 
-INSERT INTO inventories VALUES(3247,8,136); 
-INSERT INTO inventories VALUES(3248,8,136); 
-INSERT INTO inventories VALUES(3250,8,136); 
-INSERT INTO inventories VALUES(3251,8,136); 
-INSERT INTO inventories VALUES(3252,8,137); 
-INSERT INTO inventories VALUES(3253,8,137); 
-INSERT INTO inventories VALUES(3257,8,137); 
-INSERT INTO inventories VALUES(3258,8,137); 
-INSERT INTO inventories VALUES(3300,8,178); 
-INSERT INTO inventories VALUES(3301,8,178); 
-INSERT INTO inventories VALUES(3331,8,183); 
-INSERT INTO inventories VALUES(3334,8,184); 
-INSERT INTO inventories VALUES(3337,8,156); 
-INSERT INTO inventories VALUES(3350,8,160); 
-INSERT INTO inventories VALUES(3354,8,187); 
-INSERT INTO inventories VALUES(3355,8,187); 
-INSERT INTO inventories VALUES(3359,8,188); 
-INSERT INTO inventories VALUES(3362,8,154); 
-INSERT INTO inventories VALUES(3391,8,167); 
-INSERT INTO inventories VALUES(3400,8,194); 
-INSERT INTO inventories VALUES(3501,8,268); 
-INSERT INTO inventories VALUES(3502,8,176); 
-INSERT INTO inventories VALUES(3503,8,177); 
-INSERT INTO inventories VALUES(1729,9,23); 
-INSERT INTO inventories VALUES(1733,9,35); 
-INSERT INTO inventories VALUES(1734,9,35); 
-INSERT INTO inventories VALUES(1737,9,36); 
-INSERT INTO inventories VALUES(1738,9,36); 
-INSERT INTO inventories VALUES(1739,9,36); 
-INSERT INTO inventories VALUES(1740,9,36); 
-INSERT INTO inventories VALUES(1742,9,36); 
-INSERT INTO inventories VALUES(1745,9,37); 
-INSERT INTO inventories VALUES(1748,9,37); 
-INSERT INTO inventories VALUES(1749,9,37); 
-INSERT INTO inventories VALUES(1750,9,38); 
-INSERT INTO inventories VALUES(1755,9,41); 
-INSERT INTO inventories VALUES(1763,9,3); 
-INSERT INTO inventories VALUES(1768,9,3); 
-INSERT INTO inventories VALUES(1769,9,3); 
-INSERT INTO inventories VALUES(1770,9,4); 
-INSERT INTO inventories VALUES(1772,9,4); 
-INSERT INTO inventories VALUES(1781,9,5); 
-INSERT INTO inventories VALUES(1787,9,6); 
-INSERT INTO inventories VALUES(1788,9,6); 
-INSERT INTO inventories VALUES(1791,9,7); 
-INSERT INTO inventories VALUES(1792,9,7); 
-INSERT INTO inventories VALUES(1797,9,8); 
-INSERT INTO inventories VALUES(1912,9,6); 
-INSERT INTO inventories VALUES(1940,9,0); 
-INSERT INTO inventories VALUES(2058,9,33); 
-INSERT INTO inventories VALUES(2243,9,32); 
-INSERT INTO inventories VALUES(2245,9,33); 
-INSERT INTO inventories VALUES(2255,9,34); 
-INSERT INTO inventories VALUES(2257,9,34); 
-INSERT INTO inventories VALUES(2259,9,35); 
-INSERT INTO inventories VALUES(2260,9,35); 
-INSERT INTO inventories VALUES(2261,9,35); 
-INSERT INTO inventories VALUES(2262,9,35); 
-INSERT INTO inventories VALUES(2264,9,27); 
-INSERT INTO inventories VALUES(2266,9,27); 
-INSERT INTO inventories VALUES(2270,9,28); 
-INSERT INTO inventories VALUES(2274,9,29); 
-INSERT INTO inventories VALUES(2276,9,29); 
-INSERT INTO inventories VALUES(2278,9,29); 
-INSERT INTO inventories VALUES(2302,9,33); 
-INSERT INTO inventories VALUES(2316,9,35); 
-INSERT INTO inventories VALUES(2319,9,7); 
-INSERT INTO inventories VALUES(2322,9,8); 
-INSERT INTO inventories VALUES(2323,9,8); 
-INSERT INTO inventories VALUES(2326,9,22); 
-INSERT INTO inventories VALUES(2340,9,32); 
-INSERT INTO inventories VALUES(2359,9,3); 
-INSERT INTO inventories VALUES(2365,9,36); 
-INSERT INTO inventories VALUES(2370,9,5); 
-INSERT INTO inventories VALUES(2373,9,6); 
-INSERT INTO inventories VALUES(2374,9,6); 
-INSERT INTO inventories VALUES(2375,9,6); 
-INSERT INTO inventories VALUES(2377,9,6); 
-INSERT INTO inventories VALUES(2378,9,6); 
-INSERT INTO inventories VALUES(2380,9,7); 
-INSERT INTO inventories VALUES(2387,9,8); 
-INSERT INTO inventories VALUES(2394,9,9); 
-INSERT INTO inventories VALUES(2395,9,9); 
-INSERT INTO inventories VALUES(2396,9,9); 
-INSERT INTO inventories VALUES(2402,9,10); 
-INSERT INTO inventories VALUES(2403,9,10); 
-INSERT INTO inventories VALUES(2404,9,10); 
-INSERT INTO inventories VALUES(2406,9,11); 
-INSERT INTO inventories VALUES(2408,9,11); 
-INSERT INTO inventories VALUES(2409,9,11); 
-INSERT INTO inventories VALUES(2410,9,11); 
-INSERT INTO inventories VALUES(2411,9,12); 
-INSERT INTO inventories VALUES(2414,9,12); 
-INSERT INTO inventories VALUES(2415,9,12); 
-INSERT INTO inventories VALUES(2418,9,13); 
-INSERT INTO inventories VALUES(2419,9,13); 
-INSERT INTO inventories VALUES(2424,9,14); 
-INSERT INTO inventories VALUES(2430,9,15); 
-INSERT INTO inventories VALUES(2439,9,16); 
-INSERT INTO inventories VALUES(2453,9,18); 
-INSERT INTO inventories VALUES(2457,9,19); 
-INSERT INTO inventories VALUES(2596,9,15); 
-INSERT INTO inventories VALUES(2631,9,21); 
-INSERT INTO inventories VALUES(2638,9,36); 
-INSERT INTO inventories VALUES(2722,9,35); 
-INSERT INTO inventories VALUES(2752,9,54); 
-INSERT INTO inventories VALUES(2878,9,74); 
-INSERT INTO inventories VALUES(2879,9,74); 
-INSERT INTO inventories VALUES(3000,9,110); 
-INSERT INTO inventories VALUES(3003,9,111); 
-INSERT INTO inventories VALUES(3004,9,111); 
-INSERT INTO inventories VALUES(3054,9,119); 
-INSERT INTO inventories VALUES(3057,9,119); 
-INSERT INTO inventories VALUES(3060,9,120); 
-INSERT INTO inventories VALUES(3061,9,120); 
-INSERT INTO inventories VALUES(3065,9,121); 
-INSERT INTO inventories VALUES(3071,9,122); 
-INSERT INTO inventories VALUES(3072,9,122); 
-INSERT INTO inventories VALUES(3077,9,122); 
-INSERT INTO inventories VALUES(3082,9,123); 
-INSERT INTO inventories VALUES(3083,9,123); 
-INSERT INTO inventories VALUES(3086,9,124); 
-INSERT INTO inventories VALUES(3088,9,124); 
-INSERT INTO inventories VALUES(3090,9,125); 
-INSERT INTO inventories VALUES(3091,9,125); 
-INSERT INTO inventories VALUES(3099,9,109); 
-INSERT INTO inventories VALUES(3108,9,110); 
-INSERT INTO inventories VALUES(3110,9,111); 
-INSERT INTO inventories VALUES(3112,9,111); 
-INSERT INTO inventories VALUES(3117,9,112); 
-INSERT INTO inventories VALUES(3124,9,113); 
-INSERT INTO inventories VALUES(3127,9,113); 
-INSERT INTO inventories VALUES(3129,9,114); 
-INSERT INTO inventories VALUES(3134,9,134); 
-INSERT INTO inventories VALUES(3139,9,135); 
-INSERT INTO inventories VALUES(3140,9,135); 
-INSERT INTO inventories VALUES(3143,9,136); 
-INSERT INTO inventories VALUES(3189,9,109); 
-INSERT INTO inventories VALUES(3191,9,109); 
-INSERT INTO inventories VALUES(3193,9,109); 
-INSERT INTO inventories VALUES(3204,9,125); 
-INSERT INTO inventories VALUES(3300,9,161); 
-INSERT INTO inventories VALUES(3301,9,161); 
-INSERT INTO inventories VALUES(3331,9,165); 
-INSERT INTO inventories VALUES(3334,9,166); 
-INSERT INTO inventories VALUES(3350,9,148); 
-INSERT INTO inventories VALUES(3354,9,169); 
-INSERT INTO inventories VALUES(3355,9,169); 
-INSERT INTO inventories VALUES(3359,9,170); 
-INSERT INTO inventories VALUES(3391,9,155); 
-INSERT INTO inventories VALUES(3400,9,179); 
 
+set define off
+INSERT INTO product_descriptions VALUES (1726
+, 'US'
+, UNISTR(
+'LCD Monitor 11/PM'
+), UNISTR(
+'Liquid Cristal Display 11 inch passive monitor. The virtuallyflat,
+highresolution screen delivers outstanding image quality with reduced glare.'
+));
+INSERT INTO product_descriptions VALUES (2359
+, 'US'
+, UNISTR(
+'LCD Monitor 9/PM'
+), UNISTR(
+'Liquid Cristal Display 9 inch passive monitor. Enjoy the productivity that
+a small monitor can bring via more workspace on your desk. Easy setup with
+plugandplay compatibility.'
+));
+INSERT INTO product_descriptions VALUES (3060
+, 'US'
+, UNISTR(
+'Monitor 17/HR'
+), UNISTR(
+'CRT Monitor 17 inch (16 viewable) high resolution. Exceptional image
+performance and the benefit of additional screen space. This monitor offers
+sharp, colorrich monitor performance at an incredible value. With a host of
+leading features, including onscreen display controls.'
+));
+INSERT INTO product_descriptions VALUES (2243
+, 'US'
+, UNISTR(
+'Monitor 17/HR/F'
+), UNISTR(
+'Monitor 17 inch (16 viewable) high resolution, flat screen. High density
+photon gun with Enhanced Elliptical Correction System for more consistent,
+accurate focus across the screen, even in the corners.'
+));
+INSERT INTO product_descriptions VALUES (3057
+, 'US'
+, UNISTR(
+'Monitor 17/SD'
+), UNISTR(
+'CRT Monitor 17 inch (16 viewable) short depth. Delivers outstanding
+image clarity and precision. Gives professional color, technical
+engineering, and visualization/animation users the color fidelity they
+demand, plus a large desktop for enhanced productivity.'
+));
+INSERT INTO product_descriptions VALUES (3061
+, 'US'
+, UNISTR(
+'Monitor 19/SD'
+), UNISTR(
+'CRT Monitor 19 inch (18 viewable) short depth. Highcontrast black
+screen coating: produces superior contrast and grayscale performance.
+The newly designed, amplified professional speakers with dynamic bass
+response bring all of your multimedia audio experiences to life with
+crisp, truetolife sound and rich, deep bass tones. Plus, colorcoded
+cables, simple plugandplay setup and digital onscreen controls mean you
+are ready to set your sights on outrageous multimedia and the incredible
+Internet in just minutes.'
+));
+INSERT INTO product_descriptions VALUES (2245
+, 'US'
+, UNISTR(
+'Monitor 19/SD/M'
+), UNISTR(
+'Monitor 19 (18 Viewable) short depth, Monochrome. Outstanding image
+performance in a compact design. A simple, onscreen dislay menu helps you
+easily adjust screen dimensions, colors and image attributes. Just plug
+your monitor into your PC and you are ready to go.'
+));
+INSERT INTO product_descriptions VALUES (3065
+, 'US'
+, UNISTR(
+'Monitor 21/D'
+), UNISTR(
+'CRT Monitor 21 inch (20 viewable). Digital OptiScan technology: supports
+resolutions up to 1600 x 1200 at 75Hz. Dimensions (HxWxD): 8.3 x 18.5 x 15
+inch. The detachable or attachable monitorpowered Platinum Series speakers
+offer crisp sound and the convenience of a digital audio player jack. Just
+plug in your digital audio player and listen to tunes without powering up
+your PC.'
+));
+INSERT INTO product_descriptions VALUES (3331
+, 'US'
+, UNISTR(
+'Monitor 21/HR'
+), UNISTR(
+'21 inch monitor (20 inch viewable) high resolution. This monitor is ideal
+for business, desktop publishing, and graphicsintensive applications. Enjoy
+the productivity that a large monitor can bring via more workspace for
+running applications.'
+));
+INSERT INTO product_descriptions VALUES (2252
+, 'US'
+, UNISTR(
+'Monitor 21/HR/M'
+), UNISTR(
+'Monitor 21 inch (20 viewable) high resolution, monochrome. Unit size:
+35.6 x 29.6 x 33.3 cm (14.6 kg) Package: 40.53 x 31.24 x 35.39 cm
+(16.5 kg). Horizontal frequency 31.5  54 kHz, Vertical frequency 50  120
+Hz. Universal power supply 90  132 V, 50  60 Hz.'
+));
+INSERT INTO product_descriptions VALUES (3064
+, 'US'
+, UNISTR(
+'Monitor 21/SD'
+), UNISTR(
+'Monitor 21 inch (20 viewable) short depth. Features include a 0.250.28
+Aperture Grille Pitch, resolution support up to 1920 x 1200 at 76Hz,
+onscreen displays, and a conductive antireflective film coating.'
+));
+INSERT INTO product_descriptions VALUES (3155
+, 'US'
+, UNISTR(
+'Monitor Hinge  HD'
+), UNISTR(
+'Monitor Hinge, heavy duty, maximum monitor weight 30 kg'
+));
+INSERT INTO product_descriptions VALUES (3234
+, 'US'
+, UNISTR(
+'Monitor Hinge  STD'
+), UNISTR(
+'Standard Monitor Hinge, maximum monitor weight 10 kg'
+));
+INSERT INTO product_descriptions VALUES (3350
+, 'US'
+, UNISTR(
+'Plasma Monitor 10/LE/VGA'
+), UNISTR(
+'10 inch low energy plasma monitor, VGA resolution'
+));
+INSERT INTO product_descriptions VALUES (2236
+, 'US'
+, UNISTR(
+'Plasma Monitor 10/TFT/XGA'
+), UNISTR(
+'10 inch TFT XGA flatscreen monitor for laptop computers'
+));
+INSERT INTO product_descriptions VALUES (3054
+, 'US'
+, UNISTR(
+'Plasma Monitor 10/XGA'
+), UNISTR(
+'10 inch standard plasma monitor, XGA resolution. This virtuallyflat,
+highresolution screen delivers outstanding image quality with reduced glare.'
+));
+INSERT INTO product_descriptions VALUES (1782
+, 'US'
+, UNISTR(
+'Compact 400/DQ'
+), UNISTR(
+'400 characters per second highspeed draft printer. Dimensions (HxWxD):
+17.34 x 24.26 x 26.32 inch. Interface: RS232 serial (9pin), no expansion
+slots. Paper size: A4, US Letter.'
+));
+INSERT INTO product_descriptions VALUES (2430
+, 'US'
+, UNISTR(
+'Compact 400/LQ'
+), UNISTR(
+'400 characters per second highspeed letterquality printer.
+Dimensions (HxWxD): 12.37 x 27.96 x 23.92 inch. Interface: RS232 serial
+(25pin), 3 expansion slots. Paper size: A2, A3, A4.'
+));
+INSERT INTO product_descriptions VALUES (1792
+, 'US'
+, UNISTR(
+'Industrial 600/DQ'
+), UNISTR(
+'Wide carriage color capability 600 characters per second highspeed
+draft printer. Dimensions (HxWxD): 22.31 x 25.73 x 20.12 inch. Paper size:
+3x5 inch to 11x17 inch full bleed wide format.'
+));
+INSERT INTO product_descriptions VALUES (1791
+, 'US'
+, UNISTR(
+'Industrial 700/HD'
+), UNISTR(
+'700 characters per second dotmatrix printer with harder body and dust
+protection for industrial uses. Interface: Centronics parallel, IEEE 1284
+compliant. Paper size: 3x5 inch to 11x17 inch full bleed wide format.
+Memory: 4MB. Dimensions (HxWxD): 9.3 x 16.5 x 13 inch.'
+));
+INSERT INTO product_descriptions VALUES (2302
+, 'US'
+, UNISTR(
+'Inkjet B/6'
+), UNISTR(
+'Inkjet Printer, black and white, 6 pages per minute, resolution 600x300
+dpi. Interface: Centronics parallel, IEEE 1284 compliant. Dimensions
+(HxWxD): 7.3 x 17.5 x 14 inch. Paper size: A3, A4, US legal. No
+expansion slots.'
+));
+INSERT INTO product_descriptions VALUES (2453
+, 'US'
+, UNISTR(
+'Inkjet C/4'
+), UNISTR(
+'Inkjet Printer, color (with two separate ink cartridges), 6 pages per
+minute black and white, 4 pages per minute color, resolution 600x300 dpi.
+Interface: Biodirectional IEEE 1284 compliant parallel interface and
+RS232 serial (9pin) interface 2 open EIO expansion slots. Memory:
+8MB 96KB receiver buffer.'
+));
+INSERT INTO product_descriptions VALUES (1797
+, 'US'
+, UNISTR(
+'Inkjet C/8/HQ'
+), UNISTR(
+'Inkjet printer, color, 8 pages per minute, high resolution (photo
+quality). Memory: 16MB. Dimensions (HxWxD): 7.3 x 17.5 x 14 inch. Paper
+size: A4, US Letter, envelopes. Interface: Centronics parallel, IEEE
+1284 compliant.'
+));
+INSERT INTO product_descriptions VALUES (2459
+, 'US'
+, UNISTR(
+'LaserPro 1200/8/BW'
+), UNISTR(
+'Professional black and white laserprinter, resolution 1200 dpi, 8 pages
+per second. Dimensions (HxWxD): 22.37 x 19.86 x 21.92 inch. Software:
+Enhanced driver support for SPNIX v4.0; MSDOS Builtin printer drivers:
+ZoomSmart scaling technology, billboard, handout, mirror, watermark, print
+preview, quick sets, emulate laserprinter margins.'
+));
+INSERT INTO product_descriptions VALUES (3127
+, 'US'
+, UNISTR(
+'LaserPro 600/6/BW'
+), UNISTR(
+'Standard black and white laserprinter, resolution 600 dpi, 6 pages per
+second. Interface: Centronics parallel, IEEE 1284 compliant. Memory: 8MB
+96KB receiver buffer. MSDOS ToolBox utilities for SPNIX AutoCAM v.17
+compatible driver.'
+));
+INSERT INTO product_descriptions VALUES (2254
+, 'US'
+, UNISTR(
+'HD 10GB /I'
+), UNISTR(
+'10GB capacity hard disk drive (internal). These drives are intended for
+use in today''s demanding, datacritical enterprise environments and are
+ideal for use in RAID applications. Universal option kits are configured
+and premounted in the appropriate hot plug tray for immediate installation
+into your corporate server or storage system.'
+));
+INSERT INTO product_descriptions VALUES (3353
+, 'US'
+, UNISTR(
+'HD 10GB /R'
+), UNISTR(
+'10GB Removable hard disk drive for 10GB Removable HD drive. Supra7
+disk drives provide the latest technology to improve enterprise
+performance, increasing the maximum data transfer rate up to 160MB/s.'
+));
+INSERT INTO product_descriptions VALUES (3069
+, 'US'
+, UNISTR(
+'HD 10GB /S'
+), UNISTR(
+'10GB hard disk drive for Standard Mount. Backward compatible with
+Supra5 systems, users are free to deploy and redeploy these drives to
+quickly deliver increased storage capacity. Supra drives eliminate the
+risk of firmware incompatibility.'
+));
+INSERT INTO product_descriptions VALUES (2253
+, 'US'
+, UNISTR(
+'HD 10GB @5400 /SE'
+), UNISTR(
+'10GB capacity hard disk drive (external) SCSI interface, 5400 RPM.
+Universal option kits are configured and premounted in the appropriate
+hot plug tray for immediate installation into your corporate server or
+storage system. Supra drives eliminate the risk of firmware incompatibility.'
+));
+INSERT INTO product_descriptions VALUES (3354
+, 'US'
+, UNISTR(
+'HD 12GB /I'
+), UNISTR(
+'12GB capacity harddisk drive (internal). Supra drives eliminate the risk
+of firmware incompatibility. Backward compatibility: You can mix or
+match Supra2 and Supra3 devices for optimized solutions and future growth.'
+));
+INSERT INTO product_descriptions VALUES (3072
+, 'US'
+, UNISTR(
+'HD 12GB /N'
+), UNISTR(
+'12GB hard disk drive for Narrow Mount. Supra9 hot pluggable hard disk
+drives provide the ability to install or remove drives online. Our hot
+pluggable hard disk drives are required to meet our rigorous standards
+for reliability and performance.'
+));
+INSERT INTO product_descriptions VALUES (3334
+, 'US'
+, UNISTR(
+'HD 12GB /R'
+), UNISTR(
+'12GB Removable hard disk drive. With compatibility across many enterprise
+platforms, you are free to deploy and redeploy this drive to quickly
+deliver increased storage capacity. Supra7 Universal disk drives are the
+second generation of high performance hot plug drives sharing compatibility
+across corporate servers and external storage enclosures.'
+));
+INSERT INTO product_descriptions VALUES (3071
+, 'US'
+, UNISTR(
+'HD 12GB /S'
+), UNISTR(
+'12GB hard disk drive for Standard Mount. Supra9 hot pluggable hard disk
+drives provide the ability to install or remove drives online. Our hot
+pluggable hard disk drives are required to meet our rigorous standards
+for reliability and performance.'
+));
+INSERT INTO product_descriptions VALUES (2255
+, 'US'
+, UNISTR(
+'HD 12GB @7200 /SE'
+), UNISTR(
+'12GB capacity hard disk drive (external) SCSI, 7200 RPM. These drives
+are intended for use in today''s demanding, datacritical enterprise
+environments and can be used in RAID applications. Universal option kits
+are configured and premounted in the appropriate hot plug tray for
+immediate installation into your corporate server or storage system.'
+));
+INSERT INTO product_descriptions VALUES (1743
+, 'US'
+, UNISTR(
+'HD 18.2GB @10000 /E'
+), UNISTR(
+'External hard drive disk  18.2 GB, rated up to 10,000 RPM. These
+drives are intended for use in today''s demanding, datacritical
+enterprise environments and are ideal for use in RAID applications.'
+));
+INSERT INTO product_descriptions VALUES (2382
+, 'US'
+, UNISTR(
+'HD 18.2GB@10000 /I'
+), UNISTR(
+'18.2 GB SCSI hard disk @ 10000 RPM (internal). Supra7 Universal
+disk drives provide an unequaled level of investment protection and
+simplification for customers by enabling drive compatibility across
+many enterprise platforms.'
+));
+INSERT INTO product_descriptions VALUES (3399
+, 'US'
+, UNISTR(
+'HD 18GB /SE'
+), UNISTR(
+'18GB SCSI external hard disk drive. Supra5 Universal hard disk
+drives provide the ability to hot plug between various servers, RAID
+arrays, and external storage shelves.'
+));
+INSERT INTO product_descriptions VALUES (3073
+, 'US'
+, UNISTR(
+'HD 6GB /I'
+), UNISTR(
+'6GB capacity hard disk drive (internal). Supra drives eliminate the
+risk of firmware incompatibility.'
+));
+INSERT INTO product_descriptions VALUES (1768
+, 'US'
+, UNISTR(
+'HD 8.2GB @5400'
+), UNISTR(
+'Hard drive disk  8.2 GB, rated up to 5,400 RPM. Supra drives
+eliminate the risk of firmware incompatibility. Standard serial
+RS232 interface.'
+));
+INSERT INTO product_descriptions VALUES (2410
+, 'US'
+, UNISTR(
+'HD 8.4GB @5400'
+), UNISTR(
+'8.4 GB hard disk @ 5400 RPM. Reduced cost of ownership: Drives can
+be utilized across enterprise platforms. This hot pluggable hard disk
+drive is required to meet your rigorous standards for reliability
+and performance.'
+));
+INSERT INTO product_descriptions VALUES (2257
+, 'US'
+, UNISTR(
+'HD 8GB /I'
+), UNISTR(
+'8GB capacity hard disk drive (internal). Supra9 hot pluggable
+hard disk drives provide the ability to install or remove drives
+online. Backward compatibility: You can mix Supra2 and Supra3
+devices for optimized solutions and future growth.'
+));
+INSERT INTO product_descriptions VALUES (3400
+, 'US'
+, UNISTR(
+'HD 8GB /SE'
+), UNISTR(
+'8GB capacity SCSI hard disk drive (external). Supra7 disk drives
+provide the latest technology to improve enterprise performance,
+increasing the maximum data transfer rate up to 255MB/s.'
+));
+INSERT INTO product_descriptions VALUES (3355
+, 'US'
+, UNISTR(
+'HD 8GB /SI'
+), UNISTR(
+'8GB SCSI hard disk drive, internal. With compatibility across many
+enterprise platforms, you are free to deploy and redeploy this drive
+to quickly deliver increased storage capacity. '
+));
+INSERT INTO product_descriptions VALUES (1772
+, 'US'
+, UNISTR(
+'HD 9.1GB @10000'
+), UNISTR(
+'Hard disk drive  9.1 GB, rated up to 10,000 RPM. These drives
+are intended for use in datacritical enterprise environments.
+Ease of doing business: you can easily select the drives you need
+regardless of the application in which they will be deployed.'
+));
+INSERT INTO product_descriptions VALUES (2414
+, 'US'
+, UNISTR(
+'HD 9.1GB @10000 /I'
+), UNISTR(
+'9.1 GB SCSI hard disk @ 10000 RPM (internal). Supra7 disk
+drives are available in 10,000 RPM spindle speeds and capacities
+of 18GB and 9.1 GB. SCSI and RS232 interfaces.'
+));
+INSERT INTO product_descriptions VALUES (2415
+, 'US'
+, UNISTR(
+'HD 9.1GB @7200'
+), UNISTR(
+'9.1 GB hard disk @ 7200 RPM. Universal option kits are
+configured and premounted in the appropriate hot plug tray
+for immediate installation into your corporate server or storage
+system.'
+));
+INSERT INTO product_descriptions VALUES (2395
+, 'US'
+, UNISTR(
+'32MB Cache /M'
+), UNISTR(
+'32MB Mirrored cache memory (100MHz Registered SDRAM)'
+));
+INSERT INTO product_descriptions VALUES (1755
+, 'US'
+, UNISTR(
+'32MB Cache /NM'
+), UNISTR(
+'32MB NonMirrored cache memory'
+));
+INSERT INTO product_descriptions VALUES (2406
+, 'US'
+, UNISTR(
+'64MB Cache /M'
+), UNISTR(
+'64MB Mirrored cache memory'
+));
+INSERT INTO product_descriptions VALUES (2404
+, 'US'
+, UNISTR(
+'64MB Cache /NM'
+), UNISTR(
+'64 MB Nonmirrored cache memory. FPM memory chips are
+implemented on 5 volt SIMMs, but are also available on
+3.3 volt DIMMs.'
+));
+INSERT INTO product_descriptions VALUES (1770
+, 'US'
+, UNISTR(
+'8MB Cache /NM'
+), UNISTR(
+'8MB NonMirrored Cache Memory (100MHz Registered SDRAM)'
+));
+INSERT INTO product_descriptions VALUES (2412
+, 'US'
+, UNISTR(
+'8MB EDO Memory'
+), UNISTR(
+'8 MB 8x32 EDO SIM memory. Extended Data Out memory differs from FPM in a
+small, but significant design change. Unlike FPM, the data output drivers
+for EDO remain on when the memory controller removes the column address to
+begin the next cycle. Therefore, a new data cycle can begin before the
+previous cycle has completed. EDO is available on SIMMs and DIMMs, in 3.3
+and 5 volt varieties.'
+));
+INSERT INTO product_descriptions VALUES (2378
+, 'US'
+, UNISTR(
+'DIMM  128 MB'
+), UNISTR(
+'128 MB DIMM memory. The main reason for the change from SIMMs to DIMMs is
+to support the higher bus widths of 64bit processors. DIMMs are 64 or
+72bits wide; SIMMs are only 32 or 36bits wide (with parity).'
+));
+INSERT INTO product_descriptions VALUES (3087
+, 'US'
+, UNISTR(
+'DIMM  16 MB'
+), UNISTR(
+'Citrus OLX DIMM  16 MB capacity.'
+));
+INSERT INTO product_descriptions VALUES (2384
+, 'US'
+, UNISTR(
+'DIMM  1GB'
+), UNISTR(
+'Memory DIMM: RAM  1 GB capacity.'
+));
+INSERT INTO product_descriptions VALUES (1749
+, 'US'
+, UNISTR(
+'DIMM  256MB'
+), UNISTR(
+'Memory DIMM: RAM 256 MB. (100MHz Registered SDRAM)'
+));
+INSERT INTO product_descriptions VALUES (1750
+, 'US'
+, UNISTR(
+'DIMM  2GB'
+), UNISTR(
+'Memory DIMM: RAM, 2 GB capacity.'
+));
+INSERT INTO product_descriptions VALUES (2394
+, 'US'
+, UNISTR(
+'DIMM  32MB'
+), UNISTR(
+'32 MB DIMM Memory upgrade'
+));
+INSERT INTO product_descriptions VALUES (2400
+, 'US'
+, UNISTR(
+'DIMM  512 MB'
+), UNISTR(
+'512 MB DIMM memory. Improved memory upgrade granularity: Fewer DIMMs are
+required to upgrade a system than it would require if using SIMMs in the same
+system. Increased maximum memory ceilings: Given the same number of memory
+slots, the maximum memory of a system using DIMMs is more than one using
+SIMMs. DIMMs have separate contacts on each side of the board, which provide
+two times the data rate as one SIMM.'
+));
+INSERT INTO product_descriptions VALUES (1763
+, 'US'
+, UNISTR(
+'DIMM  64MB'
+), UNISTR(
+'Memory DIMM: RAM, 64MB (100MHz Unregistered ECC SDRAM)'
+));
+INSERT INTO product_descriptions VALUES (2396
+, 'US'
+, UNISTR(
+'EDO  32MB'
+), UNISTR(
+'Memory EDO SIM: RAM, 32 MB (100MHz Unregistered ECC SDRAM). Like FPM,
+EDO is available on SIMMs and DIMMs, in 3.3 and 5 volt varieties If EDO
+memory is installed in a computer that was not designed to support it,
+the memory may not work.'
+));
+INSERT INTO product_descriptions VALUES (2272
+, 'US'
+, UNISTR(
+'RAM  16 MB'
+), UNISTR(
+'Memory SIMM: RAM  16 MB capacity.'
+));
+INSERT INTO product_descriptions VALUES (2274
+, 'US'
+, UNISTR(
+'RAM  32 MB'
+), UNISTR(
+'Memory SIMM: RAM  32 MB capacity.'
+));
+INSERT INTO product_descriptions VALUES (3090
+, 'US'
+, UNISTR(
+'RAM  48 MB'
+), UNISTR(
+'Random Access Memory, SIMM  48 MB capacity.'
+));
+INSERT INTO product_descriptions VALUES (1739
+, 'US'
+, UNISTR(
+'SDRAM  128 MB'
+), UNISTR(
+'SDRAM memory, 128 MB capacity. SDRAM can access data at speeds up to 100
+MHz, which is up to four times as fast as standard DRAMs. The advantages of
+SDRAM can be fully realized, however, only by computers designed to support
+SDRAM. SDRAM is available on 5 and 3.3 volt DIMMs.'
+));
+INSERT INTO product_descriptions VALUES (3359
+, 'US'
+, UNISTR(
+'SDRAM  16 MB'
+), UNISTR(
+'SDRAM memory upgrade module, 16 MB. Synchronous Dynamic Random Access
+Memory was introduced after EDO. Its architecture and operation are based on
+those of the standard DRAM, but SDRAM provides a revolutionary change to main
+memory that further reduces data retrieval times. SDRAM is synchronized to
+the system clock that controls the CPU. This means that the system clock
+controlling the functions of the microprocessor also controls the SDRAM
+functions. This enables the memory controller to know on which clock cycle
+a data request will be ready, and therefore eliminates timing delays.'
+));
+INSERT INTO product_descriptions VALUES (3088
+, 'US'
+, UNISTR(
+'SDRAM  32 MB'
+), UNISTR(
+'SDRAM module with ECC  32 MB capacity. SDRAM has multiple memory banks
+that can work simultaneously. Switching between banks allows for a
+continuous data flow.'
+));
+INSERT INTO product_descriptions VALUES (2276
+, 'US'
+, UNISTR(
+'SDRAM  48 MB'
+), UNISTR(
+'Memory SIMM: RAM  48 MB. SDRAM can operate in burst mode. In burst
+mode, when a single data address is accessed, an entire block of data is
+retrieved rather than just the one piece. The assumption is that the next
+piece of data that will be requested will be sequential to the previous.
+Since this is usually the case, data is held readily available.'
+));
+INSERT INTO product_descriptions VALUES (3086
+, 'US'
+, UNISTR(
+'VRAM  16 MB'
+), UNISTR(
+'Citrus Video RAM module  16 MB capacity. VRAM is used by the video system
+in a computer to store video information and is reserved exclusively for
+video operations. It was developed to provide continuous streams of serial
+data for refreshing video screens.'
+));
+INSERT INTO product_descriptions VALUES (3091
+, 'US'
+, UNISTR(
+'VRAM  64 MB'
+), UNISTR(
+'Citrus Video RAM memory module  64 MB capacity. Physically, VRAM looks
+just like DRAM with added hardware called a shift register. The special
+feature of VRAM is that it can transfer one entire row of data (up to 256
+bits) into this shift register in a single clock cycle. This ability
+significantly reduces retrieval time, since the number of fetches is reduced
+from a possible 256 to a single fetch. The main benefit of having a shift
+register available for data dumps is that it frees the CPU to refresh the
+screen rather than retrieve data, thereby doubling the data bandwidth. For
+this reason, VRAM is often referred to as being dualported. However, the
+shift register will only be used when the VRAM chip is given special
+instructions to do so. The command to use the shift register is built into
+the graphics controller.'
+));
+INSERT INTO product_descriptions VALUES (1787
+, 'US'
+, UNISTR(
+'CPU D300'
+), UNISTR(
+'Dual CPU @ 300Mhz. For light personal processing only, or file servers
+with less than 5 concurrent users. This product will probably become
+obsolete soon.'
+));
+INSERT INTO product_descriptions VALUES (2439
+, 'US'
+, UNISTR(
+'CPU D400'
+), UNISTR(
+'Dual CPU @ 400Mhz. Good price/performance ratio; for midsize LAN
+file servers (up to 100 concurrent users).'
+));
+INSERT INTO product_descriptions VALUES (1788
+, 'US'
+, UNISTR(
+'CPU D600'
+), UNISTR(
+'Dual CPU @ 600Mhz. State of the art, high clock speed; for heavy
+load WAN servers (up to 200 concurrent users).'
+));
+INSERT INTO product_descriptions VALUES (2375
+, 'US'
+, UNISTR(
+'GP 1024x768'
+), UNISTR(
+'Graphics Processor, resolution 1024 X 768 pixels. Outstanding
+price/performance for 2D and 3D applications under SPNIX v3.3 and
+v4.0. Double your viewing power by running two monitors from this
+single card. Two 17 inch monitors have more screen area than one
+21 inch monitor. Excellent option for users that multitask
+frequently or access data from multiple sources often.'
+));
+INSERT INTO product_descriptions VALUES (2411
+, 'US'
+, UNISTR(
+'GP 1280x1024'
+), UNISTR(
+'Graphics Processor, resolution 1280 X 1024 pixels. High end 3D performance
+at a mid range price: 15 million Gouraud shaded triangles per second,
+Optimized 3D drivers for MCAD and DCC applications, with usercustomizable
+settings. 64MB DDR SDRAM unified frame buffer supporting true color at all
+supported standard resolutions.'
+));
+INSERT INTO product_descriptions VALUES (1769
+, 'US'
+, UNISTR(
+'GP 800x600'
+), UNISTR(
+'Graphics processor, resolution 800 x 600 pixels. Remarkable value for
+users requiring great 2D capabilities or general 3D support for advanced
+applications. Drives incredible performance in highly complex models and
+frees the customer to focus on the design, instead of the rendering process.'
+));
+INSERT INTO product_descriptions VALUES (2049
+, 'US'
+, UNISTR(
+'MB  S300'
+), UNISTR(
+'PC type motherboard, 300 Series.'
+));
+INSERT INTO product_descriptions VALUES (2751
+, 'US'
+, UNISTR(
+'MB  S450'
+), UNISTR(
+'PC type motherboard, 450 Series.'
+));
+INSERT INTO product_descriptions VALUES (3112
+, 'US'
+, UNISTR(
+'MB  S500'
+), UNISTR(
+'PC type motherboard, 500 Series.'
+));
+INSERT INTO product_descriptions VALUES (2752
+, 'US'
+, UNISTR(
+'MB  S550'
+), UNISTR(
+'PC type motherboard for the 550 Series.'
+));
+INSERT INTO product_descriptions VALUES (2293
+, 'US'
+, UNISTR(
+'MB  S600'
+), UNISTR(
+'Motherboard, 600 Series.'
+));
+INSERT INTO product_descriptions VALUES (3114
+, 'US'
+, UNISTR(
+'MB  S900/650+'
+), UNISTR(
+'PC motherboard, 900 Series; standard motherboard
+for all models 650 and up.'
+));
+INSERT INTO product_descriptions VALUES (3129
+, 'US'
+, UNISTR(
+'Sound Card STD'
+), UNISTR(
+'Sound Card  standard version, with MIDI interface,
+line in/out, low impedance microphone input.'
+));
+INSERT INTO product_descriptions VALUES (3133
+, 'US'
+, UNISTR(
+'Video Card /32'
+), UNISTR(
+'Video Card, with 32MB cache memory.'
+));
+INSERT INTO product_descriptions VALUES (2308
+, 'US'
+, UNISTR(
+'Video Card /E32'
+), UNISTR(
+'3D ELSA Video Card, with 32 MB memory.'
+));
+INSERT INTO product_descriptions VALUES (2496
+, 'US'
+, UNISTR(
+'WSP DA130'
+), UNISTR(
+'Wide storage processor DA130 for storage subunits.'
+));
+INSERT INTO product_descriptions VALUES (2497
+, 'US'
+, UNISTR(
+'WSP DA290'
+), UNISTR(
+'Wide storage processor (model DA290).'
+));
+INSERT INTO product_descriptions VALUES (3106
+, 'US'
+, UNISTR(
+'KB 101/EN'
+), UNISTR(
+'Standard PC/AT Enhanced Keyboard (101/102Key).
+Input locale: English (US).'
+));
+INSERT INTO product_descriptions VALUES (2289
+, 'US'
+, UNISTR(
+'KB 101/ES'
+), UNISTR(
+'Standard PC/AT Enhanced Keyboard (101/102Key).
+Input locale: Spanish.'
+));
+INSERT INTO product_descriptions VALUES (3110
+, 'US'
+, UNISTR(
+'KB 101/FR'
+), UNISTR(
+'Standard PC/AT Enhanced Keyboard (101/102Key).
+Input locale: French.'
+));
+INSERT INTO product_descriptions VALUES (3108
+, 'US'
+, UNISTR(
+'KB E/EN'
+), UNISTR(
+'Ergonomic Keyboard with two separate key areas,
+detachable numeric pad. Key layout: English (US).'
+));
+INSERT INTO product_descriptions VALUES (2058
+, 'US'
+, UNISTR(
+'Mouse +WP'
+), UNISTR(
+'Combination of a mouse and a wrist pad for more
+comfortable typing and mouse operation.'
+));
+INSERT INTO product_descriptions VALUES (2761
+, 'US'
+, UNISTR(
+'Mouse +WP/CL'
+), UNISTR(
+'Set consisting of a mouse and wrist pad,
+with corporate logo'
+));
+INSERT INTO product_descriptions VALUES (3117
+, 'US'
+, UNISTR(
+'Mouse C/E'
+), UNISTR(
+'Ergonomic, cordless mouse. With trackball
+for maximum comfort and ease of use.'
+));
+INSERT INTO product_descriptions VALUES (2056
+, 'US'
+, UNISTR(
+'Mouse Pad /CL'
+), UNISTR(
+'Standard mouse pad, with corporate logo'
+));
+INSERT INTO product_descriptions VALUES (2211
+, 'US'
+, UNISTR(
+'Wrist Pad'
+), UNISTR(
+'A foam strip to support your wrists when using a keyboard'
+));
+INSERT INTO product_descriptions VALUES (2944
+, 'US'
+, UNISTR(
+'Wrist Pad /CL'
+), UNISTR(
+'Wrist Pad with corporate logo'
+));
+INSERT INTO product_descriptions VALUES (1742
+, 'US'
+, UNISTR(
+'CDROM 500/16x'
+), UNISTR(
+'CD drive, read only, speed 16x, maximum capacity 500 MB.'
+));
+INSERT INTO product_descriptions VALUES (2402
+, 'US'
+, UNISTR(
+'CDROM 600/E/24x'
+), UNISTR(
+'600 MB external 24x speed CDROM drive (read only).'
+));
+INSERT INTO product_descriptions VALUES (2403
+, 'US'
+, UNISTR(
+'CDROM 600/I/24x'
+), UNISTR(
+'600 MB internal read only CDROM drive,
+reading speed 24x'
+));
+INSERT INTO product_descriptions VALUES (1761
+, 'US'
+, UNISTR(
+'CDROM 600/I/32x'
+), UNISTR(
+'600 MB Internal CDROM Drive, speed 32x (read only).'
+));
+INSERT INTO product_descriptions VALUES (2381
+, 'US'
+, UNISTR(
+'CDROM 8x'
+), UNISTR(
+'CD Writer, read only, speed 8x'
+));
+INSERT INTO product_descriptions VALUES (2424
+, 'US'
+, UNISTR(
+'CDW 12/24'
+), UNISTR(
+'CD Writer, speed 12x write, 24x read. Warning: will become obsolete very
+soon; this speed is not high enough anymore, and better alternatives are
+available for a reasonable price.'
+));
+INSERT INTO product_descriptions VALUES (1781
+, 'US'
+, UNISTR(
+'CDW 20/48/E'
+), UNISTR(
+'CD Writer, read 48x, write 20x'
+));
+INSERT INTO product_descriptions VALUES (2264
+, 'US'
+, UNISTR(
+'CDW 20/48/I'
+), UNISTR(
+'CDROM drive: read 20x, write 48x (internal)'
+));
+INSERT INTO product_descriptions VALUES (2260
+, 'US'
+, UNISTR(
+'DFD 1.44/3.5'
+), UNISTR(
+'Dual Floppy Drive  1.44 MB  3.5'
+));
+INSERT INTO product_descriptions VALUES (2266
+, 'US'
+, UNISTR(
+'DVD 12x'
+), UNISTR(
+'DVDROM drive: speed 12x'
+));
+INSERT INTO product_descriptions VALUES (3077
+, 'US'
+, UNISTR(
+'DVD 8x'
+), UNISTR(
+'DVD  ROM drive, 8x speed. Will probably become
+obsolete pretty soon...'
+));
+INSERT INTO product_descriptions VALUES (2259
+, 'US'
+, UNISTR(
+'FD 1.44/3.5'
+), UNISTR(
+'Floppy Drive  1.44 MB High Density
+capacity  3.5 inch chassis'
+));
+INSERT INTO product_descriptions VALUES (2261
+, 'US'
+, UNISTR(
+'FD 1.44/3.5/E'
+), UNISTR(
+'Floppy disk drive  1.44 MB (high density)
+capacity  3.5 inch (external)'
+));
+INSERT INTO product_descriptions VALUES (3082
+, 'US'
+, UNISTR(
+'Modem  56/90/E'
+), UNISTR(
+'Modem  56kb per second, v.90 PCI Global compliant.
+External; for power supply 110V.'
+));
+INSERT INTO product_descriptions VALUES (2270
+, 'US'
+, UNISTR(
+'Modem  56/90/I'
+), UNISTR(
+'Modem  56kb per second, v.90 PCI Global compliant.
+Internal, for standard chassis (3.5 inch).'
+));
+INSERT INTO product_descriptions VALUES (2268
+, 'US'
+, UNISTR(
+'Modem  56/H/E'
+), UNISTR(
+'Standard Hayes compatible modem  56kb per second, external.
+Power supply: 220V.'
+));
+INSERT INTO product_descriptions VALUES (3083
+, 'US'
+, UNISTR(
+'Modem  56/H/I'
+), UNISTR(
+'Standard Hayes modem  56kb per second, internal, for
+ standard 3.5 inch chassis.'
+));
+INSERT INTO product_descriptions VALUES (2374
+, 'US'
+, UNISTR(
+'Modem  C/100'
+), UNISTR(
+'DOCSIS/EURODOCSIS 1.0/1.1compliant external cable modem'
+));
+INSERT INTO product_descriptions VALUES (1740
+, 'US'
+, UNISTR(
+'TD 12GB/DAT'
+), UNISTR(
+'Tape drive  12 gigabyte capacity, DAT format.'
+));
+INSERT INTO product_descriptions VALUES (2409
+, 'US'
+, UNISTR(
+'TD 7GB/8'
+), UNISTR(
+'Tape drive, 7GB capacity, 8mm cartridge tape.'
+));
+INSERT INTO product_descriptions VALUES (2262
+, 'US'
+, UNISTR(
+'ZIP 100'
+), UNISTR(
+'ZIP Drive, 100 MB capacity (external) plus cable for
+parallel port connection'
+));
+INSERT INTO product_descriptions VALUES (2522
+, 'US'
+, UNISTR(
+'Battery  EL'
+), UNISTR(
+'Extended life battery, for laptop computers'
+));
+INSERT INTO product_descriptions VALUES (2278
+, 'US'
+, UNISTR(
+'Battery  NiHM'
+), UNISTR(
+'Rechargeable NiHM battery for laptop computers'
+));
+INSERT INTO product_descriptions VALUES (2418
+, 'US'
+, UNISTR(
+'Battery Backup (DA130)'
+), UNISTR(
+'Singlebattery charger with LED indicators'
+));
+INSERT INTO product_descriptions VALUES (2419
+, 'US'
+, UNISTR(
+'Battery Backup (DA290)'
+), UNISTR(
+'Twobattery charger with LED indicators'
+));
+INSERT INTO product_descriptions VALUES (3097
+, 'US'
+, UNISTR(
+'Cable Connector  32R'
+), UNISTR(
+'Cable Connector  32 pin ribbon'
+));
+INSERT INTO product_descriptions VALUES (3099
+, 'US'
+, UNISTR(
+'Cable Harness'
+), UNISTR(
+'Cable harness to organize and bundle computer wiring'
+));
+INSERT INTO product_descriptions VALUES (2380
+, 'US'
+, UNISTR(
+'Cable PR/15/P'
+), UNISTR(
+'15 foot parallel printer cable'
+));
+INSERT INTO product_descriptions VALUES (2408
+, 'US'
+, UNISTR(
+'Cable PR/P/6'
+), UNISTR(
+'Standard Centronics 6ft printer cable, parallel port'
+));
+INSERT INTO product_descriptions VALUES (2457
+, 'US'
+, UNISTR(
+'Cable PR/S/6'
+), UNISTR(
+'Standard RS232 serial printer cable, 6 feet'
+));
+INSERT INTO product_descriptions VALUES (2373
+, 'US'
+, UNISTR(
+'Cable RS232 10/AF'
+), UNISTR(
+'10 ft RS232 cable with F/F and 9F/25F adapters'
+));
+INSERT INTO product_descriptions VALUES (1734
+, 'US'
+, UNISTR(
+'Cable RS232 10/AM'
+), UNISTR(
+'10 ft RS232 cable with M/M and 9M/25M adapters'
+));
+INSERT INTO product_descriptions VALUES (1737
+, 'US'
+, UNISTR(
+'Cable SCSI 10/FW/ADS'
+), UNISTR(
+'10ft SCSI2 F/W Adapt to DSxx0 Cable'
+));
+INSERT INTO product_descriptions VALUES (1745
+, 'US'
+, UNISTR(
+'Cable SCSI 20/WD>D'
+), UNISTR(
+'20ft SCSI2 Wide Disk Store to Disk Store Cable'
+));
+INSERT INTO product_descriptions VALUES (2982
+, 'US'
+, UNISTR(
+'Drive Mount  A'
+), UNISTR(
+'Drive Mount assembly kit'
+));
+INSERT INTO product_descriptions VALUES (3277
+, 'US'
+, UNISTR(
+'Drive Mount  A/T'
+), UNISTR(
+'Drive Mount assembly kit for tower PC'
+));
+INSERT INTO product_descriptions VALUES (2976
+, 'US'
+, UNISTR(
+'Drive Mount  D'
+), UNISTR(
+'Drive Mount for desktop PC'
+));
+INSERT INTO product_descriptions VALUES (3204
+, 'US'
+, UNISTR(
+'Envoy DS'
+), UNISTR(
+'Envoy Docking Station'
+));
+INSERT INTO product_descriptions VALUES (2638
+, 'US'
+, UNISTR(
+'Envoy DS/E'
+), UNISTR(
+'Enhanced Envoy Docking Station'
+));
+INSERT INTO product_descriptions VALUES (3020
+, 'US'
+, UNISTR(
+'Envoy IC'
+), UNISTR(
+'Envoy Internet Computer, Plug&Play'
+));
+INSERT INTO product_descriptions VALUES (1948
+, 'US'
+, UNISTR(
+'Envoy IC/58'
+), UNISTR(
+'Internet computer with builtin 58K modem'
+));
+INSERT INTO product_descriptions VALUES (3003
+, 'US'
+, UNISTR(
+'Laptop 128/12/56/v90/110'
+), UNISTR(
+'Envoy Laptop, 128MB memory, 12GB hard disk, v90 modem,
+110V power supply.'
+));
+INSERT INTO product_descriptions VALUES (2999
+, 'US'
+, UNISTR(
+'Laptop 16/8/110'
+), UNISTR(
+'Envoy Laptop, 16MB memory, 8GB hard disk,
+110V power supply (US only).'
+));
+INSERT INTO product_descriptions VALUES (3000
+, 'US'
+, UNISTR(
+'Laptop 32/10/56'
+), UNISTR(
+'Envoy Laptop, 32MB memory, 10GB hard disk, 56K Modem,
+universal power supply (switchable).'
+));
+INSERT INTO product_descriptions VALUES (3001
+, 'US'
+, UNISTR(
+'Laptop 48/10/56/110'
+), UNISTR(
+'Envoy Laptop, 48MB memory, 10GB hard disk, 56K modem,
+110V power supply.'
+));
+INSERT INTO product_descriptions VALUES (3004
+, 'US'
+, UNISTR(
+'Laptop 64/10/56/220'
+), UNISTR(
+'Envoy Laptop, 64MB memory, 10GB hard disk, 56K modem,
+220V power supply.'
+));
+INSERT INTO product_descriptions VALUES (3391
+, 'US'
+, UNISTR(
+'PS 110/220'
+), UNISTR(
+'Power Supply  switchable, 110V/220V'
+));
+INSERT INTO product_descriptions VALUES (3124
+, 'US'
+, UNISTR(
+'PS 110V /T'
+), UNISTR(
+'Power supply for tower PC, 110V'
+));
+INSERT INTO product_descriptions VALUES (1738
+, 'US'
+, UNISTR(
+'PS 110V /US'
+), UNISTR(
+'110 V Power Supply  US compatible'
+));
+INSERT INTO product_descriptions VALUES (2377
+, 'US'
+, UNISTR(
+'PS 110V HS/US'
+), UNISTR(
+'110 V hot swappable power supply  US compatible'
+));
+INSERT INTO product_descriptions VALUES (2299
+, 'US'
+, UNISTR(
+'PS 12V /P'
+), UNISTR(
+'Power Supply  12v portable'
+));
+INSERT INTO product_descriptions VALUES (3123
+, 'US'
+, UNISTR(
+'PS 220V /D'
+), UNISTR(
+'Standard power supply, 220V, for desktop computers.'
+));
+INSERT INTO product_descriptions VALUES (1748
+, 'US'
+, UNISTR(
+'PS 220V /EUR'
+), UNISTR(
+'220 Volt Power supply type  Europe'
+));
+INSERT INTO product_descriptions VALUES (2387
+, 'US'
+, UNISTR(
+'PS 220V /FR'
+), UNISTR(
+'220V Power supply type  France'
+));
+INSERT INTO product_descriptions VALUES (2370
+, 'US'
+, UNISTR(
+'PS 220V /HS/FR'
+), UNISTR(
+'220V hot swappable power supply, for France.'
+));
+INSERT INTO product_descriptions VALUES (2311
+, 'US'
+, UNISTR(
+'PS 220V /L'
+), UNISTR(
+'Power supply for laptop computers, 220V'
+));
+INSERT INTO product_descriptions VALUES (1733
+, 'US'
+, UNISTR(
+'PS 220V /UK'
+), UNISTR(
+'220V Power supply type  United Kingdom'
+));
+INSERT INTO product_descriptions VALUES (2878
+, 'US'
+, UNISTR(
+'Router  ASR/2W'
+), UNISTR(
+'Special ALS Router  Approved Supplier required item with 2way match'
+));
+INSERT INTO product_descriptions VALUES (2879
+, 'US'
+, UNISTR(
+'Router  ASR/3W'
+), UNISTR(
+'Special ALS Router  Approved Supplier required item with 3way match'
+));
+INSERT INTO product_descriptions VALUES (2152
+, 'US'
+, UNISTR(
+'Router  DTMF4'
+), UNISTR(
+'DTMF 4 port router'
+));
+INSERT INTO product_descriptions VALUES (3301
+, 'US'
+, UNISTR(
+'Screws <B.28.P>'
+), UNISTR(
+'Screws: Brass, size 28mm, Phillips head. Plastic box, contents 500.'
+));
+INSERT INTO product_descriptions VALUES (3143
+, 'US'
+, UNISTR(
+'Screws <B.28.S>'
+), UNISTR(
+'Screws: Brass, size 28mm, straight. Plastic box, contents 500.'
+));
+INSERT INTO product_descriptions VALUES (2323
+, 'US'
+, UNISTR(
+'Screws <B.32.P>'
+), UNISTR(
+'Screws: Brass, size 32mm, Phillips head. Plastic box, contents 400.'
+));
+INSERT INTO product_descriptions VALUES (3134
+, 'US'
+, UNISTR(
+'Screws <B.32.S>'
+), UNISTR(
+'Screws: Brass, size 32mm, straight. Plastic box, contents 400.'
+));
+INSERT INTO product_descriptions VALUES (3139
+, 'US'
+, UNISTR(
+'Screws <S.16.S>'
+), UNISTR(
+'Screws: Steel, size 16 mm, straight. Carton box, contents 750.'
+));
+INSERT INTO product_descriptions VALUES (3300
+, 'US'
+, UNISTR(
+'Screws <S.32.P>'
+), UNISTR(
+'Screws: Steel, size 32mm, Phillips head. Plastic box, contents 400.'
+));
+INSERT INTO product_descriptions VALUES (2316
+, 'US'
+, UNISTR(
+'Screws <S.32.S>'
+), UNISTR(
+'Screws: Steel, size 32mm, straight. Plastic box, contents 500.'
+));
+INSERT INTO product_descriptions VALUES (3140
+, 'US'
+, UNISTR(
+'Screws <Z.16.S>'
+), UNISTR(
+'Screws: Zinc, length 16mm, straight. Carton box, contents 750.'
+));
+INSERT INTO product_descriptions VALUES (2319
+, 'US'
+, UNISTR(
+'Screws <Z.24.S>'
+), UNISTR(
+'Screws: Zinc, size 24mm, straight. Carton box, contents 500.'
+));
+INSERT INTO product_descriptions VALUES (2322
+, 'US'
+, UNISTR(
+'Screws <Z.28.P>'
+), UNISTR(
+'Screws: Zinc, size 28 mm, Phillips head. Carton box, contents 850.'
+));
+INSERT INTO product_descriptions VALUES (3178
+, 'US'
+, UNISTR(
+'Spreadsheet  SSP/V 2.0'
+), UNISTR(
+'SmartSpread Spreadsheet, Professional Edition Version 2.0, for Vision
+Release 11.1 and 11.2. Shrink wrap includes CDROM containing advanced
+software and online documentation, plus printed manual, tutorial, and
+license registration.'
+));
+INSERT INTO product_descriptions VALUES (3179
+, 'US'
+, UNISTR(
+'Spreadsheet  SSS/S 2.1'
+), UNISTR(
+'SmartSpread Spreadsheet, Standard Edition Version 2.1, for SPNIX Release
+4.0. Shrink wrap includes CDROM containing software and online
+documentation, plus printed manual and license registration.'
+));
+INSERT INTO product_descriptions VALUES (3182
+, 'US'
+, UNISTR(
+'Word Processing  SWP/V 4.5'
+), UNISTR(
+'SmartWord Word Processor, Professional Edition Version 4.5, for Vision
+Release 11.x. Shrink wrap includes CDROM, containing advanced software,
+printed manual, and license registration.'
+));
+INSERT INTO product_descriptions VALUES (3183
+, 'US'
+, UNISTR(
+'Word Processing  SWS/V 4.5'
+), UNISTR(
+'SmartWord Word Processor, Standard Edition Version 4.5, for Vision
+Release 11.x. Shrink wrap includes CDROM and license registration.'
+));
+INSERT INTO product_descriptions VALUES (3197
+, 'US'
+, UNISTR(
+'Spreadsheet  SSS/V 2.1'
+), UNISTR(
+'SmartSpread Spreadsheet, Standard Edition Version 2.1, for Vision
+Release 11.1 and 11.2. Shrink wrap includes CDROM containing software
+and online documentation, plus printed manual, tutorial, and license
+registration.'
+));
+INSERT INTO product_descriptions VALUES (3255
+, 'US'
+, UNISTR(
+'Spreadsheet  SSS/CD 2.2B'
+), UNISTR(
+'SmartSpread Spreadsheet, Standard Edition, Beta Version 2.2, for
+SPNIX Release 4.1. CDROM only.'
+));
+INSERT INTO product_descriptions VALUES (3256
+, 'US'
+, UNISTR(
+'Spreadsheet  SSS/V 2.0'
+), UNISTR(
+'SmartSpread Spreadsheet, Standard Edition Version 2.0, for Vision
+Release 11.0. Shrink wrap includes CDROM containing software and
+online documentation, plus printed manual, tutorial, and license
+registration.'
+));
+INSERT INTO product_descriptions VALUES (3260
+, 'US'
+, UNISTR(
+'Word Processing  SWP/S 4.4'
+), UNISTR(
+'SmartSpread Spreadsheet, Standard Edition Version 2.2, for SPNIX
+Release 4.x. Shrink wrap includes CDROM, containing software, plus
+printed manual and license registration.'
+));
+INSERT INTO product_descriptions VALUES (3262
+, 'US'
+, UNISTR(
+'Spreadsheet  SSS/S 2.2'
+), UNISTR(
+'SmartSpread Spreadsheet, Standard Edition Version 2.2, for SPNIX
+Release 4.1. Shrink wrap includes CDROM containing software and
+online documentation, plus printed manual and license registration.'
+));
+INSERT INTO product_descriptions VALUES (3361
+, 'US'
+, UNISTR(
+'Spreadsheet  SSP/S 1.5'
+), UNISTR(
+'SmartSpread Spreadsheet, Standard Edition Version 1.5, for SPNIX
+Release 3.3. Shrink wrap includes CDROM containing advanced software and
+online documentation, plus printed manual, tutorial, and license registration.'
+));
+INSERT INTO product_descriptions VALUES (1799
+, 'US'
+, UNISTR(
+'SPNIX3.3  SL'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  Base Server License. Includes
+10 general licenses for system administration, developers, or users. No
+network user licensing. '
+));
+INSERT INTO product_descriptions VALUES (1801
+, 'US'
+, UNISTR(
+'SPNIX3.3  AL'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  Additional system
+administrator license, including network access.'
+));
+INSERT INTO product_descriptions VALUES (1803
+, 'US'
+, UNISTR(
+'SPNIX3.3  DL'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  Additional developer license.'
+));
+INSERT INTO product_descriptions VALUES (1804
+, 'US'
+, UNISTR(
+'SPNIX3.3  UL/N'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  Additional user license with
+network access.'
+));
+INSERT INTO product_descriptions VALUES (1805
+, 'US'
+, UNISTR(
+'SPNIX3.3  UL/A'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  Additional user license class A.'
+));
+INSERT INTO product_descriptions VALUES (1806
+, 'US'
+, UNISTR(
+'SPNIX3.3  UL/C'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  Additional user license class C.'
+));
+INSERT INTO product_descriptions VALUES (1808
+, 'US'
+, UNISTR(
+'SPNIX3.3  UL/D'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  Additional user license class D.'
+));
+INSERT INTO product_descriptions VALUES (1820
+, 'US'
+, UNISTR(
+'SPNIX3.3  NL'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  Additional network access license.'
+));
+INSERT INTO product_descriptions VALUES (1822
+, 'US'
+, UNISTR(
+'SPNIX4.0  SL'
+), UNISTR(
+'Operating System Software: SPNIX V4.0  Base Server License. Includes
+10 general licenses for system administration, developers, or users. No
+network user licensing. '
+));
+INSERT INTO product_descriptions VALUES (2422
+, 'US'
+, UNISTR(
+'SPNIX4.0  SAL'
+), UNISTR(
+'Operating System Software: SPNIX V4.0  Additional system
+administrator license, including network access.'
+));
+INSERT INTO product_descriptions VALUES (2452
+, 'US'
+, UNISTR(
+'SPNIX4.0  DL'
+), UNISTR(
+'Operating System Software: SPNIX V4.0  Additional developer license.'
+));
+INSERT INTO product_descriptions VALUES (2462
+, 'US'
+, UNISTR(
+'SPNIX4.0  UL/N'
+), UNISTR(
+'Operating System Software: SPNIX V4.0  Additional user license with
+network access.'
+));
+INSERT INTO product_descriptions VALUES (2464
+, 'US'
+, UNISTR(
+'SPNIX4.0  UL/A'
+), UNISTR(
+'Operating System Software: SPNIX V4.0  Additional user license class A.'
+));
+INSERT INTO product_descriptions VALUES (2467
+, 'US'
+, UNISTR(
+'SPNIX4.0  UL/D'
+), UNISTR(
+'Operating System Software: SPNIX V4.0  Additional user license class D.'
+));
+INSERT INTO product_descriptions VALUES (2468
+, 'US'
+, UNISTR(
+'SPNIX4.0  UL/C'
+), UNISTR(
+'Operating System Software: SPNIX V4.0  Additional user license class C.'
+));
+INSERT INTO product_descriptions VALUES (2470
+, 'US'
+, UNISTR(
+'SPNIX4.0  NL'
+), UNISTR(
+'Operating System Software: SPNIX V4.0  Additional network access license.'
+));
+INSERT INTO product_descriptions VALUES (2471
+, 'US'
+, UNISTR(
+'SPNIX3.3 SU'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  Base Server License Upgrade
+to V4.0.'
+));
+INSERT INTO product_descriptions VALUES (2492
+, 'US'
+, UNISTR(
+'SPNIX3.3 AU'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  V4.0 upgrade; class A user.'
+));
+INSERT INTO product_descriptions VALUES (2493
+, 'US'
+, UNISTR(
+'SPNIX3.3 C/DU'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  V4.0 upgrade; class C or D user.'
+));
+INSERT INTO product_descriptions VALUES (2494
+, 'US'
+, UNISTR(
+'SPNIX3.3 NU'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  V4.0 upgrade; network access license.'
+));
+INSERT INTO product_descriptions VALUES (2995
+, 'US'
+, UNISTR(
+'SPNIX3.3 SAU'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  V4.0 upgrade; system
+administrator license.'
+));
+INSERT INTO product_descriptions VALUES (3290
+, 'US'
+, UNISTR(
+'SPNIX3.3 DU'
+), UNISTR(
+'Operating System Software: SPNIX V3.3  V4.0 upgrade; developer license.'
+));
+INSERT INTO product_descriptions VALUES (1778
+, 'US'
+, UNISTR(
+'C for SPNIX3.3  1 Seat'
+), UNISTR(
+'C programming software for SPNIX V3.3  single user'
+));
+INSERT INTO product_descriptions VALUES (1779
+, 'US'
+, UNISTR(
+'C for SPNIX3.3  Doc'
+), UNISTR(
+'C programming language documentation
+, SPNIX V3.3'
+));
+INSERT INTO product_descriptions VALUES (1780
+, 'US'
+, UNISTR(
+'C for SPNIX3.3  Sys'
+), UNISTR(
+'C programming software for SPNIX V3.3  system compiler,
+libraries, linker'
+));
+INSERT INTO product_descriptions VALUES (2371
+, 'US'
+, UNISTR(
+'C for SPNIX4.0  Doc'
+), UNISTR(
+'C programming language documentation, SPNIX V4.0'
+));
+INSERT INTO product_descriptions VALUES (2423
+, 'US'
+, UNISTR(
+'C for SPNIX4.0  1 Seat'
+), UNISTR(
+'C programming software for SPNIX V4.0  single user'
+));
+INSERT INTO product_descriptions VALUES (3501
+, 'US'
+, UNISTR(
+'C for SPNIX4.0  Sys'
+), UNISTR(
+'C programming software for SPNIX V4.0  system compiler,
+libraries, linker'
+));
+INSERT INTO product_descriptions VALUES (3502
+, 'US'
+, UNISTR(
+'C for SPNIX3.3 Sys/U'
+), UNISTR(
+'C programming software for SPNIX V3.3  4.0 Upgrade; system compiler, libraries, linker'
+));
+INSERT INTO product_descriptions VALUES (3503
+, 'US'
+, UNISTR(
+'C for SPNIX3.3  Seat/U'
+), UNISTR(
+'C programming software for SPNIX V3.3  4.0 Upgrade  single user'
+));
+INSERT INTO product_descriptions VALUES (1774
+, 'US'
+, UNISTR(
+'Base ISO CP  BL'
+), UNISTR(
+'Base ISO Communication Package  Base License'
+));
+INSERT INTO product_descriptions VALUES (1775
+, 'US'
+, UNISTR(
+'Client ISO CP  S'
+), UNISTR(
+'ISO Communication Package addon license for additional SPNIX V3.3 client.'
+));
+INSERT INTO product_descriptions VALUES (1794
+, 'US'
+, UNISTR(
+'OSI 816/IL'
+), UNISTR(
+'OSI Layer 8 to 16  Incremental License'
+));
+INSERT INTO product_descriptions VALUES (1825
+, 'US'
+, UNISTR(
+'X25  1 Line License'
+), UNISTR(
+'X25 network access control system, single user'
+));
+INSERT INTO product_descriptions VALUES (2004
+, 'US'
+, UNISTR(
+'IC Browser  S'
+), UNISTR(
+'IC Web Browser for SPNIX. Browser with network mail capability.'
+));
+INSERT INTO product_descriptions VALUES (2005
+, 'US'
+, UNISTR(
+'IC Browser Doc  S'
+), UNISTR(
+'Documentation set for IC Web Browser for SPNIX. Includes Installation
+Manual, Mail Server Administration Guide, and User Quick Reference.'
+));
+INSERT INTO product_descriptions VALUES (2416
+, 'US'
+, UNISTR(
+'Client ISO CP  S'
+), UNISTR(
+'ISO Communication Package addon license for additional SPNIX V4.0 client.'
+));
+INSERT INTO product_descriptions VALUES (2417
+, 'US'
+, UNISTR(
+'Client ISO CP  V'
+), UNISTR(
+'ISO Communication Package addon license for additional Vision client.'
+));
+INSERT INTO product_descriptions VALUES (2449
+, 'US'
+, UNISTR(
+'OSI 14/IL'
+), UNISTR(
+'OSI Layer 1 to 4  Incremental License'
+));
+INSERT INTO product_descriptions VALUES (3101
+, 'US'
+, UNISTR(
+'IC Browser  V'
+), UNISTR(
+'IC Web Browser for Vision with manual. Browser with network mail capability.'
+));
+INSERT INTO product_descriptions VALUES (3170
+, 'US'
+, UNISTR(
+'Smart Suite  V/SP'
+), UNISTR(
+'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for Vision.
+Spanish language software and user manuals.'
+));
+INSERT INTO product_descriptions VALUES (3171
+, 'US'
+, UNISTR(
+'Smart Suite  S3.3/EN'
+), UNISTR(
+'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for SPNIX
+Version 3.3. English language software and user manuals.'
+));
+INSERT INTO product_descriptions VALUES (3172
+, 'US'
+, UNISTR(
+'Graphics  DIK+'
+), UNISTR(
+'Software Kit Graphics: DrawIt KwikPlus. Includes extensive clip art
+files and advanced drawing tools for 3D object manipulation, variable
+shading, and extended character fonts.'
+));
+INSERT INTO product_descriptions VALUES (3173
+, 'US'
+, UNISTR(
+'Graphics  SA'
+), UNISTR(
+'Software Kit Graphics: SmartArt. Professional graphics package for
+SPNIX with multiple line styles, textures, builtin shapes and common symbols.'
+));
+INSERT INTO product_descriptions VALUES (3175
+, 'US'
+, UNISTR(
+'Project Management  S4.0'
+), UNISTR(
+'Project Management Software, for SPNIX V4.0. Software includes command
+line and graphical interface with text, graphic, spreadsheet, and
+customizable report formats.'
+));
+INSERT INTO product_descriptions VALUES (3176
+, 'US'
+, UNISTR(
+'Smart Suite  V/EN'
+), UNISTR(
+'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
+Vision. English language software and user manuals.'
+));
+INSERT INTO product_descriptions VALUES (3177
+, 'US'
+, UNISTR(
+'Smart Suite  V/FR'
+), UNISTR(
+'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
+Vision. French language software and user manuals.'
+));
+INSERT INTO product_descriptions VALUES (3245
+, 'US'
+, UNISTR(
+'Smart Suite  S4.0/FR'
+), UNISTR(
+'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
+SPNIX V4.0. French language software and user manuals.'
+));
+INSERT INTO product_descriptions VALUES (3246
+, 'US'
+, UNISTR(
+'Smart Suite  S4.0/SP'
+), UNISTR(
+'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
+SPNIX V4.0. Spanish language software and user manuals.'
+));
+INSERT INTO product_descriptions VALUES (3247
+, 'US'
+, UNISTR(
+'Smart Suite  V/DE'
+), UNISTR(
+'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
+Vision. German language software and user manuals.'
+));
+INSERT INTO product_descriptions VALUES (3248
+, 'US'
+, UNISTR(
+'Smart Suite  S4.0/DE'
+), UNISTR(
+'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
+SPNIX V4.0. German language software and user manuals.'
+));
+INSERT INTO product_descriptions VALUES (3250
+, 'US'
+, UNISTR(
+'Graphics  DIK'
+), UNISTR(
+'Software Kit Graphics: DrawIt Kwik. Simple graphics package for
+Vision systems, with options to save in GIF, JPG, and BMP formats.'
+));
+INSERT INTO product_descriptions VALUES (3251
+, 'US'
+, UNISTR(
+'Project Management  V'
+), UNISTR(
+'Project Management Software, for Vision. Software includes command
+line and graphical interface with text, graphic, spreadsheet, and
+customizable report formats.'
+));
+INSERT INTO product_descriptions VALUES (3252
+, 'US'
+, UNISTR(
+'Project Management  S3.3'
+), UNISTR(
+'Project Management Software, for SPNIX V3.3. Software includes command
+line and graphical interface with text, graphic, spreadsheet, and
+customizable report formats.'
+));
+INSERT INTO product_descriptions VALUES (3253
+, 'US'
+, UNISTR(
+'Smart Suite  S4.0/EN'
+), UNISTR(
+'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
+SPNIX V4.0. English language software and user manuals.'
+));
+INSERT INTO product_descriptions VALUES (3257
+, 'US'
+, UNISTR(
+'Web Browser  SB/S 2.1'
+), UNISTR(
+'Software Kit Web Browser: SmartBrowse V2.1 for SPNIX V3.3. Includes
+context sensitive help files and online documentation.'
+));
+INSERT INTO product_descriptions VALUES (3258
+, 'US'
+, UNISTR(
+'Web Browser  SB/V 1.0'
+), UNISTR(
+'Software Kit Web Browser: SmartBrowse V2.1 for Vision. Includes
+context sensitive help files and online documentation.'
+));
+INSERT INTO product_descriptions VALUES (3362
+, 'US'
+, UNISTR(
+'Web Browser  SB/S 4.0'
+), UNISTR(
+'Software Kit Web Browser: SmartBrowse V4.0 for SPNIX V4.0. Includes
+context sensitive help files and online documentation.'
+));
+INSERT INTO product_descriptions VALUES (2231
+, 'US'
+, UNISTR(
+'Desk  S/V'
+), UNISTR(
+'Standardsized desk; capitalizable, taxable item. Final finish is from
+veneer in stock at time of order, including oak, ash, cherry, and mahogany.'
+));
+INSERT INTO product_descriptions VALUES (2335
+, 'US'
+, UNISTR(
+'Mobile phone'
+), UNISTR(
+'Dual band mobile phone with low battery consumption. Lightweight,
+foldable, with socket for single earphone and spare battery compartment.'
+));
+INSERT INTO product_descriptions VALUES (2350
+, 'US'
+, UNISTR(
+'Desk  W/48'
+), UNISTR(
+'Desk  48 inch white laminate without return; capitalizable, taxable item.'
+));
+INSERT INTO product_descriptions VALUES (2351
+, 'US'
+, UNISTR(
+'Desk  W/48/R'
+), UNISTR(
+'Desk  60 inch white laminate with 48 inch return; capitalizable,
+taxable item.'
+));
+INSERT INTO product_descriptions VALUES (2779
+, 'US'
+, UNISTR(
+'Desk  OS/O/F'
+), UNISTR(
+'Executivestyle oversized oak desk with file drawers. Final finish is
+customizable when ordered, light or dark oak stain,
+or natural hand rubbed clear.'
+));
+INSERT INTO product_descriptions VALUES (3337
+, 'US'
+, UNISTR(
+'Mobile Web Phone'
+), UNISTR(
+'Mobile phone including monthly fee for Web access. Slimline shape
+with leatherlook carrying case and belt clip.'
+));
+INSERT INTO product_descriptions VALUES (2091
+, 'US'
+, UNISTR(
+'Paper Tablet LW 8 1/2 x 11'
+), UNISTR(
+'Paper tablet, lined, white, size 8 1/2 x 11 inch'
+));
+INSERT INTO product_descriptions VALUES (2093
+, 'US'
+, UNISTR(
+'Pens  10/FP'
+), UNISTR(
+'Permanent ink pen dries quickly and is smear resistant. Provides smooth,
+skipfree writing. Fine point. Single color boxes (black, blue, red) or
+assorted box (6 black, 3 blue, and 1 red).'
+));
+INSERT INTO product_descriptions VALUES (2144
+, 'US'
+, UNISTR(
+'Card Organizer Cover'
+), UNISTR(
+'Replacement cover for desk top style business card holder. Smoke
+grey (original color) or clear plastic.'
+));
+INSERT INTO product_descriptions VALUES (2336
+, 'US'
+, UNISTR(
+'Business Cards Box  250'
+), UNISTR(
+'Business cards box, capacity 250. Use form BC1102, Rev. 3/2000
+(hardcopy or online) when ordering and complete all fields marked
+with an asterisk.'
+));
+INSERT INTO product_descriptions VALUES (2337
+, 'US'
+, UNISTR(
+'Business Cards  1000/2L'
+), UNISTR(
+'Business cards box, capacity 1000, 2sided with different language on
+each side. Use form BC1112, Rev. 12/1999 (hardcopy or online) when
+ordering  complete all fields marked with an asterisk and check box for
+second language (English is always on side 1).'
+));
+INSERT INTO product_descriptions VALUES (2339
+, 'US'
+, UNISTR(
+'Paper  Std Printer'
+), UNISTR(
+'20 lb. 8.5x11 inch white laser printer paper (recycled),
+ten 500sheet reams'
+));
+INSERT INTO product_descriptions VALUES (2536
+, 'US'
+, UNISTR(
+'Business Cards  250/2L'
+), UNISTR(
+'Business cards box, capacity 250, 2sided with different language on
+each side. Use form BC1112, Rev. 12/1999 (hardcopy or online) when
+ordering  complete all fields marked with an asterisk and check box for
+second language (English is always on side 1).'
+));
+INSERT INTO product_descriptions VALUES (2537
+, 'US'
+, UNISTR(
+'Business Cards Box  1000'
+), UNISTR(
+'Business cards box, capacity 1000. Use form BC1103, Rev. 3/2000
+(hardcopy or online) when ordering and complete all fields marked with
+an asterisk.'
+));
+INSERT INTO product_descriptions VALUES (2783
+, 'US'
+, UNISTR(
+'Clips  Paper'
+), UNISTR(
+'World brand paper clips set the standard for quality.10 boxes with 100
+clips each. #1 regular or jumbo, smooth or nonskid.'
+));
+INSERT INTO product_descriptions VALUES (2808
+, 'US'
+, UNISTR(
+'Paper Tablet LY 8 1/2 x 11'
+), UNISTR(
+'Paper Tablet, Lined, Yellow, size 8 1/2 x 11 inch'
+));
+INSERT INTO product_descriptions VALUES (2810
+, 'US'
+, UNISTR(
+'Inkvisible Pens'
+), UNISTR(
+'Rollerball pen is equipped with a smooth precision tip. Seethrough
+rubber grip allows for a visible ink supply and comfortable writing.
+4pack with 1 each, black, blue, red, green.'
+));
+INSERT INTO product_descriptions VALUES (2870
+, 'US'
+, UNISTR(
+'Pencil  Mech'
+), UNISTR(
+'Ergonomically designed mechanical pencil for improved writing comfort. Refillable erasers and leads. Available in three lead sizes: .5mm (fine)); .7mm (medium)); and .9mm (thick).'
+));
+INSERT INTO product_descriptions VALUES (3051
+, 'US'
+, UNISTR(
+'Pens  10/MP'
+), UNISTR(
+'Permanent ink pen dries quickly and is smear resistant. Provides smooth,
+skipfree writing. Medium point. Single color boxes (black, blue, red) or
+assorted box (6 black, 3 blue, and 1 red).'
+));
+INSERT INTO product_descriptions VALUES (3150
+, 'US'
+, UNISTR(
+'Card Holder  25'
+), UNISTR(
+'Card Holder; heavy plastic business card holder with embossed corporate
+logo. Holds about 25 of your business cards, depending on card thickness.'
+));
+INSERT INTO product_descriptions VALUES (3208
+, 'US'
+, UNISTR(
+'Pencils  Wood'
+), UNISTR(
+'Box of 2 dozen wooden pencils. Specify lead type when ordering: 2H
+(double hard), H (hard), HB (hard black), B (soft black).'
+));
+INSERT INTO product_descriptions VALUES (3209
+, 'US'
+, UNISTR(
+'Sharpener  Pencil'
+), UNISTR(
+'Electric Pencil Sharpener Rugged steel cutters for long life.
+PencilSaver helps prevent oversharpening. Nonskid rubber feet.
+Builtin pencil holder.'
+));
+INSERT INTO product_descriptions VALUES (3224
+, 'US'
+, UNISTR(
+'Card Organizer  250'
+), UNISTR(
+'Portable holder for organizing business cards, capacity 250. Booklet
+style with slip in, transparent pockets for business cards. Optional
+alphabet tabs. Specify cover color when ordering (dark brown, beige,
+burgundy, black, and light grey).'
+));
+INSERT INTO product_descriptions VALUES (3225
+, 'US'
+, UNISTR(
+'Card Organizer  1000'
+), UNISTR(
+'Holder for organizing business cards with alphabet dividers; capacity
+1000. Desk top style with smoke grey cover and black base. Lid is
+removable for storing inside drawer.'
+));
+INSERT INTO product_descriptions VALUES (3511
+, 'US'
+, UNISTR(
+'Paper  HQ Printer'
+), UNISTR(
+'Quality paper for inkjet and laser printers tested to resist printer
+jams. Acid free for archival purposes. 22lb. weight with brightness of 92.
+Size: 8 1/2 x 11. Single 500sheet ream.'
+));
+INSERT INTO product_descriptions VALUES (3515
+, 'US'
+, UNISTR(
+'Lead Replacement'
+), UNISTR(
+'Refill leads for mechanical pencils. Each pack contains 25 leads and
+a replacement eraser. Available in three lead sizes: .5mm (fine)); .7mm
+(medium)); and .9mm (thick).'
+));
+INSERT INTO product_descriptions VALUES (2986
+, 'US'
+, UNISTR(
+'Manual  Vision OS/2x +'
+), UNISTR(
+'Manuals for Vision Operating System V 2.x and Vision Office Suite'
+));
+INSERT INTO product_descriptions VALUES (3163
+, 'US'
+, UNISTR(
+'Manual  Vision Net6.3/US'
+), UNISTR(
+'Vision Networking V6.3 Reference Manual. US version with advanced
+encryption.'
+));
+INSERT INTO product_descriptions VALUES (3165
+, 'US'
+, UNISTR(
+'Manual  Vision Tools2.0'
+), UNISTR(
+'Vision Business Tools Suite V2.0 Reference Manual. Includes installation,
+configuration, and user guide.'
+));
+INSERT INTO product_descriptions VALUES (3167
+, 'US'
+, UNISTR(
+'Manual  Vision OS/2.x'
+), UNISTR(
+'Vision Operating System V2.0/2.1/2/3 Reference Manual. Complete
+installation, configuration, management, and tuning information for Vision
+system administration. Note that this manual replaces the individual
+Version 2.0 and 2.1 manuals.'
+));
+INSERT INTO product_descriptions VALUES (3216
+, 'US'
+, UNISTR(
+'Manual  Vision Net6.3'
+), UNISTR(
+'Vision Networking V6.3 Reference Manual. NonUS version with basic
+encryption.'
+));
+INSERT INTO product_descriptions VALUES (3220
+, 'US'
+, UNISTR(
+'Manual  Vision OS/1.2'
+), UNISTR(
+'Vision Operating System V1.2 Reference Manual. Complete installation,
+configuration, management, and tuning information for Vision system
+administration.'
+));
+INSERT INTO product_descriptions VALUES (1729
+, 'US'
+, UNISTR(
+'Chemicals  RCP'
+), UNISTR(
+'Cleaning Chemicals  3500 roller clean pads'
+));
+INSERT INTO product_descriptions VALUES (1910
+, 'US'
+, UNISTR(
+'FG Stock  H'
+), UNISTR(
+'Fiberglass Stock  heavy duty, 1 thick'
+));
+INSERT INTO product_descriptions VALUES (1912
+, 'US'
+, UNISTR(
+'SS Stock  3mm'
+), UNISTR(
+'Stainless steel stock  3mm. Can be predrilled for standard power
+supplies, motherboard holders, and hard drives. Please use appropriate
+template to identify model number, placement, and size of finished sheet
+when placing order for drilled sheet.'
+));
+INSERT INTO product_descriptions VALUES (1940
+, 'US'
+, UNISTR(
+'ESD Bracelet/Clip'
+), UNISTR(
+'Electro static discharge bracelet with alligator clip for easy
+connection to computer chassis or other ground.'
+));
+INSERT INTO product_descriptions VALUES (2030
+, 'US'
+, UNISTR(
+'Latex Gloves'
+), UNISTR(
+'Latex Gloves for assemblers, chemical handlers, fitters. Heavy duty,
+safety orange, with textured grip on fingers and thumb. Waterproof and
+shockproof up to 220 volts/2 amps, 110 volts/5 amps. Acid proof for up
+to 5 minutes.'
+));
+INSERT INTO product_descriptions VALUES (2326
+, 'US'
+, UNISTR(
+'Plastic Stock  Y'
+), UNISTR(
+'Plastic Stock  Yellow, standard quality.'
+));
+INSERT INTO product_descriptions VALUES (2330
+, 'US'
+, UNISTR(
+'Plastic Stock  R'
+), UNISTR(
+'Plastic Stock  Red, standard quality.'
+));
+INSERT INTO product_descriptions VALUES (2334
+, 'US'
+, UNISTR(
+'Resin'
+), UNISTR(
+'General purpose synthetic resin.'
+));
+INSERT INTO product_descriptions VALUES (2340
+, 'US'
+, UNISTR(
+'Chemicals  SW'
+), UNISTR(
+'Cleaning Chemicals  3500 staticide wipes'
+));
+INSERT INTO product_descriptions VALUES (2365
+, 'US'
+, UNISTR(
+'Chemicals  TCS'
+), UNISTR(
+'Cleaning Chemical  2500 transport cleaning sheets'
+));
+INSERT INTO product_descriptions VALUES (2594
+, 'US'
+, UNISTR(
+'FG Stock  L'
+), UNISTR(
+'Fiberglass Stock  light weight for internal heat shielding, 1/4 thick'
+));
+INSERT INTO product_descriptions VALUES (2596
+, 'US'
+, UNISTR(
+'SS Stock  1mm'
+), UNISTR(
+'Stainless steel stock  3mm. Can be predrilled for standard model
+motherboard and battery holders. Please use appropriate template to
+identify model number, placement, and size of finished sheet when placing
+order for drilled sheet.'
+));
+INSERT INTO product_descriptions VALUES (2631
+, 'US'
+, UNISTR(
+'ESD Bracelet/QR'
+), UNISTR(
+'Electro Static Discharge Bracelet: 2 piece lead with quick release
+connector. One piece stays permanently attached to computer chassis with
+screw, the other is attached to the bracelet. Additional permanent
+ends available.'
+));
+INSERT INTO product_descriptions VALUES (2721
+, 'US'
+, UNISTR(
+'PC Bag  L/S'
+), UNISTR(
+'Black Leather Computer Case  single laptop capacity with pockets for
+manuals, additional hardware, and work papers. Adjustable protective straps
+and removable pocket for power supply and cables.'
+));
+INSERT INTO product_descriptions VALUES (2722
+, 'US'
+, UNISTR(
+'PC Bag  L/D'
+), UNISTR(
+'Black Leather Computer Case  double laptop capacity with pockets for
+additional hardware or manuals and work papers. Adjustable protective straps
+and removable pockets for power supplies and cables. Double wide shoulder
+strap for comfort.'
+));
+INSERT INTO product_descriptions VALUES (2725
+, 'US'
+, UNISTR(
+'Machine Oil'
+), UNISTR(
+'Machine Oil for Lubrication of CDROM drive doors and slides.
+Selfcleaning adjustable nozzle for fine to medium flow.'
+));
+INSERT INTO product_descriptions VALUES (2782
+, 'US'
+, UNISTR(
+'PC Bag  C/S'
+), UNISTR(
+'Canvas Computer Case  single laptop capacity with pockets for manuals,
+additional hardware, and work papers. Adjustable protective straps and
+removable pocket for power supply and cables. Outside pocket with snap
+closure for easy access while travelling.'
+));
+INSERT INTO product_descriptions VALUES (3187
+, 'US'
+, UNISTR(
+'Plastic Stock  B/HD'
+), UNISTR(
+'Plastic Stock  Blue, high density.'
+));
+INSERT INTO product_descriptions VALUES (3189
+, 'US'
+, UNISTR(
+'Plastic Stock  G'
+), UNISTR(
+'Plastic Stock  Green, standard density.'
+));
+INSERT INTO product_descriptions VALUES (3191
+, 'US'
+, UNISTR(
+'Plastic Stock  O'
+), UNISTR(
+'Plastic Stock  Orange, standard density.'
+));
+INSERT INTO product_descriptions VALUES (3193
+, 'US'
+, UNISTR(
+'Plastic Stock  W/HD'
+), UNISTR(
+'Plastic Stock  White, high density.'
+));
 commit;
+set define on

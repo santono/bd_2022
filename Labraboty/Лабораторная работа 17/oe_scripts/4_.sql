@@ -1,3214 +1,2067 @@
+INSERT INTO customers VALUES 
+    (101,'Constantin','Welles',cust_address_typ
+    ('514 W Superior St','46901','Kokomo','IN','US'),PHONE_LIST_TYP
+    ('+1 317 123 4104'),'us','AMERICA','100','Constantin.Welles@ANHINGA.COM',
+    149,
+    MDSYS.SDO_GEOMETRY(2001, 8307, MDSYS.SDO_POINT_TYPE (-86.13631, 40.485424,NULL),
+    NULL,NULL));
+INSERT INTO customers VALUES 
+    (102,'Harrison','Pacino',cust_address_typ
+    ('2515 Bloyd Ave','46218','Indianapolis','IN','US'),PHONE_LIST_TYP
+    ('+1 317 123 4111'),'us','AMERICA','100','Harrison.Pacino@ANI.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-86.120133, 39.795766,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (103,'Manisha','Taylor',cust_address_typ
+    ('8768 N State Rd 37','47404','Bloomington','IN','US'),PHONE_LIST_TYP
+    ('+1 812 123 4115'),'us','AMERICA','100','Manisha.Taylor@AUKLET.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-86.5173, 39.302695,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (104,'Harrison','Sutherland',cust_address_typ
+    ('6445 Bay Harbor Ln','46254','Indianapolis','IN','US'),PHONE_LIST_TYP
+    ('+1 317 123 4126'),'us','AMERICA','100','Harrison.Sutherland@GODWIT.COM', 
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-86.272743, 39.849678,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (105,'Matthias','MacGraw',cust_address_typ
+    ('4019 W 3Rd St','47404','Bloomington','IN','US'),PHONE_LIST_TYP
+    ('+1 812 123 4129'),'us','AMERICA','100','Matthias.MacGraw@GOLDENEYE.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-86.58332, 39.164783,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (106,'Matthias','Hannah',cust_address_typ
+    ('1608 Portage Ave','46616','South Bend','IN','US'),PHONE_LIST_TYP
+    ('+1 219 123 4136'),'us','AMERICA','100','Matthias.Hannah@GREBE.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-86.27021, 41.696023,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (107,'Matthias','Cruise',cust_address_typ
+    ('23943 Us Highway 33','46517','Elkhart','IN','US'),PHONE_LIST_TYP
+    ('+1 219 123 4138'),'us','AMERICA','100','Matthias.Cruise@GROSBEAK.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-85.91393, 41.631143,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (108,'Meenakshi','Mason',cust_address_typ
+    ('136 E Market St # 800','46204','Indianapolis','IN','US'),PHONE_LIST_TYP
+    ('+1 317 123 4141'),'us','AMERICA','100','Meenakshi.Mason@JACANA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-86.155533, 39.768174,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (109,'Christian','Cage',cust_address_typ
+    ('1905 College St','46628','South Bend','IN','US'),PHONE_LIST_TYP
+    ('+1 219 123 4142'),'us','AMERICA','100','Christian.Cage@KINGLET.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-86.27639, 41.701348,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (110,'Charlie','Sutherland',cust_address_typ
+    ('3512 Rockville Rd # 137C','46222','Indianapolis','IN','US'),PHONE_LIST_TYP
+    ('+1 317 123 4146'),'us','AMERICA','200','Charlie.Sutherland@LIMPKIN.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-86.219783, 39.762173,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (111,'Charlie','Pacino',cust_address_typ
+    ('1303 E University St','47401','Bloomington','IN','US'),PHONE_LIST_TYP
+    ('+1 812 123 4150'),'us','AMERICA','200','Charlie.Pacino@LONGSPUR.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-86.5175, 39.160261,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (112,'Guillaume','Jackson',cust_address_typ
+    ('115 N Weinbach Ave','47711','Evansville','IN','US'),PHONE_LIST_TYP
+    ('+1 812 123 4151'),'us','AMERICA','200','Guillaume.Jackson@MOORHEN.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.52901, 37.978385,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (113,'Daniel','Costner',cust_address_typ
+    ('2067 Rollett Ln','47712','Evansville','IN','US'),PHONE_LIST_TYP
+    ('+1 812 123 4153'),'us','AMERICA','200','Daniel.Costner@PARULA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.6354, 37.955373,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (114,'Dianne','Derek',cust_address_typ
+    ('1105 E Allendale Dr','47401','Bloomington','IN','US'),PHONE_LIST_TYP
+    ('+1 812 123 4157'),'us','AMERICA','200','Dianne.Derek@SAW-WHET.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-86.52167, 39.131013,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (115,'Geraldine','Schneider',cust_address_typ
+    ('18305 Van Dyke St','48234','Detroit','MI','US'),PHONE_LIST_TYP
+    ('+1 313 123 4159'),'us','AMERICA','200','Geraldine.Schneider@SCAUP.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.024565, 42.438298,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (116,'Geraldine','Martin',cust_address_typ
+    ('Lucas Dr Bldg 348','48242','Detroit','MI','US'),PHONE_LIST_TYP
+    ('+1 313 123 4160'),'us','AMERICA','200','Geraldine.Martin@SCOTER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.366535, 42.206862,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (117,'Guillaume','Edwards',cust_address_typ
+    ('1801 Monroe Ave Nw','49505','Grand Rapids','MI','US'),PHONE_LIST_TYP
+    ('+1 616 123 4162'),'us','AMERICA','200','Guillaume.Edwards@SHRIKE.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-85.67059, 42.995694,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (118,'Maurice','Mahoney',cust_address_typ
+    ('4925 Kendrick St Se','49512','Grand Rapids','MI','US'),PHONE_LIST_TYP
+    ('+1 616 123 4181'),'us','AMERICA','200','Maurice.Mahoney@SNIPE.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-85.54467, 42.872615,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (119,'Maurice','Hasan',cust_address_typ
+    ('3310 Dixie Ct','48601','Saginaw','MI','US'),PHONE_LIST_TYP
+    ('+1 517 123 4191'),'us','AMERICA','200','Maurice.Hasan@STILT.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.89048, 43.366886,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (120,'Diane','Higgins',cust_address_typ
+    ('113 Washington Sq N','48933','Lansing','MI','US'),PHONE_LIST_TYP
+    ('+1 517 123 4199'),'us','AMERICA','200','Diane.Higgins@TANAGER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-84.55249, 42.733738,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (121,'Dianne','Sen',cust_address_typ
+    ('2500 S Pennsylvania Ave','48910','Lansing','MI','US'),PHONE_LIST_TYP
+    ('+1 517 123 4201'),'us','AMERICA','200','Dianne.Sen@TATTLER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-84.53837, 42.706292,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (122,'Maurice','Daltrey',cust_address_typ
+    ('3213 S Cedar St','48910','Lansing','MI','US'),PHONE_LIST_TYP
+    ('+1 517 123 4206'),'us','AMERICA','200','Maurice.Daltrey@TEAL.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-84.54811, 42.698823,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (123,'Elizabeth','Brown',cust_address_typ
+    ('8110 Jackson Rd','48103','Ann Arbor','MI','US'),PHONE_LIST_TYP
+    ('+1 313 123 4219'),'us','AMERICA','200','Elizabeth.Brown@THRASHER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.890694, 42.292947,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (124,'Diane','Mason',cust_address_typ
+    ('6654 W Lafayette St','48226','Detroit','MI','US'),PHONE_LIST_TYP
+    ('+1 313 123 4222'),'us','AMERICA','200','Diane.Mason@TROGON.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.049285, 42.330868,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (125,'Dianne','Andrews',cust_address_typ
+    ('27 Benton Rd','48602','Saginaw','MI','US'),PHONE_LIST_TYP
+    ('+1 517 123 4225'),'us','AMERICA','200','Dianne.Andrews@TURNSTONE.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.99558, 43.412702,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (126,'Charles','Field',cust_address_typ
+    ('8201 Livernois Ave','48204','Detroit','MI','US'),PHONE_LIST_TYP
+    ('+1 313 123 4226'),'us','AMERICA','300','Charles.Field@BECARD.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.137545, 42.354686,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (127,'Charles','Broderick',cust_address_typ
+    ('101 N Falahee Rd','49203','Jackson','MI','US'),PHONE_LIST_TYP
+    ('+1 517 123 4228'),'us','AMERICA','300','Charles.Broderick@BITTERN.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-84.34679, 42.238519,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (128,'Isabella','Reed',cust_address_typ
+    ('3100 E Eisenhower Pky # 100','48108','Ann Arbor','MI','US'),PHONE_LIST_TYP
+    ('+1 313 123 4230'),'us','AMERICA','300','Isabella.Reed@BRANT.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.716754, 42.244284,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (129,'Louis','Jackson',cust_address_typ
+    ('952 Vassar Dr','49001','Kalamazoo','MI','US'),PHONE_LIST_TYP
+    ('+1 616 123 4234'),'us','AMERICA','400','Louis.Jackson@CARACARA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-85.56744, 42.262007,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (130,'Louis','Edwards',cust_address_typ
+    ('150 W Jefferson Ave # 2500','48226','Detroit','MI','US'),PHONE_LIST_TYP
+    ('+1 313 123 4242'),'us','AMERICA','400','Louis.Edwards@CHACHALACA.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.046195, 42.32827,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (131,'Doris','Dutt',cust_address_typ
+    ('40 Pearl St Nw # 1020','49503','Grand Rapids','MI','US'),PHONE_LIST_TYP
+    ('+1 616 123 4245'),'us','AMERICA','400','Doris.Dutt@CHUKAR.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-85.66949, 42.966096,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (132,'Doris','Spacek',cust_address_typ
+    ('1135 Catherine St','48109','Ann Arbor','MI','US'),PHONE_LIST_TYP
+    ('+1 313 123 4248'),'us','AMERICA','400','Doris.Spacek@FLICKER.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.715384, 42.290596,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (133,'Kristin','Malden',cust_address_typ
+    ('301 E Genesee Ave','48607','Saginaw','MI','US'),PHONE_LIST_TYP
+    ('+1 517 123 4253'),'us','AMERICA','400','Kristin.Malden@GODWIT.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.93747, 43.432862,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (134,'Sissy','Puri',cust_address_typ
+    ('9936 Dexter Ave','48206','Detroit','MI','US'),PHONE_LIST_TYP
+    ('+1 313 123 4255'),'us','AMERICA','400','Sissy.Puri@GREBE.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.121065, 42.374977,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (135,'Doris','Bel Geddes',cust_address_typ
+    ('1660 University Ter','48104','Ann Arbor','MI','US'),PHONE_LIST_TYP
+    ('+1 313 123 4263'),'us','AMERICA','400','Doris.BelGeddes@GROSBEAK.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.727334, 42.281681,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (136,'Sissy','Warden',cust_address_typ
+    ('15713 N East St','48906','Lansing','MI','US'),PHONE_LIST_TYP
+    ('+1 517 123 4265'),'us','AMERICA','400','Sissy.Warden@JACANA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-84.54281, 42.7886,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (137,'Elia','Brando',cust_address_typ
+    ('555 John F Kennedy Rd','52002','Dubuque','IA','US'),PHONE_LIST_TYP
+    ('+1 319 123 4271'),'us','AMERICA','500','Elia.Brando@JUNCO.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-90.72012, 42.496103,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (138,'Mani','Fonda',cust_address_typ
+    ('10315 Hickman Rd','50322','Des Moines','IA','US'),PHONE_LIST_TYP
+    ('+1 515 123 4273'),'us','AMERICA','500','Mani.Fonda@KINGLET.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-93.75829, 41.614875,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (139,'Placido','Kubrick',cust_address_typ
+    ('2115 N Towne Ln Ne','52402','Cedar Rapids','IA','US'),PHONE_LIST_TYP
+    ('+1 319 123 4278'),'us','AMERICA','500','Placido.Kubrick@SCOTER.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-91.6714, 42.032886,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (140,'Claudia','Kurosawa',cust_address_typ
+    ('1928 Sherwood Dr','51503','Council Bluffs','IA','US'),PHONE_LIST_TYP
+    ('+1 712 123 4280'),'us','AMERICA','500','Claudia.Kurosawa@CHUKAR.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-95.81115, 41.276064,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (141,'Maximilian','Henner',cust_address_typ
+    ('2102 E Kimberly Rd','52807','Davenport','IA','US'),PHONE_LIST_TYP
+    ('+1 319 123 4282'),'us','AMERICA','500','Maximilian.Henner@DUNLIN.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-90.54472, 41.5566,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (142,'Sachin','Spielberg',cust_address_typ
+    ('1691 Asbury Rd','52001','Dubuque','IA','US'),PHONE_LIST_TYP
+    ('+1 319 123 4288'),'us','AMERICA','500','Sachin.Spielberg@GADWALL.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-90.69686, 42.500903,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (143,'Sachin','Neeson',cust_address_typ
+    ('5112 Sw 9Th St','50315','Des Moines','IA','US'),PHONE_LIST_TYP
+    ('+1 515 123 4290'),'us','AMERICA','500','Sachin.Neeson@GALLINULE.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-93.62554, 41.537188,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (144,'Sivaji','Landis',cust_address_typ
+    ('221 3Rd Ave Se # 300','52401','Cedar Rapids','IA','US'),PHONE_LIST_TYP
+    ('+1 319 123 4301'),'us','AMERICA','500','Sivaji.Landis@GOLDENEYE.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-91.66643, 41.977151,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (145,'Mammutti','Pacino',cust_address_typ
+    ('2120 Heights Dr','54701','Eau Claire','WI','US'),PHONE_LIST_TYP
+    ('+1 745 123 4306'),'us','AMERICA','500','Mammutti.Pacino@GREBE.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-91.51556, 44.795509,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (146,'Elia','Fawcett',cust_address_typ
+    ('8989 N Port Washington Rd','53217','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4307'),'us','AMERICA','500','Elia.Fawcett@JACANA.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.91422, 43.180714,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (147,'Ishwarya','Roberts',cust_address_typ
+    ('6555 W Good Hope Rd','53223','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4308'),'us','AMERICA','600','Ishwarya.Roberts@LAPWING.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.99294, 43.148558,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (148,'Gustav','Steenburgen',cust_address_typ
+    ('1314 N Stoughton Rd','53714','Madison','WI','US'),PHONE_LIST_TYP
+    ('+1 608 123 4309'),'us','AMERICA','600','Gustav.Steenburgen@PINTAIL.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-89.32103, 43.11362,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (149,'Markus','Rampling',cust_address_typ
+    ('4715 Sprecher Rd','53704','Madison','WI','US'),PHONE_LIST_TYP
+    ('+1 608 123 4318'),'us','AMERICA','600','Markus.Rampling@PUFFIN.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-89.31665, 43.130717,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (150,'Goldie','Slater',cust_address_typ
+    ('6161 N 64Th St','53218','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4323'),'us','AMERICA','700','Goldie.Slater@PYRRHULOXIA.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.99083, 43.130205,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (151,'Divine','Aykroyd',cust_address_typ
+    ('11016 W Lincoln Ave','53227','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4324'),'us','AMERICA','700','Divine.Aykroyd@REDSTART.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-88.049291, 43.00271,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (152,'Dieter','Matthau',cust_address_typ
+    ('8600 W National Ave','53227','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4328'),'us','AMERICA','700','Dieter.Matthau@VERDIN.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (0, NULL,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (153,'Divine','Sheen',cust_address_typ
+    ('615 N Sherman Ave','53704','Madison','WI','US'),PHONE_LIST_TYP
+    ('+1 608 123 4332'),'us','AMERICA','700','Divine.Sheen@COWBIRD.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-89.3638, 43.107253,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (154,'Frederic','Grodin',cust_address_typ
+    ('512 E Grand Ave','53511','Beloit','WI','US'),PHONE_LIST_TYP
+    ('+1 608 123 4344'),'us','AMERICA','700','Frederic.Grodin@CREEPER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-89.03216, 42.499575,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (155,'Frederico','Romero',cust_address_typ
+    ('600 N Broadway Fl 1','53202','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4347'),'us','AMERICA','700','Frederico.Romero@CURLEW.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.90777, 43.037372,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (156,'Goldie','Montand',cust_address_typ
+    ('5235 N Ironwood Ln','53217','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4348'),'us','AMERICA','700','Goldie.Montand@DIPPER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.91841, 43.113239,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (157,'Sidney','Capshaw',cust_address_typ
+    ('322 E Michigan St','53202','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4350'),'us','AMERICA','700','Sidney.Capshaw@DUNLIN.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.90745, 43.037389,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (158,'Frederico','Lyon',cust_address_typ
+    ('1400 Bellinger St Fl 4','54703','Eau Claire','WI','US'),PHONE_LIST_TYP
+    ('+1 745 123 4367'),'us','AMERICA','700','Frederico.Lyon@FLICKER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-91.51112, 44.813529,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (159,'Eddie','Boyer',cust_address_typ
+    ('411 E Wisconsin Ave # 2550','53202','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4369'),'us','AMERICA','700','Eddie.Boyer@GALLINULE.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.90645, 43.038621,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (160,'Eddie','Stern',cust_address_typ
+    ('808 3Rd St # 100','54403','Wausau','WI','US'),PHONE_LIST_TYP
+    ('+1 715 123 4372'),'us','AMERICA','700','Eddie.Stern@GODWIT.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-89.62748, 44.963124,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (161,'Ernest','Weaver',cust_address_typ
+    ('300 Crooks St','54301','Green Bay','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4373'),'us','AMERICA','900','Ernest.Weaver@GROSBEAK.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-88.01714, 44.510237,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (162,'Ernest','George',cust_address_typ
+    ('122 E Dayton St','53703','Madison','WI','US'),PHONE_LIST_TYP
+    ('+1 608 123 4374'),'us','AMERICA','900','Ernest.George@LAPWING.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-89.38472, 43.077067,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (163,'Ernest','Chandar',cust_address_typ
+    ('633 S Hawley Rd','53214','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4376'),'us','AMERICA','900','Ernest.Chandar@LIMPKIN.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.98592, 43.025362,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (164,'Charlotte','Kazan',cust_address_typ
+    ('2122 Campbell Rd','54601','La Crosse','WI','US'),PHONE_LIST_TYP
+    ('+1 608 123 4378'),'us','AMERICA','1200','Charlotte.Kazan@MERGANSER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-91.22433, 43.815379,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (165,'Charlotte','Fonda',cust_address_typ
+    ('3324 N Oakland Ave','53211','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4381'),'us','AMERICA','1200','Charlotte.Fonda@MOORHEN.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.88781, 43.078038,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (166,'Dheeraj','Alexander',cust_address_typ
+    ('666 22Nd Ave Ne','55418','Minneapolis','MN','US'),PHONE_LIST_TYP
+    ('+1 612 123 4397'),'us','AMERICA','1200','Dheeraj.Alexander@NUTHATCH.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-93.25421, 45.009864,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (167,'Gerard','Hershey',cust_address_typ
+    ('1501 Lowry Ave N','55411','Minneapolis','MN','US'),PHONE_LIST_TYP
+    ('+1 612 123 4399'),'us','AMERICA','1200','Gerard.Hershey@PARULA.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-93.29798, 45.01319,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (168,'Hema','Voight',cust_address_typ
+    ('113 N 1St St','55401','Minneapolis','MN','US'),PHONE_LIST_TYP
+    ('+1 612 123 4408'),'us','AMERICA','1200','Hema.Voight@PHALAROPE.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-93.26806, 44.984747,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (169,'Dheeraj','Davis',cust_address_typ
+    ('4200 Yosemite Ave S','55416','Minneapolis','MN','US'),PHONE_LIST_TYP
+    ('+1 612 123 4417'),'us','AMERICA','1200','Dheeraj.Davis@PIPIT.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-93.35285, 44.924115,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (170,'Harry Dean','Fonda',cust_address_typ
+    ('2800 Chicago Ave # 100','55407','Minneapolis','MN','US'),PHONE_LIST_TYP
+    ('+1 612 123 4419'),'us','AMERICA','1200','HarryDean.Fonda@PLOVER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-93.26233, 44.951875,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (171,'Hema','Powell',cust_address_typ
+    ('200 1St St Sw','55905','Rochester','MN','US'),PHONE_LIST_TYP
+    ('+1 507 123 4421'),'us','AMERICA','1200','Hema.Powell@SANDERLING.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-92.46698, 44.021392,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (172,'Harry Mean','Peckinpah',cust_address_typ
+    ('314 W Superior St # 1015','55802','Duluth','MN','US'),PHONE_LIST_TYP
+    ('+1 218 123 4429'),'us','AMERICA','1200','HarryMean.Peckinpah@VERDIN.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (0, NULL,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (173,'Kathleen','Walken',cust_address_typ
+    ('1409 Willow St # 600','55403','Minneapolis','MN','US'),PHONE_LIST_TYP
+    ('+1 612 123 4434'),'us','AMERICA','1200','Kathleen.Walken@VIREO.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-93.28193, 44.968631,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (174,'Blake','Seignier',cust_address_typ
+    ('2720 Brewerton Rd','13211','Syracuse','NY','US'),PHONE_LIST_TYP
+    ('+1 315 123 4442'),'us','AMERICA','1200','Blake.Seignier@GALLINULE.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.14607, 43.106533,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (175,'Claude','Powell',cust_address_typ
+    ('2134 W Genesee St','13219','Syracuse','NY','US'),PHONE_LIST_TYP
+    ('+1 315 123 4447'),'us','AMERICA','1200','Claude.Powell@GODWIT.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.19845, 43.047707,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (176,'Faye','Glenn',cust_address_typ
+    ('1522 Main St','14305','Niagara Falls','NY','US'),PHONE_LIST_TYP
+    ('+1 716 123 4457'),'us','AMERICA','1200','Faye.Glenn@GREBE.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-79.05241, 43.102789,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (177,'Gerhard','Seignier',cust_address_typ
+    ('49 N Pine Ave','12203','Albany','NY','US'),PHONE_LIST_TYP
+    ('+1 518 123 4459'),'us','AMERICA','1200','Gerhard.Seignier@JACANA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-73.7927, 42.668507,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (178,'Grace','Belushi',cust_address_typ
+    ('726 Union St','12534','Hudson','NY','US'),PHONE_LIST_TYP
+    ('+1 518 123 4464'),'us','AMERICA','1200',
+    'Grace.Belushi@KILLDEER.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-73.784949, 42.246766,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (179,'Harry dean','Forrest',cust_address_typ
+    ('137 Lark St','12210','Albany','NY','US'),PHONE_LIST_TYP
+    ('+1 518 123 4474'),'us','AMERICA','1200',
+    'Harrydean.Forrest@KISKADEE.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-73.76188, 42.658418,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (180,'Harry dean','Cage',cust_address_typ
+    ('33 Fulton St','12601','Poughkeepsie','NY','US'),PHONE_LIST_TYP
+    ('+1 914 123 4494'),'us','AMERICA','1200',
+    'Harrydean.Cage@LAPWING.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-73.928561, 41.723468,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (181,'Lauren','Hershey',cust_address_typ
+    ('2360 Maxon Rd','12308','Schenectady','NY','US'),PHONE_LIST_TYP
+    ('+1 518 123 4496'),'us','AMERICA','1200',
+    'Lauren.Hershey@LIMPKIN.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-73.91984, 42.833987,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (182,'Lauren','Dench',cust_address_typ
+    ('85 High St','14203','Buffalo','NY','US'),PHONE_LIST_TYP
+    ('+1 716 123 4575'),'us','AMERICA','1200',
+    'Lauren.Dench@LONGSPUR.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-78.86586, 42.900169,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (183,'Lauren','Altman',cust_address_typ
+    ('1 Palisade Ave Fl 2','10701','Yonkers','NY','US'),PHONE_LIST_TYP
+    ('+1 914 123 4578'),'us','AMERICA','1200','Lauren.Altman@MERGANSER.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-73.89811, 40.933646,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (184,'Mary Beth','Roberts',cust_address_typ
+    ('500 S Salina St # 500','13202','Syracuse','NY','US'),PHONE_LIST_TYP
+    ('+1 315 123 4597'),'us','AMERICA','1200','MaryBeth.Roberts@NUTHATCH.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.15252, 43.044258,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (185,'Matthew','Wright',cust_address_typ
+    ('33 Pine St','14094','Lockport','NY','US'),PHONE_LIST_TYP
+    ('+1 716 123 4599'),'us','AMERICA','1200','Matthew.Wright@OVENBIRD.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-78.69231, 43.169422,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (186,'Meena','Alexander',cust_address_typ
+    ('Po Box 2152','14240','Buffalo','NY','US'),PHONE_LIST_TYP
+    ('+1 716 123 4605'),'us','AMERICA','1200','Meena.Alexander@PARULA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-78.82672, 42.884822,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (187,'Grace','Dvrrie',cust_address_typ
+    ('2979 Hamburg St','12303','Schenectady','NY','US'),PHONE_LIST_TYP
+    ('+1 518 123 4617'),'us','AMERICA','1200','Grace.Dvrrie@PHOEBE.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-73.93703, 42.76779,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (188,'Charlotte','Buckley',cust_address_typ
+    ('1790 Grand Blvd','12309','Schenectady','NY','US'),PHONE_LIST_TYP
+    ('+1 518 123 4618'),'us','AMERICA','1200','Charlotte.Buckley@PINTAIL.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-73.90567, 42.814971,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (189,'Gena','Harris',cust_address_typ
+    ('7 Ingelside Ln','10605','White Plains','NY','US'),PHONE_LIST_TYP
+    ('+1 914 123 4619'),'us','AMERICA','1200','Gena.Harris@PIPIT.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-73.7369, 40.999002,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (190,'Gena','Curtis',cust_address_typ
+    ('18 Glenridge Rd','12302','Schenectady','NY','US'),PHONE_LIST_TYP
+    ('+1 518 123 4624'),'us','AMERICA','1200','Gena.Curtis@PLOVER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-73.92997, 42.868566,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (191,'Maureen','Sanders',cust_address_typ
+    ('6432 Rising Sun Ave','19111','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4644'),'us','AMERICA','1200','Maureen.Sanders@PUFFIN.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.095, 40.050359,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (192,'Sean','Stockwell',cust_address_typ
+    ('Rr 10','19606','Reading','PA','US'),PHONE_LIST_TYP
+    ('+1 610 123 4657'),'us','AMERICA','1200','Sean.Stockwell@PYRRHULOXIA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.85273, 40.333337,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (193,'Harry dean','Kinski',cust_address_typ
+    ('2455 Rose Garden Rd','15220','Pittsburgh','PA','US'),PHONE_LIST_TYP
+    ('+1 412 123 4662'),'us','AMERICA','1200','Harrydean.Kinski@REDPOLL.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-80.045732, 40.407729,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (194,'Kathleen','Garcia',cust_address_typ
+    ('1812 Timberline Rd','16601','Altoona','PA','US'),PHONE_LIST_TYP
+    ('+1 814 123 4663'),'us','AMERICA','1200','Kathleen.Garcia@REDSTART.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-78.44857, 40.487139,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (195,'Sean','Olin',cust_address_typ
+    ('141 Schiller St','19601','Reading','PA','US'),PHONE_LIST_TYP
+    ('+1 610 123 4664'),'us','AMERICA','1200','Sean.Olin@SCAUP.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.93642, 40.342217,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (196,'Gerard','Dench',cust_address_typ
+    ('1126 Pawlings Rd','19403','Norristown','PA','US'),PHONE_LIST_TYP
+    ('+1 610 123 4667'),'us','AMERICA','1200','Gerard.Dench@SCOTER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.432962, 40.126981,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (197,'Gerard','Altman',cust_address_typ
+    ('55 Church Hill Rd','19606','Reading','PA','US'),PHONE_LIST_TYP
+    ('+1 610 123 4669'),'us','AMERICA','1200','Gerard.Altman@SHRIKE.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.85054, 40.359876,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (198,'Maureen','de Funes',cust_address_typ
+    ('354 N Prince St','17603','Lancaster','PA','US'),PHONE_LIST_TYP
+    ('+1 717 123 4674'),'us','AMERICA','1200','Maureen.deFunes@SISKIN.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.30895, 40.043037,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (199,'Clint','Chapman',cust_address_typ
+    ('115 Chestnut St','19106','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4676'),'us','AMERICA','1400','Clint.Chapman@SNIPE.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.14343, 39.94801,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (200,'Clint','Gielgud',cust_address_typ
+    ('2899 Grand Ave','15225','Pittsburgh','PA','US'),PHONE_LIST_TYP
+    ('+1 412 123 4681'),'us','AMERICA','1400','Clint.Gielgud@STILT.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-80.117174, 40.508616,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (201,'Eric','Prashant',cust_address_typ
+    ('Po Box 39','15701','Indiana','PA','US'),PHONE_LIST_TYP
+    ('+1 412 123 4684'),'us','AMERICA','1400','Eric.Prashant@TATTLER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-79.151699, 40.620971,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (202,'Ingrid','Welles',cust_address_typ
+    ('1604 Broadway Ave','15216','Pittsburgh','PA','US'),PHONE_LIST_TYP
+    ('+1 412 123 4688'),'us','AMERICA','1400','Ingrid.Welles@TEAL.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-80.024861, 40.410256,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (203,'Ingrid','Rampling',cust_address_typ
+    ('4734 Liberty Ave','15224','Pittsburgh','PA','US'),PHONE_LIST_TYP
+    ('+1 412 123 4691'),'us','AMERICA','1400','Ingrid.Rampling@WIGEON.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-79.94906, 40.461561,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (204,'Cliff','Puri',cust_address_typ
+    ('21 Thornwood Rd','17112','Harrisburg','PA','US'),PHONE_LIST_TYP
+    ('+1 717 123 4692'),'us','AMERICA','1400','Cliff.Puri@CORMORANT.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.80393, 40.314701,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (205,'Emily','Pollack',cust_address_typ
+    ('3725 W Lake Rd','16505','Erie','PA','US'),PHONE_LIST_TYP
+    ('+1 814 123 4696'),'us','AMERICA','1400','Emily.Pollack@DIPPER.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-80.16936, 42.097165,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (206,'Fritz','Hackman',cust_address_typ
+    ('1808 4Th Ave','16602','Altoona','PA','US'),PHONE_LIST_TYP
+    ('+1 814 123 4697'),'us','AMERICA','1400','Fritz.Hackman@DUNLIN.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-78.399501, 40.505884,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (207,'Cybill','Laughton',cust_address_typ
+    ('Station Sq','15219','Pittsburgh','PA','US'),PHONE_LIST_TYP
+    ('+1 412 123 4700'),'us','AMERICA','1400','Cybill.Laughton@EIDER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-79.9818, 40.443237,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (208,'Cyndi','Griem',cust_address_typ
+    ('4020 Garden Ave','16508','Erie','PA','US'),PHONE_LIST_TYP
+    ('+1 814 123 4706'),'us','AMERICA','1400','Cyndi.Griem@GALLINULE.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-80.11026, 42.083634,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (209,'Cyndi','Collins',cust_address_typ
+    ('100 N Peach St','19139','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4708'),'us','AMERICA','1400','Cyndi.Collins@GODWIT.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.22731, 39.961649,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (210,'Cybill','Clapton',cust_address_typ
+    ('835 Heister Ln','19605','Reading','PA','US'),PHONE_LIST_TYP
+    ('+1 610 123 4714'),'us','AMERICA','1400','Cybill.Clapton@GOLDENEYE.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.92064, 40.364485,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (211,'Luchino','Jordan',cust_address_typ
+    ('378 S Negley Ave','15232','Pittsburgh','PA','US'),PHONE_LIST_TYP
+    ('+1 412 123 4718'),'us','AMERICA','1500','Luchino.Jordan@GREBE.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-79.93347, 40.459305,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (212,'Luchino','Falk',cust_address_typ
+    ('5643 N 5Th St','19120','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4721'),'us','AMERICA','1500','Luchino.Falk@OVENBIRD.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.13043, 40.036595,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (213,'Luchino','Bradford',cust_address_typ
+    ('1401 W Warren Rd','16701','Bradford','PA','US'),PHONE_LIST_TYP
+    ('+1 814 123 4722'),'us','AMERICA','1500','Luchino.Bradford@PARULA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-78.651424, 41.905571,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (214,'Robin','Danson',cust_address_typ
+    ('815 Freeport Rd','15215','Pittsburgh','PA','US'),PHONE_LIST_TYP
+    ('+1 412 123 4724'),'us','AMERICA','1500','Robin.Danson@PHAINOPEPLA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-79.896621, 40.487805,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (215,'Orson','Perkins',cust_address_typ
+    ('327 N Washington Ave # 300','18503','Scranton','PA','US'),PHONE_LIST_TYP
+    ('+1 717 123 4730'),'us','AMERICA','1900','Orson.Perkins@PINTAIL.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.662181, 41.409215,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (216,'Orson','Koirala',cust_address_typ
+    ('810 Race St','19107','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4738'),'us','AMERICA','1900','Orson.Koirala@PIPIT.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.15289, 39.95474,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (217,'Bryan','Huston',cust_address_typ
+    ('4901 Locust Ln','17109','Harrisburg','PA','US'),PHONE_LIST_TYP
+    ('+1 717 123 4739'),'us','AMERICA','2300','Bryan.Huston@PYRRHULOXIA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.80639, 40.293213,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (218,'Bryan','Dvrrie',cust_address_typ
+    ('3376 Perrysville Ave','15214','Pittsburgh','PA','US'),PHONE_LIST_TYP
+    ('+1 412 123 4740'),'us','AMERICA','2300','Bryan.Dvrrie@REDPOLL.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-80.014072, 40.481972,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (219,'Ajay','Sen',cust_address_typ
+    ('220 Penn Ave # 300','18503','Scranton','PA','US'),PHONE_LIST_TYP
+    ('+1 717 123 4741'),'us','AMERICA','2300','Ajay.Sen@TROGON.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.666231, 41.409595,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (220,'Carol','Jordan',cust_address_typ
+    ('135 S 18Th St # 1','19103','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4743'),'us','AMERICA','2300','Carol.Jordan@TURNSTONE.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.17787, 39.949455,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (221,'Carol','Bradford',cust_address_typ
+    ('522 Swede St','19401','Norristown','PA','US'),PHONE_LIST_TYP
+    ('+1 610 123 4744'),'us','AMERICA','2300','Carol.Bradford@VERDIN.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.343572, 40.11615,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (222,'Cary','Stockwell',cust_address_typ
+    ('7708 City Ave','19151','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4745'),'us','AMERICA','2300','Cary.Stockwell@VIREO.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.278794, 39.975525,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (223,'Cary','Olin',cust_address_typ
+    ('1801 Lititz Pike','17601','Lancaster','PA','US'),PHONE_LIST_TYP
+    ('+1 717 123 4746'),'us','AMERICA','2300','Cary.Olin@WATERTHRUSH.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.30826, 40.07257,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (224,'Clara','Krige',cust_address_typ
+    ('101 E Olney Ave','19120','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4748'),'us','AMERICA','2300','Clara.Krige@WHIMBREL.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.12021, 40.034937,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (225,'Clara','Ganesan',cust_address_typ
+    ('612 Jefferson Ave','18510','Scranton','PA','US'),PHONE_LIST_TYP
+    ('+1 717 123 4752'),'us','AMERICA','2300','Clara.Ganesan@WIGEON.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.655941, 41.411024,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (226,'Ajay','Andrews',cust_address_typ
+    ('223 4Th Ave # 1100','15222','Pittsburgh','PA','US'),PHONE_LIST_TYP
+    ('+1 412 123 4763'),'us','AMERICA','2300','Ajay.Andrews@YELLOWTHROAT.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-80.0027, 40.439706,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (227,'Kathy','Prashant',cust_address_typ
+    ('36 W 34Th St','16508','Erie','PA','US'),PHONE_LIST_TYP
+    ('+1 814 123 4766'),'us','AMERICA','2400','Kathy.Prashant@ANI.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-80.07008, 42.105437,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (228,'Graham','Neeson',cust_address_typ
+    ('1007 Mount Royal Blvd','15223','Pittsburgh','PA','US'),PHONE_LIST_TYP
+    ('+1 412 123 4767'),'us','AMERICA','2400','Graham.Neeson@AUKLET.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-79.959364, 40.516644,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (229,'Ian','Chapman',cust_address_typ
+    ('601 Market St','19106','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4768'),'us','AMERICA','2400','Ian.Chapman@AVOCET.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.15065, 39.950394,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (230,'Danny','Wright',cust_address_typ
+    ('5565 Baynton St','19144','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4771'),'us','AMERICA','2400','Danny.Wright@BITTERN.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.16979, 40.036941,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (231,'Danny','Rourke',cust_address_typ
+    ('5640 Fishers Ln','20852','Rockville','MD','US'),PHONE_LIST_TYP
+    ('+1 301 123 4794'),'us','AMERICA','2400','Danny.Rourke@BRANT.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-77.115297, 39.062872,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (232,'Donald','Hunter',cust_address_typ
+    ('5122 Sinclair Ln','21206','Baltimore','MD','US'),PHONE_LIST_TYP
+    ('+1 410 123 4795'),'us','AMERICA','2400','Donald.Hunter@CHACHALACA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.545732, 39.322775,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (233,'Graham','Spielberg',cust_address_typ
+    ('680 Bel Air Rd','21014','Bel Air','MD','US'),PHONE_LIST_TYP
+    ('+1 410 123 4800'),'us','AMERICA','2400','Graham.Spielberg@CHUKAR.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.357073, 39.523878,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (234,'Dan','Roberts',cust_address_typ
+    ('4301 Ashland Ave','21205','Baltimore','MD','US'),PHONE_LIST_TYP
+    ('+1 410 123 4805'),'us','AMERICA','2400','Dan.Roberts@NUTHATCH.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.561682, 39.301622,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (235,'Edward','Oates',cust_address_typ
+    ('8004 Stansbury Rd','21222','Baltimore','MD','US'),PHONE_LIST_TYP
+    ('+1 410 012 4715', '+1 410 083 4715'),'us','AMERICA','2400','Edward.Oates@OVENBIRD.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.500344, 39.25618,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (236,'Edward','Julius',cust_address_typ
+    ('10209 Yearling Dr','20850','Rockville','MD','US'),PHONE_LIST_TYP
+    ('+1 301 123 4809'),'us','AMERICA','2400','Edward.Julius@PARULA.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-77.212047, 39.098763,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (237,'Farrah','Quinlan',cust_address_typ
+    ('3000 Greenmount Ave','21218','Baltimore','MD','US'),PHONE_LIST_TYP
+    ('+1 410 123 4812'),'us','AMERICA','2400','Farrah.Quinlan@PHAINOPEPLA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.609501, 39.324878,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (238,'Farrah','Lange',cust_address_typ
+    ('200 E Fort Ave','21230','Baltimore','MD','US'),PHONE_LIST_TYP
+    ('+1 410 123 4813'),'us','AMERICA','2400','Farrah.Lange@PHALAROPE.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.610142, 39.272749,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (239,'Hal','Stockwell',cust_address_typ
+    ('1262 Vocke Rd','21502','Cumberland','MD','US'),PHONE_LIST_TYP
+    ('+1 301 123 4814'),'us','AMERICA','2400','Hal.Stockwell@PHOEBE.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (0, NULL,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (240,'Malcolm','Kanth',cust_address_typ
+    ('3314 Eastern Ave','21224','Baltimore','MD','US'),PHONE_LIST_TYP
+    ('+1 410 123 4816'),'us','AMERICA','2400','Malcolm.Kanth@PIPIT.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.570102, 39.28652,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (241,'Malcolm','Broderick',cust_address_typ
+    ('12817 Coastal Hwy','21842','Ocean City','MD','US'),PHONE_LIST_TYP
+    ('+1 410 123 4817'),'us','AMERICA','2400','Malcolm.Broderick@PLOVER.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.056879, 38.422394,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (242,'Mary','Lemmon',cust_address_typ
+    ('11200 Scaggsville Rd','20723','Laurel','MD','US'),PHONE_LIST_TYP
+    ('+1 301 123 4818'),'us','AMERICA','2400','Mary.Lemmon@PUFFIN.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.904846, 39.138404,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (243,'Mary','Collins',cust_address_typ
+    ('9435 Washington Blvd N # M','20723','Laurel','MD','US'),PHONE_LIST_TYP
+    ('+1 301 123 4819'),'us','AMERICA','2400','Mary.Collins@PYRRHULOXIA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.830336, 39.117905,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (244,'Matt','Gueney',cust_address_typ
+    ('2300 Harford Rd','21218','Baltimore','MD','US'),PHONE_LIST_TYP
+    ('+1 410 123 4822'),'us','AMERICA','2400','Matt.Gueney@REDPOLL.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.5969, 39.315728,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (245,'Max','von Sydow',cust_address_typ
+    ('2 2Nd St # A','21842','Ocean City','MD','US'),PHONE_LIST_TYP
+    ('+1 410 123 4840'),'us','AMERICA','2400','Max.vonSydow@REDSTART.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.084509, 38.333211,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (246,'Max','Schell',cust_address_typ
+    ('6917 W Oklahoma Ave','53219','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4363'),'us','AMERICA','2400','Max.Schell@SANDERLING.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.99935, 42.988358,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (247,'Cynda','Whitcraft',cust_address_typ
+    ('206 S Broadway # 707','55904','Rochester','MN','US'),PHONE_LIST_TYP
+    ('+1 507 123 4387'),'us','AMERICA','2400','Cynda.Whitcraft@SANDPIPER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-92.46291, 44.021356,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (248,'Donald','Minnelli',cust_address_typ
+    ('160 Glenwood Ave','55405','Minneapolis','MN','US'),PHONE_LIST_TYP
+    ('+1 612 123 4436'),'us','AMERICA','2400','Donald.Minnelli@SCAUP.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-93.28336, 44.979113,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (249,'Hannah','Broderick',cust_address_typ
+    ('6915 Grand Ave','46323','Hammond','IN','US'),PHONE_LIST_TYP
+    ('+1 219 123 4145'),'us','AMERICA','2400','Hannah.Broderick@SHRIKE.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.44218, 41.587639,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (250,'Dan','Williams',cust_address_typ
+    ('2215 Oak Industrial Dr Ne','49505','Grand Rapids','MI','US'),PHONE_LIST_TYP
+    ('+1 616 123 4190'),'us','AMERICA','2400','Dan.Williams@SISKIN.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-85.61161, 42.975227,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (251,'Raul','Wilder',cust_address_typ
+    ('65 Cadillac Sq # 2701','48226','Detroit','MI','US'),PHONE_LIST_TYP
+    ('+1 313 123 4241'),'us','AMERICA','2500','Raul.Wilder@STILT.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.045345, 42.331799,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (252,'Shah Rukh','Field',cust_address_typ
+    ('3435 Tuscany Dr Se','49546','Grand Rapids','MI','US'),PHONE_LIST_TYP
+    ('+1 616 123 4259'),'us','AMERICA','2500','ShahRukh.Field@WHIMBREL.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-85.49774, 42.900677,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (253,'Sally','Bogart',cust_address_typ
+    ('215 4Th Ave Se','52401','Cedar Rapids','IA','US'),PHONE_LIST_TYP
+    ('+1 319 123 4269'),'us','AMERICA','2500','Sally.Bogart@WILLET.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-91.66561, 41.976278,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (254,'Bruce','Bates',cust_address_typ
+    ('1751 Madison Ave','51503','Council Bluffs','IA','US'),PHONE_LIST_TYP
+    ('+1 712 123 4284'),'us','AMERICA','3500','Bruce.Bates@COWBIRD.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-95.82708, 41.244721,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (255,'Brooke','Shepherd',cust_address_typ
+    ('810 1St Ave','51501','Council Bluffs','IA','US'),PHONE_LIST_TYP
+    ('+1 712 123 4289'),'us','AMERICA','3500','Brooke.Shepherd@KILLDEER.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-95.85574, 41.260392,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (256,'Ben','de Niro',cust_address_typ
+    ('500 W Oklahoma Ave','53207','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4312'),'us','AMERICA','3500','Ben.deNiro@KINGLET.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.91708, 42.987664,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (257,'Emmet','Walken',cust_address_typ
+    ('4811 S 76Th St # 205','53220','Milwaukee','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4364'),'us','AMERICA','3600','Emmet.Walken@LIMPKIN.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-88.008361, 42.957388,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (258,'Ellen','Palin',cust_address_typ
+    ('310 Broadway St','56308','Alexandria','MN','US'),PHONE_LIST_TYP
+    ('+1 320 123 4385'),'us','AMERICA','3600','Ellen.Palin@LONGSPUR.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-95.377469, 45.890088,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (259,'Denholm','von Sydow',cust_address_typ
+    ('1721 E Lake St','55407','Minneapolis','MN','US'),PHONE_LIST_TYP
+    ('+1 612 123 4407'),'us','AMERICA','3600','Denholm.vonSydow@MERGANSER.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-93.24927, 44.94833,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (260,'Ellen','Khan',cust_address_typ
+    ('255 Great Arrow Ave','14207','Buffalo','NY','US'),PHONE_LIST_TYP
+    ('+1 716 123 4456'),'us','AMERICA','3600','Ellen.Khan@VERDIN.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-78.8782, 42.939107,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (261,'Emmet','Garcia',cust_address_typ
+    ('800 Carter St','14621','Rochester','NY','US'),PHONE_LIST_TYP
+    ('+1 716 123 4582'),'us','AMERICA','3600','Emmet.Garcia@VIREO.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-77.59255, 43.19264,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (262,'Fred','Reynolds',cust_address_typ
+    ('6640 Campbell Blvd','14094','Lockport','NY','US'),PHONE_LIST_TYP
+    ('+1 716 123 4627'),'us','AMERICA','3600','Fred.Reynolds@WATERTHRUSH.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-78.77288, 43.103915,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (263,'Fred','Lithgow',cust_address_typ
+    ('802 North Ave','15209','Pittsburgh','PA','US'),PHONE_LIST_TYP
+    ('+1 412 123 4677'),'us','AMERICA','3600','Fred.Lithgow@WHIMBREL.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-79.973484, 40.488173,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (264,'George','Adjani',cust_address_typ
+    ('1136 Arch St','19107','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4702'),'us','AMERICA','3600','George.Adjani@WILLET.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.15858, 39.953503,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (265,'Irene','Laughton',cust_address_typ
+    ('6Th And Master St','19122','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4749'),'us','AMERICA','3600','Irene.Laughton@ANHINGA.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.146, 39.972648,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (266,'Prem','Cardinale',cust_address_typ
+    ('Rt 6 E','16365','Warren','PA','US'),PHONE_LIST_TYP
+    ('+1 814 123 4755'),'us','AMERICA','3700','Prem.Cardinale@BITTERN.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-79.093419, 41.836445,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (267,'Prem','Walken',cust_address_typ
+    ('1924 Bedford St','21502','Cumberland','MD','US'),PHONE_LIST_TYP
+    ('+1 301 123 4831'),'us','AMERICA','3700','Prem.Walken@BRANT.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-78.74141, 39.67579,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (268,'Kyle','Schneider',cust_address_typ
+    ('2674 Collingwood St','48206','Detroit','MI','US'),PHONE_LIST_TYP
+    ('+1 313 123 4167'),'us','AMERICA','3700','Kyle.Schneider@DUNLIN.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.114655, 42.379998,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (269,'Kyle','Martin',cust_address_typ
+    ('2713 N Bendix Dr','46628','South Bend','IN','US'),PHONE_LIST_TYP
+    ('+1 219 123 4116'),'us','AMERICA','3700','Kyle.Martin@EIDER.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-86.29384, 41.713988,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (270,'Meg','Derek',cust_address_typ
+    ('23985 Bedford Rd N','49017','Battle Creek','MI','US'),PHONE_LIST_TYP
+    ('+1 616 123 4166'),'us','AMERICA','3700','Meg.Derek@FLICKER.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-85.23775, 42.419583,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (271,'Shelley','Peckinpah',cust_address_typ
+    ('752 W Huron St','48341','Pontiac','MI','US'),PHONE_LIST_TYP
+    ('+1 810 123 4212'),'us','AMERICA','3700','Shelley.Peckinpah@GODWIT.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.319991, 42.635196,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (272,'Prem','Garcia',cust_address_typ
+    ('660 Woodward Ave # 2290','48226','Detroit','MI','US'),PHONE_LIST_TYP
+    ('+1 313 123 4240'),'us','AMERICA','3700','Prem.Garcia@JACANA.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-83.045995, 42.330983,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (273,'Bo','Hitchcock',cust_address_typ
+    ('1330 N Memorial Dr','53404','Racine','WI','US'),PHONE_LIST_TYP
+    ('+1 414 123 4340'),'us','AMERICA','5000','Bo.Hitchcock@ANHINGA.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-87.8003, 42.737121,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (274,'Bob','McCarthy',cust_address_typ
+    ('701 Seneca St','14210','Buffalo','NY','US'),PHONE_LIST_TYP
+    ('+1 716 123 4485'),'us','AMERICA','5000','Bob.McCarthy@ANI.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-78.85093, 42.876154,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (275,'Dom','McQueen',cust_address_typ
+    ('8 Automation Ln','12205','Albany','NY','US'),PHONE_LIST_TYP
+    ('+1 518 123 4532'),'us','AMERICA','5000','Dom.McQueen@AUKLET.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-73.81064, 42.719449,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (276,'Dom','Hoskins',cust_address_typ
+    ('811 N Brandywine Ave','12308','Schenectady','NY','US'),PHONE_LIST_TYP
+    ('+1 518 123 4562'),'us','AMERICA','5000','Dom.Hoskins@AVOCET.COM',
+    145,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-73.91715, 42.806965,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (277,'Don','Siegel',cust_address_typ
+    ('2904 S Salina St','13205','Syracuse','NY','US'),PHONE_LIST_TYP
+    ('+1 315 123 4585'),'us','AMERICA','5000','Don.Siegel@BITTERN.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.14293, 43.01943,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (278,'Gvtz','Bradford',cust_address_typ
+    ('3025 Sussex Ave','15226','Pittsburgh','PA','US'),PHONE_LIST_TYP
+    ('+1 412 123 4659'),'us','AMERICA','5000','Gvtz.Bradford@BULBUL.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-80.016204, 40.384079,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (279,'Holly','Kurosawa',cust_address_typ
+    ('932 High St','17603','Lancaster','PA','US'),PHONE_LIST_TYP
+    ('+1 717 123 4679'),'us','AMERICA','5000','Holly.Kurosawa@CARACARA.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.31964, 40.028889,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (280,'Rob','MacLaine',cust_address_typ
+    ('5344 Haverford Ave','19139','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4709'),'us','AMERICA','5000','Rob.MacLaine@COOT.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (0, NULL,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (281,'Don','Barkin',cust_address_typ
+    ('6959 Tulip St','19135','Philadelphia','PA','US'),PHONE_LIST_TYP
+    ('+1 215 123 4751'),'us','AMERICA','5000','Don.Barkin@CORMORANT.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-75.04023, 40.024509,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (282,'Kurt','Danson',cust_address_typ
+    ('511 S Central Ave # A','21202','Baltimore','MD','US'),PHONE_LIST_TYP
+    ('+1 410 123 4807'),'us','AMERICA','5000','Kurt.Danson@COWBIRD.COM',
+    149,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.59934, 39.28475,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (283,'Kurt','Heard',cust_address_typ
+    ('400 E Joppa Rd','21286','Baltimore','MD','US'),PHONE_LIST_TYP
+    ('+1 410 123 4829'),'us','AMERICA','5000','Kurt.Heard@CURLEW.COM',
+    NULL,MDSYS.SDO_GEOMETRY
+    (2001, 8307, MDSYS.SDO_POINT_TYPE
+    (-76.595984, 39.401932,NULL),NULL,NULL));
+INSERT INTO customers VALUES 
+    (308,'Glenda','Dunaway',cust_address_typ
+    ('1795 Wu Meng','21191','Muang Chonburi','','CN'),PHONE_LIST_TYP
+    ('+86 811 012 4093'),'zhs','CHINA','1200','Glenda.Dunaway@DOWITCHER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (309,'Glenda','Bates',cust_address_typ
+    ('1796 Tsing Tao','11111','Muang Nonthaburi','','CN'),PHONE_LIST_TYP
+    ('+86 123 012 4095'),'zhs','CHINA','1200','Glenda.Bates@DIPPER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (323,'Goetz','Falk',cust_address_typ
+    ('1810 Tucker Crt','361181','Mumbai','','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4123', '+91 80 083 4833'),'hi','INDIA','5000',
+    'Goetz.Falk@VEERY.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (326,'Hal','Olin',cust_address_typ
+    ('Walpurgisstr 69','81243','Munich','','DE'),PHONE_LIST_TYP
+    ('+49 89 012 4129', '+49 89 083 4839'),'d','GERMANY','2400',
+    'Hal.Olin@FLICKER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (327,'Hannah','Kanth',cust_address_typ
+    ('Sendlinger Tor 4','81696','Munich','','DE'),PHONE_LIST_TYP
+    ('+49 90 012 4131', '+49 90 083 4131'),'d','GERMANY','2400',
+    'Hannah.Kanth@GADWALL.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (328,'Hannah','Field',cust_address_typ
+    ('Theresienstr 15','81999','Munich','','DE'),PHONE_LIST_TYP
+    ('+49 91 012 4133', '+49 91 083 4133'),'d','GERMANY','2400',
+    'Hannah.Field@GALLINULE.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (333,'Margret','Powell',cust_address_typ
+    ('Via Frenzy 6903','361196','Roma','','IT'),PHONE_LIST_TYP
+    ('+39 6 012 4543'),'i','ITALY','1200',
+    'Margret.Powell@ANI.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (334,'Harry Mean','Taylor',cust_address_typ
+    ('1822 Ironweed St','91261','Toronto','ONT','CA'),PHONE_LIST_TYP
+    ('+1 416 012 4147'),'us','AMERICA','1200','HarryMean.Taylor@REDPOLL.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (335,'Margrit','Garner',cust_address_typ
+    ('Via Luminosa 162','361197','Firenze','','IT'),PHONE_LIST_TYP
+    ('+39 55 012 4547'),'i','ITALY','500','Margrit.Garner@STILT.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (337,'Maria','Warden',cust_address_typ
+    ('Via Notoriosa 1932 Rd','361198','Firenze','','IT'),PHONE_LIST_TYP
+    ('+39 55 012 4551'),'i','ITALY','500','Maria.Warden@TANAGER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (339,'Marilou','Landis',cust_address_typ
+    ('Via Notoriosa 1941','361199','Firenze','','IT'),PHONE_LIST_TYP
+    ('+39 55 012 4555'),'i','ITALY','500','Marilou.Landis@TATTLER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (361,'Marilou','Chapman',cust_address_typ
+    ('Via Notoriosa 1942','361200','Firenze','','IT'),PHONE_LIST_TYP
+    ('+39 55 012 4559'),'i','ITALY','500','Marilou.Chapman@TEAL.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (363,'Kathy','Lambert',cust_address_typ
+    ('Via Delle Grazie 11','361225','Tellaro','','IT'),PHONE_LIST_TYP
+    ('+39 10 012 4363'),'i','ITALY','2400','Kathy.Lambert@COOT.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (360,'Helmut','Capshaw',cust_address_typ
+    ('1831 No Wong','111181','Peking','','CN'),PHONE_LIST_TYP
+    ('+86 10 012 4165'),'zhs','CHINA','3600','Helmut.Capshaw@TROGON.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (341,'Keir','George',cust_address_typ
+    ('Via Dolorosa 69','361229','Tellaro','','IT'),PHONE_LIST_TYP
+    ('+39 10 012 4365'),'i','ITALY','700','Keir.George@VIREO.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (342,'Marlon','Laughton',cust_address_typ
+    ('Via Notoriosa 1943','361201','Firenze','','IT'),PHONE_LIST_TYP
+    ('+39 55 012 4565'),'i','ITALY','2400','Marlon.Laughton@CORMORANT.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (343,'Keir','Chandar',cust_address_typ
+    ('Via Luminosa 162','361231','Tellaro','','IT'),PHONE_LIST_TYP
+    ('+39 10 012 4367'),'i','ITALY','700','Keir.Chandar@WATERTHRUSH.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (344,'Marlon','Godard',cust_address_typ
+    ('2017 Convoy St','876508','Tokyo','','JP'),PHONE_LIST_TYP
+    ('+81 565 012 4567'),'ja','JAPAN','2400','Marlon.Godard@MOORHEN.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (345,'Keir','Weaver',cust_address_typ
+    ('Via Di Firenze 231','361228','Tellaro','','IT'),PHONE_LIST_TYP
+    ('+39 10 012 4369'),'i','ITALY','700','Keir.Weaver@WHIMBREL.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (346,'Marlon','Clapton',cust_address_typ
+    ('Via Notoriosa 1949','361202','Firenze','','IT'),PHONE_LIST_TYP
+    ('+39 55 012 4569'),'i','ITALY','2400','Marlon.Clapton@COWBIRD.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (347,'Kelly','Quinlan',cust_address_typ
+    ('Via Frenzy 6903','361230','Tellaro','','IT'),PHONE_LIST_TYP
+    ('+39 10 012 4371', '+39 10 083 4371'),'i','ITALY','3600',
+    'Kelly.Quinlan@PYRRHULOXIA.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (348,'Kelly','Lange',cust_address_typ
+    ('Piazza Del Congresso 22','361219','San Giminiano','','IT'),PHONE_LIST_TYP
+    ('+39 49 012 4373', '+39 49 083 4373'),'i','ITALY','3600',
+    'Kelly.Lange@SANDPIPER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (349,'Ken','Glenn',cust_address_typ
+    ('Piazza Quattre Stagioni 4','361220','San Giminiano','','IT'),PHONE_LIST_TYP
+    ('+39 49 012 4375', '+39 49 083 4375'),'i','ITALY','3600',
+    'Ken.Glenn@SAW-WHET.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (350,'Ken','Chopra',cust_address_typ
+    ('Piazza Cacchiatore 23','361218','San Giminiano','','IT'),PHONE_LIST_TYP
+    ('+39 49 012 4377', '+39 49 083 4377'),'i','ITALY','3600',
+    'Ken.Chopra@SCAUP.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (351,'Ken','Wenders',cust_address_typ
+    ('Via Notoriosa 1932','361232','Tellaro','','IT'),PHONE_LIST_TYP
+    ('+39 10 012 4379', '+39 10 083 4379'),'i','ITALY','3600',
+    'Ken.Wenders@REDPOLL.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (352,'Kenneth','Redford',cust_address_typ
+    ('Via Notoriosa 1949','361236','Ventimiglia','','IT'),PHONE_LIST_TYP
+    ('+39 10 012 4381', '+39 10 083 4381'),'i','ITALY','3600',
+    'Kenneth.Redford@REDSTART.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (378,'Meg','Sen',cust_address_typ
+    ('2033 Spartacus St','','Samutprakarn','','TH'),PHONE_LIST_TYP
+    ('+66 76 012 4633', '+66 76 083 4633'),'th','THAILAND','3700',
+    'Meg.Sen@COWBIRD.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (380,'Meryl','Holden',cust_address_typ
+    ('2034 Sabrina Rd','361182','Samutprakarn','','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4637', '+91 80 083 4637'),'hi','INDIA','3700',
+    'Meryl.Holden@DIPPER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (447,'Richard','Coppola',cust_address_typ
+    ('Piazza Svizzera','361211','Milano','','IT'),PHONE_LIST_TYP
+    ('+39 2 012 4771'),'i','ITALY','500','Richard.Coppola@SISKIN.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (448,'Richard','Winters',cust_address_typ
+    ('Ruella Delle Spiriti','361212','Milano','','IT'),PHONE_LIST_TYP
+    ('+39 2 012 4773'),'i','ITALY','500','Richard.Winters@SNIPE.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (449,'Rick','Romero',cust_address_typ
+    ('Via Del Disegno 194','361213','Milano','','IT'),PHONE_LIST_TYP
+    ('+39 2 012 4775'),'i','ITALY','1500','Rick.Romero@LONGSPUR.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (450,'Rick','Lyon',cust_address_typ
+    ('Via Delle Capeletti 52','361214','San Giminiano','','IT'),PHONE_LIST_TYP
+    ('+39 49 012 4777'),'i','ITALY','1500','Rick.Lyon@MERGANSER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (451,'Ridley','Hackman',cust_address_typ
+    ('Via Delle Grazie 11','361215','San Giminiano','','IT'),PHONE_LIST_TYP
+    ('+39 49 012 4779'),'i','ITALY','700','Ridley.Hackman@ANHINGA.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (452,'Ridley','Coyote',cust_address_typ
+    ('Via Delli Capelli 2','361216','San Giminiano','','IT'),PHONE_LIST_TYP
+    ('+39 49 012 4781'),'i','ITALY','700','Ridley.Coyote@ANI.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (453,'Ridley','Young',cust_address_typ
+    ('1592 Silverado St','361123','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4783'),'hi','INDIA','700','Ridley.Young@CHUKAR.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (454,'Rob','Russell',cust_address_typ
+    ('1593 Silverado St','361112','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4785', '+91 80 083 4785'),'hi','INDIA','5000',
+    'Rob.Russell@VERDIN.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (458,'Robert','de Niro',cust_address_typ
+    ('1597 Legend St','','Mysore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4793'),'hi','INDIA','3700',
+    'Robert.deNiro@DOWITCHER.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (463,'Robin','Adjani',cust_address_typ
+    ('1602 Sholay St','','Chennai','Tam','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4803'),'hi','INDIA','1500','Robin.Adjani@MOORHEN.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (466,'Rodolfo','Hershey',cust_address_typ
+    ('1605 Bazigar Crt','','Pune','','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4809', '+91 80 083 4809'),'hi','INDIA','5000',
+    'Rodolfo.Hershey@VIREO.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (467,'Rodolfo','Dench',cust_address_typ
+    ('1606 Sangam Blvd','361196','New Delhi','','IN'),PHONE_LIST_TYP
+    ('+91 11 012 4811', '+91 11 083 4811'),'hi','INDIA','5000',
+    'Rodolfo.Dench@SCOTER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (468,'Rodolfo','Altman',cust_address_typ
+    ('1607 Sangam Blvd','361114','New Delhi','','IN'),PHONE_LIST_TYP
+    ('+91 11 012 4813', '+91 11 083 4813'),'hi','INDIA','5000',
+    'Rodolfo.Altman@SHRIKE.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (470,'Roger','Mastroianni',cust_address_typ
+    ('1609 Pakija Rd','','New Delhi','','IN'),PHONE_LIST_TYP
+    ('+91 11 012 4817', '+91 11 083 4817'),'hi','INDIA','3700',
+    'Roger.Mastroianni@CREEPER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (473,'Rolf','Ashby',cust_address_typ
+    ('1612 Talaivar St','','Chennai','Tam','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4823', '+91 80 083 4823'),'hi','INDIA','5000',
+    'Rolf.Ashby@WATERTHRUSH.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (474,'Romy','Sharif',cust_address_typ
+    ('1613 Victoria St','','Calcutta','','IN'),PHONE_LIST_TYP
+    ('+91 33 012 4825', '+91 33 083 4825'),'hi','INDIA','5000',
+    'Romy.Sharif@SNIPE.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (475,'Romy','McCarthy',cust_address_typ
+    ('1614 Gitanjali Rd','361168','Calcutta','','IN'),PHONE_LIST_TYP
+    ('+91 33 012 4827', '+91 33 083 4827'),'hi','INDIA','5000',
+    'Romy.McCarthy@STILT.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (476,'Rosanne','Hopkins',cust_address_typ
+    ('1615 Crackers Crt','361168','Chennai - India','','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4829'),'hi','INDIA','300','Rosanne.Hopkins@ANI.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (477,'Rosanne','Douglas',cust_address_typ
+    ('1616 Mr. India Ln','361168','Bombay - India','Kar','IN'),PHONE_LIST_TYP
+    ('+91 22 012 4831'),'hi','INDIA','300','Rosanne.Douglas@ANHINGA.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (478,'Rosanne','Baldwin',cust_address_typ
+    ('1617 Crackers St','361168','Bangalore - India','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4833'),'hi','INDIA','300','Rosanne.Baldwin@AUKLET.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (479,'Roxanne','Shepherd',cust_address_typ
+    ('1618 Villains St','361168','New Delhi - India','','IN'),PHONE_LIST_TYP
+    ('+91 11 012 4835', '+91 11 083 4835'),'hi','INDIA','1200',
+    'Roxanne.Shepherd@DUNLIN.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (480,'Roxanne','Michalkow',cust_address_typ
+    ('1619 Bowlers Rd','361168','Chandigarh','Har','IN'),PHONE_LIST_TYP
+    ('+91 172 012 4837'),'hi','INDIA','1200','Roxanne.Michalkow@EIDER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (481,'Roy','Hulce',cust_address_typ
+    ('1620 Sixers Crt','361168','Bombay','Kar','IN'),PHONE_LIST_TYP
+    ('+91 22 012 4839', '+91 22 083 4839'),'hi','INDIA','5000',
+    'Roy.Hulce@SISKIN.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (482,'Roy','Dunaway',cust_address_typ
+    ('1622 Roja St','361168','Chennai','Tam','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4841', '+91 80 083 4841'),'hi','INDIA','5000',
+    'Roy.Dunaway@WHIMBREL.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (483,'Roy','Bates',cust_address_typ
+    ('1623 Hey Ram St','361168','Chennai - India','','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4843', '+91 80 083 4843'),'hi','INDIA','5000',
+    'Roy.Bates@WIGEON.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (487,'Rufus','Dvrrie',cust_address_typ
+    ('1627 Sowdagar St','361168','New Delhi','','IN'),PHONE_LIST_TYP
+    ('+91 11 012 4851', '+91 11 083 4851'),'hi','INDIA','1900',
+    'Rufus.Dvrrie@PLOVER.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (488,'Rufus','Belushi',cust_address_typ
+    ('1628 Pataudi St','361168','New Delhi','','IN'),PHONE_LIST_TYP
+    ('+91 11 012 4853', '+91 11 083 4853'),'hi','INDIA','1900',
+ 'Rufus.Belushi@PUFFIN.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (492,'Sally','Edwards',cust_address_typ
+    ('1632 Splash St','361168','Chandigarh','Har','IN'),PHONE_LIST_TYP
+    ('+91 172 012 4861'),'hi','INDIA','2500',
+ 'Sally.Edwards@TURNSTONE.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (496,'Scott','Jordan',cust_address_typ
+    ('1636 Pretty Blvd','361168','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4869'),'hi','INDIA','5000','Scott.Jordan@WILLET.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (605,'Shammi','Pacino',cust_address_typ
+    ('1646 Brazil Blvd','361168','Chennai','Tam','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4887'),'hi','INDIA','500','Shammi.Pacino@BITTERN.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (606,'Sharmila','Kazan',cust_address_typ
+    ('1647 Suspense St','361168','Cochin','Ker','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4889'),'hi','INDIA','500','Sharmila.Kazan@BRANT.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (607,'Sharmila','Fonda',cust_address_typ
+    ('1648 Anamika St','361168','Cochin','Ker','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4891'),'hi','INDIA','500','Sharmila.Fonda@BUFFLEHEAD.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (609,'Shelley','Taylor',cust_address_typ
+    ('1650 Teesri Manjil Crt','361168','Kashmir','','IN'),PHONE_LIST_TYP
+    ('+91 141 012 4895', '+91 141 083 4895'),'hi','INDIA','3700',
+ 'Shelley.Taylor@CURLEW.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (615,'Shyam','Plummer',cust_address_typ
+    ('1656 Veterans Rd','361168','Chennai','Tam','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4907'),'hi','INDIA','2500','Shyam.Plummer@VEERY.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (621,'Silk','Kurosawa',cust_address_typ
+    ('1662 Talaivar St','361168','Chennai','Tam','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4919'),'hi','INDIA','1500','Silk.Kurosawa@NUTHATCH.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (627,'Sivaji','Gielgud',cust_address_typ
+    ('1667 2010 St','61311','Batavia','Ker','IN'),PHONE_LIST_TYP
+    ('+91 80 012 4931'),'hi','INDIA','500','Sivaji.Gielgud@BULBUL.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (712,'M. Emmet','Stockwell',cust_address_typ
+    ('Piazza Del Congresso 22','361185','Roma','','IT'),PHONE_LIST_TYP
+    ('+39 6 012 4501', '+39 6 083 4501'),'i','ITALY','3700',
+    'M.Emmet.Stockwell@COOT.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (713,'M. Emmet','Olin',cust_address_typ
+    ('Piazza Quattre Stagioni 4','361186','Roma','','IT'),PHONE_LIST_TYP
+    ('+39 6 012 4503', '+39 6 083 4503'),'i','ITALY','3700',
+    'M.Emmet.Olin@CORMORANT.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (715,'Malcolm','Field',cust_address_typ
+    ('Piazza Svizzera','361187','Roma','','IT'),PHONE_LIST_TYP
+    ('+39 6 012 4507', '+39 6 083 4507'),'i','ITALY','2400',
+    'Malcolm.Field@DOWITCHER.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (717,'Mammutti','Sutherland',cust_address_typ
+    ('Ruella Delle Spiriti','361188','Roma','','IT'),PHONE_LIST_TYP
+    ('+39 6 012 4511'),'i','ITALY','500',
+    'Mammutti.Sutherland@TOWHEE.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (719,'Mani','Kazan',cust_address_typ
+    ('Via Del Disegno 194','361189','Roma','','IT'),PHONE_LIST_TYP
+    ('+39 6 012 4515'),'i','ITALY','500','Mani.Kazan@TROGON.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (721,'Mani','Buckley',cust_address_typ
+    ('Via Delle Capeletti 52','361190','Roma','','IT'),PHONE_LIST_TYP
+    ('+39 6 012 4519'),'i','ITALY','500','Mani.Buckley@TURNSTONE.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (727,'Margaret','Ustinov',cust_address_typ
+    ('Via Dello Croce 93','361193','Roma','','IT'),PHONE_LIST_TYP
+    ('+39 6 012 4531'),'i','ITALY','1200','Margaret.Ustinov@ANHINGA.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (729,'Margaux','Krige',cust_address_typ
+    ('Via Di Firenze 231','361194','Roma','','IT'),PHONE_LIST_TYP
+    ('+39 6 012 4535', '+39 6 083 4535'),'i','ITALY','2400',
+    'Margaux.Krige@DUNLIN.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (731,'Margaux','Capshaw',cust_address_typ
+    ('Via Dolorosa 69','361195','Roma','','IT'),PHONE_LIST_TYP
+    ('+39 6 012 4539', '+39 6 083 4539'),'i','ITALY','2400',
+    'Margaux.Capshaw@EIDER.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (754,'Kevin','Goodman',cust_address_typ
+    ('Via Notoriosa 1942','361234','Ventimiglia','','IT'),PHONE_LIST_TYP
+    ('+39 10 012 4385'),'i','ITALY','700','Kevin.Goodman@WIGEON.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (755,'Kevin','Cleveland',cust_address_typ
+    ('Via Notoriosa 1943','361235','Ventimiglia','','IT'),PHONE_LIST_TYP
+    ('+39 10 012 4387'),'i','ITALY','700','Kevin.Cleveland@WILLET.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (756,'Kevin','Wilder',cust_address_typ
+    ('Canale Grande 2','361183','Roma','','IT'),PHONE_LIST_TYP
+    ('+39 6 012 4389'),'i','ITALY','700','Kevin.Wilder@AUKLET.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (757,'Kiefer','Reynolds',cust_address_typ
+    ('Piazza Cacchiatore 23','361184','Roma','','IT'),PHONE_LIST_TYP
+    ('+39 6 012 4391'),'i','ITALY','700','Kiefer.Reynolds@AVOCET.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (766,'Klaus','Young',cust_address_typ
+    ('Via Del Disegno 194','361223','San Giminiano','','IT'),PHONE_LIST_TYP
+    ('+39 49 012 4409'),'i','ITALY','600','Klaus.Young@OVENBIRD.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (767,'Klaus Maria','Russell',cust_address_typ
+    ('Piazza Svizzera','361221','San Giminiano','','IT'),PHONE_LIST_TYP
+    ('+39 49 012 4411'),'i','ITALY','100','KlausMaria.Russell@COOT.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (768,'Klaus Maria','MacLaine',cust_address_typ
+    ('Via Dello Croce 93','361227','Tellaro','','IT'),PHONE_LIST_TYP
+    ('+39 10 012 4413'),'i','ITALY','100','KlausMaria.MacLaine@CHUKAR.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (769,'Kris','Harris',cust_address_typ
+    ('Via Dello Croce 93','361217','San Giminiano','','IT'),PHONE_LIST_TYP
+    ('+39 49 012 4415'),'i','ITALY','400','Kris.Harris@DIPPER.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (770,'Kris','Curtis',cust_address_typ
+    ('Ruella Delle Spiriti','361222','San Giminiano','','IT'),PHONE_LIST_TYP
+    ('+39 49 012 4417'),'i','ITALY','400','Kris.Curtis@DOWITCHER.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (771,'Kris','de Niro',cust_address_typ
+    ('Via Delle Capeletti 52','361224','San Giminiano','','IT'),PHONE_LIST_TYP
+    ('+39 49 012 4419'),'i','ITALY','400','Kris.deNiro@DUNLIN.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (772,'Kristin','Savage',cust_address_typ
+    ('Via Delli Capelli 2','361226','Tellaro','','IT'),PHONE_LIST_TYP
+    ('+39 10 012 4421'),'i','ITALY','400','Kristin.Savage@CURLEW.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (782,'Laurence','Seignier',cust_address_typ
+    ('1971 Limelight Blvd','','Samutprakarn','','TH'),PHONE_LIST_TYP
+    ('+66 76 012 4441'),'th','THAILAND','1200','Laurence.Seignier@CREEPER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (825,'Alain','Dreyfuss',cust_address_typ
+    ('Harmoniegasse 3','3413','Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 56 012 3527'),'d','SWITZERLAND','500','Alain.Dreyfuss@VEERY.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (826,'Alain','Barkin',cust_address_typ
+    ('Sonnenberg 4','3413','Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 57 012 3529'),'d','SWITZERLAND','500','Alain.Barkin@VERDIN.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (827,'Alain','Siegel',cust_address_typ
+    ('Alfred E. Neumann-Weg 3','3413','Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 58 012 3531'),'d','SWITZERLAND','500','Alain.Siegel@VIREO.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (828,'Alan','Minnelli',cust_address_typ
+    ('Dr. Herbert Bitto Str 23','3413','Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 59 012 3533', '+41 59 083 3533'),'d','SWITZERLAND','2300',
+    'Alan.Minnelli@TANAGER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (829,'Alan','Hunter',cust_address_typ
+    ('Taefernstr 4','3413',
+    'Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 60 012 3535', '+41 60 083 3535'),'d','SWITZERLAND',
+    '2300','Alan.Hunter@TATTLER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (830,'Albert','Dutt',cust_address_typ
+    ('Kreuzritterplatz 5','3413','Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 61 012 3537', '+41 61 083 3537'),'d','SWITZERLAND','3500',
+    'Albert.Dutt@CURLEW.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (831,'Albert','Bel Geddes',cust_address_typ
+    ('Helebardenweg 5','3413','Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 62 012 3539', '+41 62 083 3539'),'d','SWITZERLAND','3500',
+    'Albert.BelGeddes@DIPPER.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (832,'Albert','Spacek',cust_address_typ
+    ('Zum Freundlichen Nachbarn 5','3413',
+    'Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 63 012 3541', '+41 63 083 3541'),'d','SWITZERLAND','3500',
+    'Albert.Spacek@DOWITCHER.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (833,'Alec','Moranis',cust_address_typ
+    ('Ziegenwiese 3','3413','Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 64 012 3543', '+41 64 083 3543'),'d','SWITZERLAND','3500',
+    'Alec.Moranis@DUNLIN.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (834,'Alec','Idle',cust_address_typ
+    ('Am Waldrand 5','3413','Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 65 012 3545', '+41 65 083 3545'),'d','SWITZERLAND','3500',
+    'Alec.Idle@EIDER.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (835,'Alexander','Eastwood',cust_address_typ
+    ('Zur Kantine 9','3413','Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 66 012 3547'),'d','SWITZERLAND','1200',
+    'Alexander.Eastwood@AVOCET.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (836,'Alexander','Berenger',cust_address_typ
+    ('Grosse Bahnhostrasse 3','3413','Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 67 012 3549'),'d','SWITZERLAND','1200',
+    'Alexander.Berenger@BECARD.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (837,'Alexander','Stanton',cust_address_typ
+    ('Paradeplatz 4','8001','Zuerich','ZH','CH'),PHONE_LIST_TYP
+    ('+41 2 012 3551', '+41 2 083 3551'),'d','SWITZERLAND','1200',
+    'Alexander.Stanton@AUKLET.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (838,'Alfred','Nicholson',cust_address_typ
+    ('Badenerstr 1941','8004','Zuerich','ZH','CH'),PHONE_LIST_TYP
+    ('+41 3 012 3553', '+41 3 083 3553'),'d','SWITZERLAND','3500',
+    'Alfred.Nicholson@CREEPER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (839,'Alfred','Johnson',cust_address_typ
+    ('Welschdoerfchen 1941','7001','Chur','ZH','CH'),PHONE_LIST_TYP
+    ('+41 81 012 3555'),'d','SWITZERLAND','3500','Alfred.Johnson@FLICKER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (840,'Ali','Elliott',cust_address_typ
+    ('Le Reduit','7064','Tschiertschen','GR','CH'),PHONE_LIST_TYP
+    ('+41 81 012 3557'),'d','SWITZERLAND','1400','Ali.Elliott@ANHINGA.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (841,'Ali','Boyer',cust_address_typ
+    ('Bendlehn','9062','Trogen','SG','CH'),PHONE_LIST_TYP
+    ('+41 71 012 3559'),'d','SWITZERLAND','1400','Ali.Boyer@WILLET.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (842,'Ali','Stern',cust_address_typ
+    ('Spisertor 3','7000','St. Gallen','SG','CH'),PHONE_LIST_TYP
+    ('+41 71 012 3561'),'d','SWITZERLAND','1400','Ali.Stern@YELLOWTHROAT.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (843,'Alice','Oates',cust_address_typ
+    ('Langstr 14','8004','Zuerich','ZH','CH'),PHONE_LIST_TYP
+    ('+41 4 012 3563'),'d','SWITZERLAND','700','Alice.Oates@BECARD.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (844,'Alice','Julius',cust_address_typ
+    ('Roessligasse 4','8001','Zurich','ZH','CH'),PHONE_LIST_TYP
+    ('+41 6 012 3565'),'d','SWITZERLAND','700','Alice.Julius@BITTERN.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (845,'Ally','Fawcett',cust_address_typ
+    ('Zum Froehlichen Schweizer 3','8000','Zurich','ZH','CH'),PHONE_LIST_TYP
+    ('+41 7 012 3567', '+41 7 083 3567'),'d','SWITZERLAND','5000',
+    'Ally.Fawcett@PLOVER.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (846,'Ally','Brando',cust_address_typ
+    ('Chrottenweg','3000','Bern','BE','CH'),PHONE_LIST_TYP
+    ('+41 31 012 3569', '+41 31 083 3569'),'d','SWITZERLAND','5000',
+    'Ally.Brando@PINTAIL.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (847,'Ally','Streep',cust_address_typ
+    ('Bruppacher Str 3','3413','Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 68 012 3571', '+41 68 083 3571'),'d','SWITZERLAND','5000',
+    'Ally.Streep@PIPIT.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (848,'Alonso','Olmos',cust_address_typ
+    ('Limmatquai','8001','Zuerich','ZH','CH'),PHONE_LIST_TYP
+    ('+41 5 012 3573', '+41 5 083 3573'),'d','SWITZERLAND','1800',
+    'Alonso.Olmos@PHALAROPE.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (849,'Alonso','Kaurusmdki',cust_address_typ
+    ('Dreikoenigsstr 3','8001','Zurich','ZH','CH'),PHONE_LIST_TYP
+    ('+41 8 012 3575', '+41 8 083 3575'),'d','SWITZERLAND','1800',
+    'Alonso.Kaurusmdki@PHOEBE.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (850,'Amanda','Finney',cust_address_typ
+    ('Pfannenstilstr 13','8132','Egg','ZH','CH'),PHONE_LIST_TYP
+    ('+41 1 012 3577', '+41 1 083 3577'),'d','SWITZERLAND','2300',
+    'Amanda.Finney@STILT.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (851,'Amanda','Brown',cust_address_typ
+    ('Kreuzstr 32','8032','Zurich','ZH','CH'),PHONE_LIST_TYP
+    ('+41 9 012 3579', '+41 9 083 3579'),'d','SWITZERLAND','2300',
+    'Amanda.Brown@THRASHER.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (852,'Amanda','Tanner',cust_address_typ
+    ('1539 Stripes Rd','3413','Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 69 012 3581', '+41 69 083 3581'),'d','SWITZERLAND','2300',
+    'Amanda.Tanner@TEAL.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (853,'Amrish','Palin',cust_address_typ
+    ('1540 Stripes Crt','3413','Baden-Daettwil','AG','CH'),PHONE_LIST_TYP
+    ('+41 70 012 3583'),'d','SWITZERLAND','400','Amrish.Palin@EIDER.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (905,'Billy','Hershey',cust_address_typ
+    ('1592 Silverado St','361123','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3687'),'hi','INDIA','1400','Billy.Hershey@BULBUL.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (906,'Billy','Dench',cust_address_typ
+    ('1593 Silverado St','361112','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3689'),'hi','INDIA','1400','Billy.Dench@CARACARA.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (909,'Blake','Mastroianni',cust_address_typ
+    ('1596 Commando Blvd','361126','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3695'),'hi','INDIA','1200','Blake.Mastroianni@FLICKER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (911,'Bo','Dickinson',cust_address_typ
+    ('1598 Legend St','361149','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3699', '+91 80 083 3699'),'hi','INDIA','5000',
+    'Bo.Dickinson@TANAGER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (912,'Bo','Ashby',cust_address_typ
+    ('1599 Legend Rd','361128','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3701', '+91 80 083 3701'),'hi','INDIA','5000',
+    'Bo.Ashby@TATTLER.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (913,'Bob','Sharif',cust_address_typ
+    ('1600 Target Crt','361191','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3703', '+91 80 083 3703'),'hi','INDIA','5000',
+    'Bob.Sharif@TEAL.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (916,'Brian','Douglas',cust_address_typ
+    ('1603 Rebel St','361129','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3709'),'hi','INDIA','500','Brian.Douglas@AVOCET.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (917,'Brian','Baldwin',cust_address_typ
+    ('1604 Volunteers Rd','361121','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3711'),'hi','INDIA','500','Brian.Baldwin@BECARD.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (919,'Brooke','Michalkow',cust_address_typ
+    ('1606 Volunteers Blvd','361196','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3715'),'hi','INDIA','3500','Brooke.Michalkow@GROSBEAK.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (920,'Bruce','Hulce',cust_address_typ
+    ('1607 Abwdrts St','361114','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3717'),'hi','INDIA','3500','Bruce.Hulce@JACANA.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (921,'Bruce','Dunaway',cust_address_typ
+    ('1608 Amadeus St','361198','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3719', '+91 80 083 3719'),'hi','INDIA','3500',
+    'Bruce.Dunaway@JUNCO.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (923,'Bruno','Slater',cust_address_typ
+    ('1610 Betrayal Crt','361119','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3723', '+91 80 083 3723'),'hi','INDIA','5000',
+    'Bruno.Slater@THRASHER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (924,'Bruno','Montand',cust_address_typ
+    ('1611 Carmen Blvd','361118','Bangalore','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3725', '+91 80 083 3725'),'hi','INDIA','5000',
+    'Bruno.Montand@TOWHEE.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (927,'Bryan','Belushi',cust_address_typ
+    ('1614 Crackers Rd','361168','Bangalore - India','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3731', '+91 80 083 3731'),'hi','INDIA','2300',
+    'Bryan.Belushi@TOWHEE.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (928,'Burt','Spielberg',cust_address_typ
+    ('1615 Crackers Crt','361168','Bangalore - India','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3733', '+91 80 083 3733'),'hi','INDIA','5000',
+    'Burt.Spielberg@TROGON.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (929,'Burt','Neeson',cust_address_typ
+    ('1616 Crackers Blvd','361168','Bangalore - India','Kar','IN')
+    ,PHONE_LIST_TYP
+    ('+91 80 012 3735', '+91 80 083 3735'),'hi','INDIA','5000',
+    'Burt.Neeson@TURNSTONE.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (930,'Buster','Jackson',cust_address_typ
+    ('1617 Crackers St','361168','Bangalore - India','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3737'),'hi','INDIA','900','Buster.Jackson@KILLDEER.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (931,'Buster','Edwards',cust_address_typ
+    ('1618 Footloose St','361168','Bangalore - India','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3739'),'hi','INDIA','900','Buster.Edwards@KINGLET.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (932,'Buster','Bogart',cust_address_typ
+    ('1619 Footloose Rd','361168','Bangalore - India','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3741'),'hi','INDIA','900','Buster.Bogart@KISKADEE.COM',
+    NULL,NULL);
+INSERT INTO customers VALUES 
+    (934,'C. Thomas','Nolte',cust_address_typ
+    ('1621 Gargon! Blvd','361168','Bangalore - India','Kar','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3745'),'hi','INDIA','600','C.Thomas.Nolte@PHOEBE.COM',
+    145,NULL);
+INSERT INTO customers VALUES 
+    (980,'Daniel','Loren',cust_address_typ
+    ('1667 2010 St','61311','Batavia','IL','IN'),PHONE_LIST_TYP
+    ('+91 80 012 3837'),'hi','INDIA','200','Daniel.Loren@REDSTART.COM',
+    149,NULL);
+INSERT INTO customers VALUES 
+    (981,'Daniel','Gueney',cust_address_typ
+    ('1668 Chong Tao','111181','Beijing','','CN'),PHONE_LIST_TYP
+    ('+86 10 012 3839'),'zhs','CHINA','200','Daniel.Gueney@REDPOLL.COM',
+    149,NULL); 
 
-INSERT INTO product_information VALUES (1726
-, 'LCD Monitor 11/PM'
-, 'Liquid Cristal Display 11 inch passive monitor. The virtually-flat,
-high-resolution screen delivers outstanding image quality with reduced glare.'
-, 11,3
-, to_yminterval('+00-03')
-, 102067
-, 'under development'
-, 259
-, 208
-, 'http://www.www.supp-102067.com/cat/hw/p1726.html');
-INSERT INTO product_information VALUES (2359
-, 'LCD Monitor 9/PM'
-, 'Liquid Cristal Display 9 inch passive monitor. Enjoy the productivity that
-a small monitor can bring via more workspace on your desk. Easy setup with
-plug-and-play compatibility.'
-, 11,3
-, to_yminterval('+00-03')
-, 102061
-, 'orderable'
-, 249
-, 206
-, 'http://www.www.supp-102061.com/cat/hw/p2359.html');
-INSERT INTO product_information VALUES (3060
-, 'Monitor 17/HR'
-, 'CRT Monitor 17 inch (16 viewable) high resolution. Exceptional image
-performance and the benefit of additional screen space. This monitor offers
-sharp, color-rich monitor performance at an incredible value. With a host of
-leading features, including on-screen display controls.'
-, 11,4
-, to_yminterval('+00-06')
-, 102081
-, 'orderable'
-, 299
-, 250
-, 'http://www.supp-102081.com/cat/hw/p3060.html');
-INSERT INTO product_information VALUES (2243
-, 'Monitor 17/HR/F'
-, 'Monitor 17 inch (16 viewable) high resolution, flat screen. High density
-photon gun with Enhanced Elliptical Correction System for more consistent,
-accurate focus across the screen, even in the corners.'
-, 11,4
-, to_yminterval('+00-06')
-, 102060
-, 'orderable'
-, 350
-, 302
-, 'http://www.supp-102060.com/cat/hw/p2243.html');
-INSERT INTO product_information VALUES (3057
-, 'Monitor 17/SD'
-, 'CRT Monitor 17 inch (16 viewable) short depth. Delivers outstanding
-image clarity and precision. Gives professional color, technical
-engineering, and visualization/animation users the color fidelity they
-demand, plus a large desktop for enhanced productivity.'
-, 11,4
-, to_yminterval('+00-06')
-, 102055
-, 'orderable'
-, 369
-, 320
-, 'http://www.supp-102055.com/cat/hw/p3057.html');
-INSERT INTO product_information VALUES (3061
-, 'Monitor 19/SD'
-, 'CRT Monitor 19 inch (18 viewable) short depth. High-contrast black
-screen coating: produces superior contrast and grayscale performance.
-The newly designed, amplified professional speakers with dynamic bass
-response bring all of your multimedia audio experiences to life with
-crisp, true-to-life sound and rich, deep bass tones. Plus, color-coded
-cables, simple plug-and-play setup and digital on-screen controls mean you
-are ready to set your sights on outrageous multimedia and the incredible
-Internet in just minutes.'
-, 11,5
-, to_yminterval('+00-09')
-, 102094
-, 'orderable'
-, 499
-, 437
-, 'http://www.supp-102094.com/cat/hw/p3061.html');
-INSERT INTO product_information VALUES (2245
-, 'Monitor 19/SD/M'
-, 'Monitor 19 (18 Viewable) short depth, Monochrome. Outstanding image
-performance in a compact design. A simple, on-screen dislay menu helps you
-easily adjust screen dimensions, colors and image attributes. Just plug
-your monitor into your PC and you are ready to go.'
-, 11,5
-, to_yminterval('+00-09')
-, 102053
-, 'orderable'
-, 512
-, 420
-, 'http://www.supp-102053.com/cat/hw/p2245.html');
-INSERT INTO product_information VALUES (3065
-, 'Monitor 21/D'
-, 'CRT Monitor 21 inch (20 viewable). Digital OptiScan technology: supports
-resolutions up to 1600 x 1200 at 75Hz. Dimensions (HxWxD): 8.3 x 18.5 x 15
-inch. The detachable or attachable monitor-powered Platinum Series speakers
-offer crisp sound and the convenience of a digital audio player jack. Just
-plug in your digital audio player and listen to tunes without powering up
-your PC.'
-, 11,5
-, to_yminterval('+01-00')
-, 102051
-, 'orderable'
-, 999
-, 875
-, 'http://www.supp-102051.com/cat/hw/p3065.html');
-INSERT INTO product_information VALUES (3331
-, 'Monitor 21/HR'
-, '21 inch monitor (20 inch viewable) high resolution. This monitor is ideal
-for business, desktop publishing, and graphics-intensive applications. Enjoy
-the productivity that a large monitor can bring via more workspace for
-running applications.'
-, 11,5
-, to_yminterval('+01-00')
-, 102083
-, 'orderable'
-, 879
-, 785
-, 'http://www.supp-102083.com/cat/hw/p3331.html');
-INSERT INTO product_information VALUES (2252
-, 'Monitor 21/HR/M'
-, 'Monitor 21 inch (20 viewable) high resolution, monochrome. Unit size:
-35.6 x 29.6 x 33.3 cm (14.6 kg) Package: 40.53 x 31.24 x 35.39 cm
-(16.5 kg). Horizontal frequency 31.5 - 54 kHz, Vertical frequency 50 - 120
-Hz. Universal power supply 90 - 132 V, 50 - 60 Hz.'
-, 11,5
-, to_yminterval('+01-06')
-, 102079
-, 'obsolete'
-, 889
-, 717
-, 'http://www.supp-102079.com/cat/hw/p2252.html');
-INSERT INTO product_information VALUES (3064
-, 'Monitor 21/SD'
-, 'Monitor 21 inch (20 viewable) short depth. Features include a 0.25-0.28
-Aperture Grille Pitch, resolution support up to 1920 x 1200 at 76Hz,
-on-screen displays, and a conductive anti-reflective film coating.'
-, 11,5
-, to_yminterval('+01-06')
-, 102096
-, 'planned'
-, 1023
-, 909
-, 'http://www.supp-102096.com/cat/hw/p3064.html');
-INSERT INTO product_information VALUES (3155
-, 'Monitor Hinge - HD'
-, 'Monitor Hinge, heavy duty, maximum monitor weight 30 kg'
-, 11,4
-, to_yminterval('+10-00')
-, 102092
-, 'orderable'
-, 49
-, 42
-, 'http://www.supp-102092.com/cat/hw/p3155.html');
-INSERT INTO product_information VALUES (3234
-, 'Monitor Hinge - STD'
-, 'Standard Monitor Hinge, maximum monitor weight 10 kg'
-, 11,3
-, to_yminterval('+10-00')
-, 102072
-, 'orderable'
-, 39
-, 34
-, 'http://www.supp-102072.com/cat/hw/p3234.html');
-INSERT INTO product_information VALUES (3350
-, 'Plasma Monitor 10/LE/VGA'
-, '10 inch low energy plasma monitor, VGA resolution'
-, 11,3
-, to_yminterval('+01-00')
-, 102068
-, 'orderable'
-, 740
-, 630
-, 'http://www.supp-102068.com/cat/hw/p3350.html');
-INSERT INTO product_information VALUES (2236
-, 'Plasma Monitor 10/TFT/XGA'
-, '10 inch TFT XGA flatscreen monitor for laptop computers'
-, 11,3
-, to_yminterval('+01-00')
-, 102090
-, 'under development'
-, 964
-, 863
-, 'http://www.supp-102090.com/cat/hw/p2236.html');
-INSERT INTO product_information VALUES (3054
-, 'Plasma Monitor 10/XGA'
-, '10 inch standard plasma monitor, XGA resolution. This virtually-flat,
-high-resolution screen delivers outstanding image quality with reduced glare.'
-, 11,3
-, to_yminterval('+01-00')
-, 102060
-, 'orderable'
-, 600
-, 519
-, 'http://www.supp-102060.com/cat/hw/p3054.html');
-INSERT INTO product_information VALUES (1782
-, 'Compact 400/DQ'
-, '400 characters per second high-speed draft printer. Dimensions (HxWxD):
-17.34 x 24.26 x 26.32 inch. Interface: RS-232 serial (9-pin), no expansion
-slots. Paper size: A4, US Letter.'
-, 12,4
-, to_yminterval('+01-06')
-, 102088
-, 'obsolete'
-, 125
-, 108
-, 'http://www.supp-102088.com/cat/hw/p1782.html');
-INSERT INTO product_information VALUES (2430
-, 'Compact 400/LQ'
-, '400 characters per second high-speed letter-quality printer.
-Dimensions (HxWxD): 12.37 x 27.96 x 23.92 inch. Interface: RS-232 serial
-(25-pin), 3 expansion slots. Paper size: A2, A3, A4.'
-, 12,4
-, to_yminterval('+02-00')
-, 102087
-, 'orderable'
-, 175
-, 143
-, 'http://www.supp-102087.com/cat/hw/p2430.html');
-INSERT INTO product_information VALUES (1792
-, 'Industrial 600/DQ'
-, 'Wide carriage color capability 600 characters per second high-speed
-draft printer. Dimensions (HxWxD): 22.31 x 25.73 x 20.12 inch. Paper size:
-3x5 inch to 11x17 inch full bleed wide format.'
-, 12,4
-, to_yminterval('+05-00')
-, 102088
-, 'orderable'
-, 225
-, 180
-, 'http://www.supp-102088.com/cat/hw/p1792.html');
-INSERT INTO product_information VALUES (1791
-, 'Industrial 700/HD'
-, '700 characters per second dot-matrix printer with harder body and dust
-protection for industrial uses. Interface: Centronics parallel, IEEE 1284
-compliant. Paper size: 3x5 inch to 11x17 inch full bleed wide format.
-Memory: 4MB. Dimensions (HxWxD): 9.3 x 16.5 x 13 inch.'
-, 12,5
-, to_yminterval('+05-00')
-, 102086
-, 'orderable'
-, 275
-, 239
-, 'http://www.supp-102086.com/cat/hw/p1791.html');
-INSERT INTO product_information VALUES (2302
-, 'Inkjet B/6'
-, 'Inkjet Printer, black and white, 6 pages per minute, resolution 600x300
-dpi. Interface: Centronics parallel, IEEE 1284 compliant. Dimensions
-(HxWxD): 7.3 x 17.5 x 14 inch. Paper size: A3, A4, US legal. No
-expansion slots.'
-, 12,3
-, to_yminterval('+02-00')
-, 102096
-, 'orderable'
-, 150
-, 121
-, 'http://www.supp-102096.com/cat/hw/p2302.html');
-INSERT INTO product_information VALUES (2453
-, 'Inkjet C/4'
-, 'Inkjet Printer, color (with two separate ink cartridges), 6 pages per
-minute black and white, 4 pages per minute color, resolution 600x300 dpi.
-Interface: Biodirectional IEEE 1284 compliant parallel interface and
-RS-232 serial (9-pin) interface 2 open EIO expansion slots. Memory:
-8MB 96KB receiver buffer.'
-, 12,3
-, to_yminterval('+02-00')
-, 102090
-, 'orderable'
-, 195
-, 174
-, 'http://www.supp-102090.com/cat/hw/p2453.html');
-INSERT INTO product_information VALUES (1797
-, 'Inkjet C/8/HQ'
-, 'Inkjet printer, color, 8 pages per minute, high resolution (photo
-quality). Memory: 16MB. Dimensions (HxWxD): 7.3 x 17.5 x 14 inch. Paper
-size: A4, US Letter, envelopes. Interface: Centronics parallel, IEEE
-1284 compliant.'
-, 12,3
-, to_yminterval('+02-00')
-, 102094
-, 'orderable'
-, 349
-, 288
-, 'http://www.supp-102094.com/cat/hw/p1797.html');
-INSERT INTO product_information VALUES (2459
-, 'LaserPro 1200/8/BW'
-, 'Professional black and white laserprinter, resolution 1200 dpi, 8 pages
-per second. Dimensions (HxWxD): 22.37 x 19.86 x 21.92 inch. Software:
-Enhanced driver support for SPNIX v4.0; MS-DOS Built-in printer drivers:
-ZoomSmart scaling technology, billboard, handout, mirror, watermark, print
-preview, quick sets, emulate laserprinter margins.'
-, 12,5
-, to_yminterval('+03-00')
-, 102099
-, 'under development'
-, 699
-, 568
-, 'http://www.supp-102099.com/cat/hw/p2459.html');
-INSERT INTO product_information VALUES (3127
-, 'LaserPro 600/6/BW'
-, 'Standard black and white laserprinter, resolution 600 dpi, 6 pages per
-second. Interface: Centronics parallel, IEEE 1284 compliant. Memory: 8MB
-96KB receiver buffer. MS-DOS ToolBox utilities for SPNIX AutoCAM v.17
-compatible driver.'
-, 12,4
-, to_yminterval('+03-00')
-, 102087
-, 'orderable'
-, 498
-, 444
-, 'http://www.supp-102087.com/cat/hw/p3127.html');
-INSERT INTO product_information VALUES (2254
-, 'HD 10GB /I'
-, '10GB capacity hard disk drive (internal). These drives are intended for
-use in today''s demanding, data-critical enterprise environments and are
-ideal for use in RAID applications. Universal option kits are configured
-and pre-mounted in the appropriate hot plug tray for immediate installation
-into your corporate server or storage system.'
-, 13,2
-, to_yminterval('+02-00')
-, 102071
-, 'obsolete'
-, 453
-, 371
-, 'http://www.supp-102071.com/cat/hw/p2254.html');
-INSERT INTO product_information VALUES (3353
-, 'HD 10GB /R'
-, '10GB Removable hard disk drive for 10GB Removable HD drive. Supra7
-disk drives provide the latest technology to improve enterprise
-performance, increasing the maximum data transfer rate up to 160MB/s.'
-, 13,1
-, to_yminterval('+03-00')
-, 102071
-, 'obsolete'
-, 489
-, 413
-, 'http://www.supp-102071.com/cat/hw/p3353.html');
-INSERT INTO product_information VALUES (3069
-, 'HD 10GB /S'
-, '10GB hard disk drive for Standard Mount. Backward compatible with
-Supra5 systems, users are free to deploy and re-deploy these drives to
-quickly deliver increased storage capacity. Supra drives eliminate the
-risk of firmware incompatibility.'
-, 13,1
-, to_yminterval('+02-00')
-, 102051
-, 'obsolete'
-, 436
-, 350
-, 'http://www.supp-102051.com/cat/hw/p3069.html');
-INSERT INTO product_information VALUES (2253
-, 'HD 10GB @5400 /SE'
-, '10GB capacity hard disk drive (external) SCSI interface, 5400 RPM.
-Universal option kits are configured and pre-mounted in the appropriate
-hot plug tray for immediate installation into your corporate server or
-storage system. Supra drives eliminate the risk of firmware incompatibility.'
-, 13,2
-, to_yminterval('+03-00')
-, 102069
-, 'obsolete'
-, 399
-, 322
-, 'http://www.supp-102069.com/cat/hw/p2253.html');
-INSERT INTO product_information VALUES (3354
-, 'HD 12GB /I'
-, '12GB capacity harddisk drive (internal). Supra drives eliminate the risk
-of firmware incompatibility. Backward compatibility: You can mix or
-match Supra2 and Supra3 devices for optimized solutions and future growth.'
-, 13,2
-, to_yminterval('+02-00')
-, 102066
-, 'orderable'
-, 543
-, 478
-, 'http://www.supp-102066.com/cat/hw/p3354.html');
-INSERT INTO product_information VALUES (3072
-, 'HD 12GB /N'
-, '12GB hard disk drive for Narrow Mount. Supra9 hot pluggable hard disk
-drives provide the ability to install or remove drives on-line. Our hot
-pluggable hard disk drives are required to meet our rigorous standards
-for reliability and performance.'
-, 13,1
-, to_yminterval('+03-00')
-, 102061
-, 'orderable'
-, 567
-, 507
-, 'http://www.supp-102061.com/cat/hw/p3072.html');
-INSERT INTO product_information VALUES (3334
-, 'HD 12GB /R'
-, '12GB Removable hard disk drive. With compatibility across many enterprise
-platforms, you are free to deploy and re-deploy this drive to quickly
-deliver increased storage capacity. Supra7 Universal disk drives are the
-second generation of high performance hot plug drives sharing compatibility
-across corporate servers and external storage enclosures.'
-, 13,2
-, to_yminterval('+03-00')
-, 102090
-, 'orderable'
-, 612
-, 512
-, 'http://www.supp-102090.com/cat/hw/p3334.html');
-INSERT INTO product_information VALUES (3071
-, 'HD 12GB /S'
-, '12GB hard disk drive for Standard Mount. Supra9 hot pluggable hard disk
-drives provide the ability to install or remove drives on-line. Our hot
-pluggable hard disk drives are required to meet our rigorous standards
-for reliability and performance.'
-, 13,1
-, to_yminterval('+03-00')
-, 102071
-, 'orderable'
-, 633
-, 553
-, 'http://www.supp-102071.com/cat/hw/p3071.html');
-INSERT INTO product_information VALUES (2255
-, 'HD 12GB @7200 /SE'
-, '12GB capacity hard disk drive (external) SCSI, 7200 RPM. These drives
-are intended for use in today''s demanding, data-critical enterprise
-environments and can be used in RAID applications. Universal option kits
-are configured and pre-mounted in the appropriate hot plug tray for
-immediate installation into your corporate server or storage system.'
-, 13,2
-, to_yminterval('+02-00')
-, 102057
-, 'orderable'
-, 775
-, 628
-, 'http://www.supp-102057.com/cat/hw/p2255.html');
-INSERT INTO product_information VALUES (1743
-, 'HD 18.2GB @10000 /E'
-, 'External hard drive disk - 18.2 GB, rated up to 10,000 RPM. These
-drives are intended for use in today''s demanding, data-critical
-enterprise environments and are ideal for use in RAID applications.'
-, 13,3
-, to_yminterval('+03-00')
-, 102078
-, 'planned'
-, 800
-, 661
-, 'http://www.supp-102078.com/cat/hw/p1743.html');
-INSERT INTO product_information VALUES (2382
-, 'HD 18.2GB@10000 /I'
-, '18.2 GB SCSI hard disk @ 10000 RPM (internal). Supra7 Universal
-disk drives provide an unequaled level of investment protection and
-simplification for customers by enabling drive compatibility across
-many enterprise platforms.'
-, 13,3
-, to_yminterval('+03-00')
-, 102050
-, 'under development'
-, 850
-, 731
-, 'http://www.supp-102050.com/cat/hw/p2382.html');
-INSERT INTO product_information VALUES (3399
-, 'HD 18GB /SE'
-, '18GB SCSI external hard disk drive. Supra5 Universal hard disk
-drives provide the ability to hot plug between various servers, RAID
-arrays, and external storage shelves.'
-, 13,3
-, to_yminterval('+02-00')
-, 102083
-, 'under development'
-, 815
-, 706
-, 'http://www.supp-999999.com/cat/hw/p3333.html');
-INSERT INTO product_information VALUES (3073
-, 'HD 6GB /I'
-, '6GB capacity hard disk drive (internal). Supra drives eliminate the
-risk of firmware incompatibility.'
-, 13,2
-, to_yminterval('+05-00')
-, 102072
-, 'obsolete'
-, 224
-, 197
-, 'http://www.supp-102083.com/cat/hw/p3073.html');
-INSERT INTO product_information VALUES (1768
-, 'HD 8.2GB @5400'
-, 'Hard drive disk - 8.2 GB, rated up to 5,400 RPM. Supra drives
-eliminate the risk of firmware incompatibility. Standard serial
-RS-232 interface.'
-, 13,2
-, to_yminterval('+02-00')
-, 102093
-, 'orderable'
-, 345
-, 306
-, 'http://www.supp-102093.com/cat/hw/p1768.html');
-INSERT INTO product_information VALUES (2410
-, 'HD 8.4GB @5400'
-, '8.4 GB hard disk @ 5400 RPM. Reduced cost of ownership: Drives can
-be utilized across enterprise platforms. This hot pluggable hard disk
-drive is required to meet your rigorous standards for reliability
-and performance.'
-, 13,2
-, to_yminterval('+03-00')
-, 102061
-, 'orderable'
-, 357
-, 319
-, 'http://www.supp-102061.com/cat/hw/p2410.html');
-INSERT INTO product_information VALUES (2257
-, 'HD 8GB /I'
-, '8GB capacity hard disk drive (internal). Supra9 hot pluggable
-hard disk drives provide the ability to install or remove drives
-on-line. Backward compatibility: You can mix Supra2 and Supra3
-devices for optimized solutions and future growth.'
-, 13,1
-, to_yminterval('+03-00')
-, 102061
-, 'orderable'
-, 399
-, 338
-, 'http://www.supp-102061.com/cat/hw/p2257.html');
-INSERT INTO product_information VALUES (3400
-, 'HD 8GB /SE'
-, '8GB capacity SCSI hard disk drive (external). Supra7 disk drives
-provide the latest technology to improve enterprise performance,
-increasing the maximum data transfer rate up to 255MB/s.'
-, 13,2
-, to_yminterval('+03-00')
-, 102063
-, 'orderable'
-, 389
-, 337
-, 'http://www.supp-102063.com/cat/hw/p3400.html');
-INSERT INTO product_information VALUES (3355
-, 'HD 8GB /SI'
-, '8GB SCSI hard disk drive, internal. With compatibility across many
-enterprise platforms, you are free to deploy and re-deploy this drive
-to quickly deliver increased storage capacity. '
-, 13,1
-, to_yminterval('+02-00')
-, 102050
-, 'orderable'
-, NULL
-, NULL
-, 'http://www.supp-102050.com/cat/hw/p3355.html');
-INSERT INTO product_information VALUES (1772
-, 'HD 9.1GB @10000'
-, 'Hard disk drive - 9.1 GB, rated up to 10,000 RPM. These drives
-are intended for use in data-critical enterprise environments.
-Ease of doing business: you can easily select the drives you need
-regardless of the application in which they will be deployed.'
-, 13,3
-, to_yminterval('+05-00')
-, 102070
-, 'orderable'
-, 456
-, 393
-, 'http://www.supp-102070.com/cat/hw/p1772.html');
-INSERT INTO product_information VALUES (2414
-, 'HD 9.1GB @10000 /I'
-, '9.1 GB SCSI hard disk @ 10000 RPM (internal). Supra7 disk
-drives are available in 10,000 RPM spindle speeds and capacities
-of 18GB and 9.1 GB. SCSI and RS-232 interfaces.'
-, 13,3
-, to_yminterval('+05-00')
-, 102098
-, 'orderable'
-, 454
-, 399
-, 'http://www.supp-102098.com/cat/hw/p2414.html');
-INSERT INTO product_information VALUES (2415
-, 'HD 9.1GB @7200'
-, '9.1 GB hard disk @ 7200 RPM. Universal option kits are
-configured and pre-mounted in the appropriate hot plug tray
-for immediate installation into your corporate server or storage
-system.'
-, 13,3
-, to_yminterval('+05-00')
-, 102063
-, 'orderable'
-, 359
-, 309
-, 'http://www.supp-102063.com/cat/hw/p2415.html');
-INSERT INTO product_information VALUES (2395
-, '32MB Cache /M'
-, '32MB Mirrored cache memory (100-MHz Registered SDRAM)'
-, 14,1
-, to_yminterval('+00-06')
-, 102093
-, 'orderable'
-, 123
-, 109
-, 'http://www.supp-102093.com/cat/hw/p2395.html');
-INSERT INTO product_information VALUES (1755
-, '32MB Cache /NM'
-, '32MB Non-Mirrored cache memory'
-, 14,1
-, to_yminterval('+00-06')
-, 102076
-, 'orderable'
-, 121
-, 99
-, 'http://www.supp-102076.com/cat/hw/p1755.html');
-INSERT INTO product_information VALUES (2406
-, '64MB Cache /M'
-, '64MB Mirrored cache memory'
-, 14,1
-, to_yminterval('+00-06')
-, 102059
-, 'orderable'
-, 223
-, 178
-, 'http://www.supp-102059.com/cat/hw/p2406.html');
-INSERT INTO product_information VALUES (2404
-, '64MB Cache /NM'
-, '64 MB Non-mirrored cache memory. FPM memory chips are
-implemented on 5 volt SIMMs, but are also available on
-3.3 volt DIMMs.'
-, 14,1
-, to_yminterval('+00-06')
-, 102087
-, 'orderable'
-, 221
-, 180
-, 'http://www.supp-102087.com/cat/hw/p2404.html');
-INSERT INTO product_information VALUES (1770
-, '8MB Cache /NM'
-, '8MB Non-Mirrored Cache Memory (100-MHz Registered SDRAM)'
-, 14,1
-, to_yminterval('+00-06')
-, 102050
-, 'orderable'
-, NULL
-, 73
-, 'http://www.supp-102050.com/cat/hw/p1770.html');
-INSERT INTO product_information VALUES (2412
-, '8MB EDO Memory'
-, '8 MB 8x32 EDO SIM memory. Extended Data Out memory differs from FPM in a
-small, but significant design change. Unlike FPM, the data output drivers
-for EDO remain on when the memory controller removes the column address to
-begin the next cycle. Therefore, a new data cycle can begin before the
-previous cycle has completed. EDO is available on SIMMs and DIMMs, in 3.3
-and 5 volt varieties.'
-, 14,1
-, to_yminterval('+00-06')
-, 102058
-, 'obsolete'
-, 98
-, 83
-, 'http://www.supp-102058.com/cat/hw/p2412.html');
-INSERT INTO product_information VALUES (2378
-, 'DIMM - 128 MB'
-, '128 MB DIMM memory. The main reason for the change from SIMMs to DIMMs is
-to support the higher bus widths of 64-bit processors. DIMMs are 64- or
-72-bits wide; SIMMs are only 32- or 36-bits wide (with parity).'
-, 14,1
-, to_yminterval('+00-06')
-, 102050
-, 'orderable'
-, 305
-, 247
-, 'http://www.supp-102050.com/cat/hw/p2378.html');
-INSERT INTO product_information VALUES (3087
-, 'DIMM - 16 MB'
-, 'Citrus OLX DIMM - 16 MB capacity.'
-, 14,1
-, to_yminterval('+00-06')
-, 102081
-, 'obsolete'
-, 124
-, 99
-, 'http://www.supp-102081.com/cat/hw/p3087.html');
-INSERT INTO product_information VALUES (2384
-, 'DIMM - 1GB'
-, 'Memory DIMM: RAM - 1 GB capacity.'
-, 14,1
-, to_yminterval('+00-06')
-, 102074
-, 'under development'
-, 599
-, 479
-, 'http://www.supp-102074.com/cat/hw/p2384.html');
-INSERT INTO product_information VALUES (1749
-, 'DIMM - 256MB'
-, 'Memory DIMM: RAM 256 MB. (100-MHz Registered SDRAM)'
-, 14,1
-, to_yminterval('+00-06')
-, 102053
-, 'orderable'
-, 337
-, 300
-, 'http://www.supp-102053.com/cat/hw/p1749.html');
-INSERT INTO product_information VALUES (1750
-, 'DIMM - 2GB'
-, 'Memory DIMM: RAM, 2 GB capacity.'
-, 14,1
-, to_yminterval('+00-06')
-, 102052
-, 'orderable'
-, 699
-, 560
-, 'http://www.supp-102052.com/cat/hw/p1750.html');
-INSERT INTO product_information VALUES (2394
-, 'DIMM - 32MB'
-, '32 MB DIMM Memory upgrade'
-, 14,1
-, to_yminterval('+00-06')
-, 102054
-, 'orderable'
-, 128
-, 106
-, 'http://www.supp-102054.com/cat/hw/p2394.html');
-INSERT INTO product_information VALUES (2400
-, 'DIMM - 512 MB'
-, '512 MB DIMM memory. Improved memory upgrade granularity: Fewer DIMMs are
-required to upgrade a system than it would require if using SIMMs in the same
-system. Increased maximum memory ceilings: Given the same number of memory
-slots, the maximum memory of a system using DIMMs is more than one using
-SIMMs. DIMMs have separate contacts on each side of the board, which provide
-two times the data rate as one SIMM.'
-, 14,1
-, to_yminterval('+01-00')
-, 102098
-, 'under development'
-, 448
-, 380
-, 'http://www.supp-102098.com/cat/hw/p2400.html');
-INSERT INTO product_information VALUES (1763
-, 'DIMM - 64MB'
-, 'Memory DIMM: RAM, 64MB (100-MHz Unregistered ECC SDRAM)'
-, 14,1
-, to_yminterval('+01-00')
-, 102069
-, 'orderable'
-, 247
-, 202
-, 'http://www.supp-102069.com/cat/hw/p1763.html');
-INSERT INTO product_information VALUES (2396
-, 'EDO - 32MB'
-, 'Memory EDO SIM: RAM, 32 MB (100-MHz Unregistered ECC SDRAM). Like FPM,
-EDO is available on SIMMs and DIMMs, in 3.3 and 5 volt varieties If EDO
-memory is installed in a computer that was not designed to support it,
-the memory may not work.'
-, 14,1
-, to_yminterval('+00-06')
-, 102051
-, 'orderable'
-, 179
-, 149
-, 'http://www.supp-102051.com/cat/hw/p2396.html');
-INSERT INTO product_information VALUES (2272
-, 'RAM - 16 MB'
-, 'Memory SIMM: RAM - 16 MB capacity.'
-, 14,1
-, to_yminterval('+01-00')
-, 102074
-, 'obsolete'
-, 135
-, 110
-, 'http://www.supp-102074.com/cat/hw/p2272.html');
-INSERT INTO product_information VALUES (2274
-, 'RAM - 32 MB'
-, 'Memory SIMM: RAM - 32 MB capacity.'
-, 14,1
-, to_yminterval('+01-00')
-, 102064
-, 'orderable'
-, 161
-, 135
-, 'http://www.supp-102064.com/cat/hw/p2274.html');
-INSERT INTO product_information VALUES (3090
-, 'RAM - 48 MB'
-, 'Random Access Memory, SIMM - 48 MB capacity.'
-, 14,1
-, to_yminterval('+01-00')
-, 102084
-, 'orderable'
-, 193
-, 170
-, 'http://www.supp-102084.com/cat/hw/p3090.html');
-INSERT INTO product_information VALUES (1739
-, 'SDRAM - 128 MB'
-, 'SDRAM memory, 128 MB capacity. SDRAM can access data at speeds up to 100
-MHz, which is up to four times as fast as standard DRAMs. The advantages of
-SDRAM can be fully realized, however, only by computers designed to support
-SDRAM. SDRAM is available on 5 and 3.3 volt DIMMs.'
-, 14,1
-, to_yminterval('+00-09')
-, 102077
-, 'orderable'
-, 299
-, 248
-, 'http://www.supp-102077.com/cat/hw/p1739.html');
-INSERT INTO product_information VALUES (3359
-, 'SDRAM - 16 MB'
-, 'SDRAM memory upgrade module, 16 MB. Synchronous Dynamic Random Access
-Memory was introduced after EDO. Its architecture and operation are based on
-those of the standard DRAM, but SDRAM provides a revolutionary change to main
-memory that further reduces data retrieval times. SDRAM is synchronized to
-the system clock that controls the CPU. This means that the system clock
-controlling the functions of the microprocessor also controls the SDRAM
-functions. This enables the memory controller to know on which clock cycle
-a data request will be ready, and therefore eliminates timing delays.'
-, 14,1
-, to_yminterval('+00-09')
-, 102059
-, 'orderable'
-, 111
-, 99
-, 'http://www.supp-102059.com/cat/hw/p3359.html');
-INSERT INTO product_information VALUES (3088
-, 'SDRAM - 32 MB'
-, 'SDRAM module with ECC - 32 MB capacity. SDRAM has multiple memory banks
-that can work simultaneously. Switching between banks allows for a
-continuous data flow.'
-, 14,1
-, to_yminterval('+00-09')
-, 102057
-, 'orderable'
-, 258
-, 220
-, 'http://www.supp-102057.com/cat/hw/p3088.html');
-INSERT INTO product_information VALUES (2276
-, 'SDRAM - 48 MB'
-, 'Memory SIMM: RAM - 48 MB. SDRAM can operate in burst mode. In burst
-mode, when a single data address is accessed, an entire block of data is
-retrieved rather than just the one piece. The assumption is that the next
-piece of data that will be requested will be sequential to the previous.
-Since this is usually the case, data is held readily available.'
-, 14,1
-, to_yminterval('+00-09')
-, 102058
-, 'orderable'
-, 269
-, 215
-, 'http://www.supp-102058.com/cat/hw/p2276.html');
-INSERT INTO product_information VALUES (3086
-, 'VRAM - 16 MB'
-, 'Citrus Video RAM module - 16 MB capacity. VRAM is used by the video system
-in a computer to store video information and is reserved exclusively for
-video operations. It was developed to provide continuous streams of serial
-data for refreshing video screens.'
-, 14,1
-, to_yminterval('+00-06')
-, 102056
-, 'orderable'
-, 211
-, 186
-, 'http://www.supp-102056.com/cat/hw/p3086.html');
-INSERT INTO product_information VALUES (3091
-, 'VRAM - 64 MB'
-, 'Citrus Video RAM memory module - 64 MB capacity. Physically, VRAM looks
-just like DRAM with added hardware called a shift register. The special
-feature of VRAM is that it can transfer one entire row of data (up to 256
-bits) into this shift register in a single clock cycle. This ability
-significantly reduces retrieval time, since the number of fetches is reduced
-from a possible 256 to a single fetch. The main benefit of having a shift
-register available for data dumps is that it frees the CPU to refresh the
-screen rather than retrieve data, thereby doubling the data bandwidth. For
-this reason, VRAM is often referred to as being dual-ported. However, the
-shift register will only be used when the VRAM chip is given special
-instructions to do so. The command to use the shift register is built into
-the graphics controller.'
-, 14,1
-, to_yminterval('+00-06')
-, 102098
-, 'orderable'
-, 279
-, 243
-, 'http://www.supp-102098.com/cat/hw/p3091.html');
-INSERT INTO product_information VALUES (1787
-, 'CPU D300'
-, 'Dual CPU @ 300Mhz. For light personal processing only, or file servers
-with less than 5 concurrent users. This product will probably become
-obsolete soon.'
-, 15,1
-, to_yminterval('+03-00')
-, 102097
-, 'orderable'
-, 101
-, 90
-, 'http://www.supp-102097.com/cat/hw/p1787.html');
-INSERT INTO product_information VALUES (2439
-, 'CPU D400'
-, 'Dual CPU @ 400Mhz. Good price/performance ratio; for mid-size LAN
-file servers (up to 100 concurrent users).'
-, 15,1
-, to_yminterval('+03-00')
-, 102092
-, 'orderable'
-, 123
-, 105
-, 'http://www.supp-102092.com/cat/hw/p2439.html');
-INSERT INTO product_information VALUES (1788
-, 'CPU D600'
-, 'Dual CPU @ 600Mhz. State of the art, high clock speed; for heavy
-load WAN servers (up to 200 concurrent users).'
-, 15,1
-, to_yminterval('+05-00')
-, 102067
-, 'orderable'
-, 178
-, 149
-, 'http://www.supp-102067.com/cat/hw/p1788.html');
-INSERT INTO product_information VALUES (2375
-, 'GP 1024x768'
-, 'Graphics Processor, resolution 1024 X 768 pixels. Outstanding
-price/performance for 2D and 3D applications under SPNIX v3.3 and
-v4.0. Double your viewing power by running two monitors from this
-single card. Two 17 inch monitors have more screen area than one
-21 inch monitor. Excellent option for users that multi-task
-frequently or access data from multiple sources often.'
-, 15,1
-, to_yminterval('+00-09')
-, 102063
-, 'orderable'
-, 78
-, 69
-, 'http://www.supp-102063.com/cat/hw/p2375.html');
-INSERT INTO product_information VALUES (2411
-, 'GP 1280x1024'
-, 'Graphics Processor, resolution 1280 X 1024 pixels. High end 3D performance
-at a mid range price: 15 million Gouraud shaded triangles per second,
-Optimized 3D drivers for MCAD and DCC applications, with user-customizable
-settings. 64MB DDR SDRAM unified frame buffer supporting true color at all
-supported standard resolutions.'
-, 15,1
-, to_yminterval('+01-00')
-, 102061
-, 'orderable'
-, 98
-, 78
-, 'http://www.supp-102061.com/cat/hw/p2411.html');
-INSERT INTO product_information VALUES (1769
-, 'GP 800x600'
-, 'Graphics processor, resolution 800 x 600 pixels. Remarkable value for
-users requiring great 2D capabilities or general 3D support for advanced
-applications. Drives incredible performance in highly complex models and
-frees the customer to focus on the design, instead of the rendering process.'
-, 15,1
-, to_yminterval('+00-06')
-, 102050
-, 'orderable'
-, 48
-, NULL
-, 'http://www.supp-102050.com/cat/hw/p1769.html');
-INSERT INTO product_information VALUES (2049
-, 'MB - S300'
-, 'PC type motherboard, 300 Series.'
-, 15,2
-, to_yminterval('+01-00')
-, 102082
-, 'obsolete'
-, 55
-, 47
-, 'http://www.supp-102082.com/cat/hw/p2049.html');
-INSERT INTO product_information VALUES (2751
-, 'MB - S450'
-, 'PC type motherboard, 450 Series.'
-, 15,2
-, to_yminterval('+01-00')
-, 102072
-, 'orderable'
-, 66
-, 54
-, 'http://www.supp-102072.com/cat/hw/p2751.html');
-INSERT INTO product_information VALUES (3112
-, 'MB - S500'
-, 'PC type motherboard, 500 Series.'
-, 15,2
-, to_yminterval('+01-06')
-, 102086
-, 'orderable'
-, 77
-, 66
-, 'http://www.supp-102086.com/cat/hw/p3112.html');
-INSERT INTO product_information VALUES (2752
-, 'MB - S550'
-, 'PC type motherboard for the 550 Series.'
-, 15,2
-, to_yminterval('+01-06')
-, 102086
-, 'orderable'
-, 88
-, 76
-, 'http://www.supp-102086.com/cat/hw/p2752.html');
-INSERT INTO product_information VALUES (2293
-, 'MB - S600'
-, 'Motherboard, 600 Series.'
-, 15,2
-, to_yminterval('+02-00')
-, 102086
-, 'orderable'
-, 99
-, 87
-, 'http://www.supp-102086.com/cat/hw/p2293.html');
-INSERT INTO product_information VALUES (3114
-, 'MB - S900/650+'
-, 'PC motherboard, 900 Series; standard motherboard
-for all models 650 and up.'
-, 15,3
-, to_yminterval('+00-00')
-, 102086
-, 'under development'
-, 101
-, 88
-, 'http://www.supp-102086.com/cat/hw/p3114.html');
-INSERT INTO product_information VALUES (3129
-, 'Sound Card STD'
-, 'Sound Card - standard version, with MIDI interface,
-line in/out, low impedance microphone input.'
-, 15,1
-, to_yminterval('+00-06')
-, 102090
-, 'orderable'
-, 46
-, 39
-, 'http://www.supp-102090.com/cat/hw/p3129.html');
-INSERT INTO product_information VALUES (3133
-, 'Video Card /32'
-, 'Video Card, with 32MB cache memory.'
-, 15,2
-, to_yminterval('+00-06')
-, 102076
-, 'orderable'
-, 48
-, 41
-, 'http://www.supp-102076.com/cat/hw/p3133.html');
-INSERT INTO product_information VALUES (2308
-, 'Video Card /E32'
-, '3-D ELSA Video Card, with 32 MB memory.'
-, 15,2
-, to_yminterval('+00-06')
-, 102087
-, 'orderable'
-, 58
-, 48
-, 'http://www.supp-102087.com/cat/hw/p2308.html');
-INSERT INTO product_information VALUES (2496
-, 'WSP DA-130'
-, 'Wide storage processor DA-130 for storage subunits.'
-, 15,2
-, to_yminterval('+00-00')
-, 102067
-, 'planned'
-, 299
-, 244
-, 'http://www.supp-102067.com/cat/hw/p2496.html');
-INSERT INTO product_information VALUES (2497
-, 'WSP DA-290'
-, 'Wide storage processor (model DA-290).'
-, 15,3
-, to_yminterval('+00-00')
-, 102053
-, 'planned'
-, 399
-, 355
-, 'http://www.supp-102053.com/cat/hw/p2497.html');
-INSERT INTO product_information VALUES (3106
-, 'KB 101/EN'
-, 'Standard PC/AT Enhanced Keyboard (101/102-Key).
-Input locale: English (US).'
-, 16,1
-, to_yminterval('+01-00')
-, 102066
-, 'orderable'
-, 48
-, 41
-, 'http://www.supp-102066.com/cat/hw/p3106.html');
-INSERT INTO product_information VALUES (2289
-, 'KB 101/ES'
-, 'Standard PC/AT Enhanced Keyboard (101/102-Key).
-Input locale: Spanish.'
-, 16,1
-, to_yminterval('+01-00')
-, 102055
-, 'orderable'
-, 48
-, 38
-, 'http://www.supp-102055.com/cat/hw/p2289.html');
-INSERT INTO product_information VALUES (3110
-, 'KB 101/FR'
-, 'Standard PC/AT Enhanced Keyboard (101/102-Key).
-Input locale: French.'
-, 16,1
-, to_yminterval('+01-00')
-, 102055
-, 'orderable'
-, 48
-, 39
-, 'http://www.supp-102055.com/cat/hw/p3110.html');
-INSERT INTO product_information VALUES (3108
-, 'KB E/EN'
-, 'Ergonomic Keyboard with two separate key areas,
-detachable numeric pad. Key layout: English (US).'
-, 16,2
-, to_yminterval('+02-00')
-, 102055
-, 'orderable'
-, 78
-, 63
-, 'http://www.supp-102055.com/cat/hw/p3108.html');
-INSERT INTO product_information VALUES (2058
-, 'Mouse +WP'
-, 'Combination of a mouse and a wrist pad for more
-comfortable typing and mouse operation.'
-, 16,1
-, to_yminterval('+01-00')
-, 102055
-, 'orderable'
-, 23
-, 19
-, 'http://www.supp-102055.com/cat/hw/p2058.html');
-INSERT INTO product_information VALUES (2761
-, 'Mouse +WP/CL'
-, 'Set consisting of a mouse and wrist pad,
-with corporate logo'
-, 16,1
-, to_yminterval('+01-06')
-, 102099
-, 'planned'
-, 27
-, 23
-, 'http://www.supp-102099.com/cat/hw/p2761.html');
-INSERT INTO product_information VALUES (3117
-, 'Mouse C/E'
-, 'Ergonomic, cordless mouse. With track-ball
-for maximum comfort and ease of use.'
-, 16,1
-, to_yminterval('+01-00')
-, 102099
-, 'orderable'
-, 41
-, 35
-, 'http://www.supp-102099.com/cat/hw/p3117.html');
-INSERT INTO product_information VALUES (2056
-, 'Mouse Pad /CL'
-, 'Standard mouse pad, with corporate logo'
-, 16,1
-, to_yminterval('+01-00')
-, 102099
-, 'planned'
-, 8
-, 6
-, 'http://www.supp-102099.com/cat/hw/p2056.html');
-INSERT INTO product_information VALUES (2211
-, 'Wrist Pad'
-, 'A foam strip to support your wrists when using a keyboard'
-, 16,1
-, to_yminterval('+01-00')
-, 102072
-, 'orderable'
-, 4
-, 3
-, 'http://www.supp-102072.com/cat/hw/p2211.html');
-INSERT INTO product_information VALUES (2944
-, 'Wrist Pad /CL'
-, 'Wrist Pad with corporate logo'
-, 16,1
-, to_yminterval('+01-00')
-, 102063
-, 'under development'
-, 3
-, 2
-, 'http://www.supp-102063.com/cat/hw/p2944.html');
-INSERT INTO product_information VALUES (1742
-, 'CD-ROM 500/16x'
-, 'CD drive, read only, speed 16x, maximum capacity 500 MB.'
-, 17,1
-, to_yminterval('+00-06')
-, 102052
-, 'orderable'
-, 101
-, 81
-, 'http://www.supp-102052.com/cat/hw/p1742.html');
-INSERT INTO product_information VALUES (2402
-, 'CD-ROM 600/E/24x'
-, '600 MB external 24x speed CD-ROM drive (read only).'
-, 17,2
-, to_yminterval('+00-09')
-, 102052
-, 'orderable'
-, 127
-, 113
-, 'http://www.supp-102052.com/cat/hw/p2402.html');
-INSERT INTO product_information VALUES (2403
-, 'CD-ROM 600/I/24x'
-, '600 MB internal read only CD-ROM drive,
-reading speed 24x'
-, 17,2
-, to_yminterval('+01-00')
-, 102052
-, 'orderable'
-, 117
-, 103
-, 'http://www.supp-102052.com/cat/hw/p2403.html');
-INSERT INTO product_information VALUES (1761
-, 'CD-ROM 600/I/32x'
-, '600 MB Internal CD-ROM Drive, speed 32x (read only).'
-, 17,2
-, to_yminterval('+01-00')
-, 102052
-, 'under development'
-, 134
-, 119
-, 'http://www.supp-102052.com/cat/hw/p1761.html');
-INSERT INTO product_information VALUES (2381
-, 'CD-ROM 8x'
-, 'CD Writer, read only, speed 8x'
-, 17,1
-, to_yminterval('+00-03')
-, 102052
-, 'obsolete'
-, 99
-, 82
-, 'http://www.supp-102052.com/cat/hw/p2381.html');
-INSERT INTO product_information VALUES (2424
-, 'CDW 12/24'
-, 'CD Writer, speed 12x write, 24x read. Warning: will become obsolete very
-soon; this speed is not high enough anymore, and better alternatives are
-available for a reasonable price.'
-, 17,2
-, to_yminterval('+00-06')
-, 102075
-, 'orderable'
-, 221
-, 198
-, 'http://www.supp-102075.com/cat/hw/p2424.html');
-INSERT INTO product_information VALUES (1781
-, 'CDW 20/48/E'
-, 'CD Writer, read 48x, write 20x'
-, 17,2
-, to_yminterval('+00-09')
-, 102060
-, 'orderable'
-, 233
-, 206
-, 'http://www.supp-102060.com/cat/hw/p1781.html');
-INSERT INTO product_information VALUES (2264
-, 'CDW 20/48/I'
-, 'CD-ROM drive: read 20x, write 48x (internal)'
-, 17,2
-, to_yminterval('+00-09')
-, 102060
-, 'orderable'
-, 223
-, 181
-, 'http://www.supp-102060.com/cat/hw/p2264.html');
-INSERT INTO product_information VALUES (2260
-, 'DFD 1.44/3.5'
-, 'Dual Floppy Drive - 1.44 MB - 3.5'
-, 17,2
-, to_yminterval('+00-06')
-, 102062
-, 'orderable'
-, 67
-, 54
-, 'http://www.supp-102062.com/cat/hw/p2260.html');
-INSERT INTO product_information VALUES (2266
-, 'DVD 12x'
-, 'DVD-ROM drive: speed 12x'
-, 17,3
-, to_yminterval('+01-00')
-, 102099
-, 'orderable'
-, 333
-, 270
-, 'http://www.supp-102099.com/cat/hw/p2266.html');
-INSERT INTO product_information VALUES (3077
-, 'DVD 8x'
-, 'DVD - ROM drive, 8x speed. Will probably become
-obsolete pretty soon...'
-, 17,3
-, to_yminterval('+01-00')
-, 102099
-, 'orderable'
-, 274
-, 237
-, 'http://www.supp-102099.com/cat/hw/p3077.html');
-INSERT INTO product_information VALUES (2259
-, 'FD 1.44/3.5'
-, 'Floppy Drive - 1.44 MB High Density
-capacity - 3.5 inch chassis'
-, 17,1
-, to_yminterval('+00-09')
-, 102086
-, 'orderable'
-, 39
-, 32
-, 'http://www.supp-102086.com/cat/hw/p2259.html');
-INSERT INTO product_information VALUES (2261
-, 'FD 1.44/3.5/E'
-, 'Floppy disk drive - 1.44 MB (high density)
-capacity - 3.5 inch (external)'
-, 17,2
-, to_yminterval('+00-09')
-, 102086
-, 'orderable'
-, 42
-, 37
-, 'http://www.supp-102086.com/cat/hw/p2261.html');
-INSERT INTO product_information VALUES (3082
-, 'Modem - 56/90/E'
-, 'Modem - 56kb per second, v.90 PCI Global compliant.
-External; for power supply 110V.'
-, 17,1
-, to_yminterval('+01-00')
-, 102068
-, 'orderable'
-, 81
-, 72
-, 'http://www.supp-102068.com/cat/hw/p3082.html');
-INSERT INTO product_information VALUES (2270
-, 'Modem - 56/90/I'
-, 'Modem - 56kb per second, v.90 PCI Global compliant.
-Internal, for standard chassis (3.5 inch).'
-, 17,1
-, to_yminterval('+01-00')
-, 102068
-, 'orderable'
-, 66
-, 56
-, 'http://www.supp-102068.com/cat/hw/p2270.html');
-INSERT INTO product_information VALUES (2268
-, 'Modem - 56/H/E'
-, 'Standard Hayes compatible modem - 56kb per second, external.
-Power supply: 220V.'
-, 17,1
-, to_yminterval('+01-00')
-, 102068
-, 'obsolete'
-, 77
-, 67
-, 'http://www.supp-102068.com/cat/hw/p2268.html');
-INSERT INTO product_information VALUES (3083
-, 'Modem - 56/H/I'
-, 'Standard Hayes modem - 56kb per second, internal, for
- standard 3.5 inch chassis.'
-, 17,1
-, to_yminterval('+01-00')
-, 102068
-, 'orderable'
-, 67
-, 56
-, 'http://www.supp-102068.com/cat/hw/p3083.html');
-INSERT INTO product_information VALUES (2374
-, 'Modem - C/100'
-, 'DOCSIS/EURODOCSIS 1.0/1.1-compliant external cable modem'
-, 17,2
-, to_yminterval('+01-06')
-, 102064
-, 'orderable'
-, 65
-, 54
-, 'http://www.supp-102064.com/cat/hw/p2374.html');
-INSERT INTO product_information VALUES (1740
-, 'TD 12GB/DAT'
-, 'Tape drive - 12 gigabyte capacity, DAT format.'
-, 17,2
-, to_yminterval('+01-06')
-, 102075
-, 'orderable'
-, 134
-, 111
-, 'http://www.supp-102075.com/cat/hw/p1740.html');
-INSERT INTO product_information VALUES (2409
-, 'TD 7GB/8'
-, 'Tape drive, 7GB capacity, 8mm cartridge tape.'
-, 17,2
-, to_yminterval('+01-06')
-, 102054
-, 'orderable'
-, 210
-, 177
-, 'http://www.supp-102054.com/cat/hw/p2409.html');
-INSERT INTO product_information VALUES (2262
-, 'ZIP 100'
-, 'ZIP Drive, 100 MB capacity (external) plus cable for
-parallel port connection'
-, 17,2
-, to_yminterval('+01-06')
-, 102054
-, 'orderable'
-, 98
-, 81
-, 'http://www.supp-102054.com/cat/hw/p2262.html');
-INSERT INTO product_information VALUES (2522
-, 'Battery - EL'
-, 'Extended life battery, for laptop computers'
-, 19,2
-, to_yminterval('+00-03')
-, 102078
-, 'orderable'
-, 44
-, 39
-, 'http://www.supp-102078.com/cat/hw/p2522.html');
-INSERT INTO product_information VALUES (2278
-, 'Battery - NiHM'
-, 'Rechargeable NiHM battery for laptop computers'
-, 19,1
-, to_yminterval('+00-03')
-, 102078
-, 'orderable'
-, 55
-, 48
-, 'http://www.supp-102078.com/cat/hw/p2278.html');
-INSERT INTO product_information VALUES (2418
-, 'Battery Backup (DA-130)'
-, 'Single-battery charger with LED indicators'
-, 19,1
-, to_yminterval('+00-03')
-, 102074
-, 'orderable'
-, 61
-, 52
-, 'http://www.supp-102074.com/cat/hw/p2418.html');
-INSERT INTO product_information VALUES (2419
-, 'Battery Backup (DA-290)'
-, 'Two-battery charger with LED indicators'
-, 19,1
-, to_yminterval('+00-03')
-, 102074
-, 'orderable'
-, 72
-, 60
-, 'http://www.supp-102074.com/cat/hw/p2419.html');
-INSERT INTO product_information VALUES (3097
-, 'Cable Connector - 32R'
-, 'Cable Connector - 32 pin ribbon'
-, 19,1
-, to_yminterval('+00-00')
-, 102055
-, 'orderable'
-, 3
-, 2
-, 'http://www.supp-102055.com/cat/hw/p3097.html');
-INSERT INTO product_information VALUES (3099
-, 'Cable Harness'
-, 'Cable harness to organize and bundle computer wiring'
-, 19,1
-, to_yminterval('+00-00')
-, 102055
-, 'orderable'
-, 4
-, 3
-, 'http://www.supp-102055.com/cat/hw/p3099.html');
-INSERT INTO product_information VALUES (2380
-, 'Cable PR/15/P'
-, '15 foot parallel printer cable'
-, 19,2
-, to_yminterval('+00-01')
-, 102055
-, 'orderable'
-, 6
-, 5
-, 'http://www.supp-102055.com/cat/hw/p2380.html');
-INSERT INTO product_information VALUES (2408
-, 'Cable PR/P/6'
-, 'Standard Centronics 6ft printer cable, parallel port'
-, 19,1
-, to_yminterval('+00-01')
-, 102055
-, 'orderable'
-, 4
-, 3
-, 'http://www.supp-102055.com/cat/hw/p2408.html');
-INSERT INTO product_information VALUES (2457
-, 'Cable PR/S/6'
-, 'Standard RS232 serial printer cable, 6 feet'
-, 19,1
-, to_yminterval('+00-01')
-, 102055
-, 'orderable'
-, 5
-, 4
-, 'http://www.supp-102055.com/cat/hw/p2457.html');
-INSERT INTO product_information VALUES (2373
-, 'Cable RS232 10/AF'
-, '10 ft RS232 cable with F/F and 9F/25F adapters'
-, 19,2
-, to_yminterval('+01-00')
-, 102055
-, 'orderable'
-, 6
-, 4
-, 'http://www.supp-102055.com/cat/hw/p2373.html');
-INSERT INTO product_information VALUES (1734
-, 'Cable RS232 10/AM'
-, '10 ft RS232 cable with M/M and 9M/25M adapters'
-, 19,2
-, to_yminterval('+01-00')
-, 102055
-, 'orderable'
-, 6
-, 5
-, 'http://www.supp-102055.com/cat/hw/p1734.html');
-INSERT INTO product_information VALUES (1737
-, 'Cable SCSI 10/FW/ADS'
-, '10ft SCSI2 F/W Adapt to DSxx0 Cable'
-, 19,2
-, to_yminterval('+00-02')
-, 102095
-, 'orderable'
-, 8
-, 6
-, 'http://www.supp-102095.com/cat/hw/p1737.html');
-INSERT INTO product_information VALUES (1745
-, 'Cable SCSI 20/WD->D'
-, '20ft SCSI2 Wide Disk Store to Disk Store Cable'
-, 19,2
-, to_yminterval('+00-02')
-, 102095
-, 'orderable'
-, 9
-, 7
-, 'http://www.supp-102095.com/cat/hw/p1745.html');
-INSERT INTO product_information VALUES (2982
-, 'Drive Mount - A'
-, 'Drive Mount assembly kit'
-, 19,2
-, to_yminterval('+00-01')
-, 102057
-, 'orderable'
-, 44
-, 35
-, 'http://www.supp-102057.com/cat/hw/p2982.html');
-INSERT INTO product_information VALUES (3277
-, 'Drive Mount - A/T'
-, 'Drive Mount assembly kit for tower PC'
-, 19,2
-, to_yminterval('+01-00')
-, 102057
-, 'orderable'
-, 36
-, 29
-, 'http://www.supp-102057.com/cat/hw/p3277.html');
-INSERT INTO product_information VALUES (2976
-, 'Drive Mount - D'
-, 'Drive Mount for desktop PC'
-, 19,2
-, to_yminterval('+01-00')
-, 102057
-, 'orderable'
-, 52
-, 44
-, 'http://www.supp-102057.com/cat/hw/p2976.html');
-INSERT INTO product_information VALUES (3204
-, 'Envoy DS'
-, 'Envoy Docking Station'
-, 19,3
-, to_yminterval('+02-00')
-, 102060
-, 'orderable'
-, 126
-, 107
-, 'http://www.supp-102060.com/cat/hw/p3204.html');
-INSERT INTO product_information VALUES (2638
-, 'Envoy DS/E'
-, 'Enhanced Envoy Docking Station'
-, 19,3
-, to_yminterval('+02-00')
-, 102060
-, 'orderable'
-, 137
-, 111
-, 'http://www.supp-102060.com/cat/hw/p2638.html');
-INSERT INTO product_information VALUES (3020
-, 'Envoy IC'
-, 'Envoy Internet Computer, Plug&Play'
-, 19,4
-, to_yminterval('+01-00')
-, 102060
-, 'orderable'
-, 449
-, 366
-, 'http://www.supp-102060.com/cat/hw/p3020.html');
-INSERT INTO product_information VALUES (1948
-, 'Envoy IC/58'
-, 'Internet computer with built-in 58K modem'
-, 19,4
-, to_yminterval('+01-06')
-, 102060
-, 'orderable'
-, 498
-, 428
-, 'http://www.supp-102060.com/cat/hw/p1948.html');
-INSERT INTO product_information VALUES (3003
-, 'Laptop 128/12/56/v90/110'
-, 'Envoy Laptop, 128MB memory, 12GB hard disk, v90 modem,
-110V power supply.'
-, 19,4
-, to_yminterval('+01-06')
-, 102060
-, 'orderable'
-, 3219
-, 2606
-, 'http://www.supp-102060.com/cat/hw/p3003.html');
-INSERT INTO product_information VALUES (2999
-, 'Laptop 16/8/110'
-, 'Envoy Laptop, 16MB memory, 8GB hard disk,
-110V power supply (US only).'
-, 19,3
-, to_yminterval('+01-06')
-, 102060
-, 'obsolete'
-, 999
-, 800
-, 'http://www.supp-102060.com/cat/hw/p2999.html');
-INSERT INTO product_information VALUES (3000
-, 'Laptop 32/10/56'
-, 'Envoy Laptop, 32MB memory, 10GB hard disk, 56K Modem,
-universal power supply (switchable).'
-, 19,4
-, to_yminterval('+01-06')
-, 102060
-, 'orderable'
-, 1749
-, 1542
-, 'http://www.supp-102060.com/cat/hw/p3000.html');
-INSERT INTO product_information VALUES (3001
-, 'Laptop 48/10/56/110'
-, 'Envoy Laptop, 48MB memory, 10GB hard disk, 56K modem,
-110V power supply.'
-, 19,4
-, to_yminterval('+01-06')
-, 102060
-, 'obsolete'
-, 2556
-, 2073
-, 'http://www.supp-102060.com/cat/hw/p3001.html');
-INSERT INTO product_information VALUES (3004
-, 'Laptop 64/10/56/220'
-, 'Envoy Laptop, 64MB memory, 10GB hard disk, 56K modem,
-220V power supply.'
-, 19,4
-, to_yminterval('+01-06')
-, 102060
-, 'orderable'
-, 2768
-, 2275
-, 'http://www.supp-102060.com/cat/hw/p3004.html');
-INSERT INTO product_information VALUES (3391
-, 'PS 110/220'
-, 'Power Supply - switchable, 110V/220V'
-, 19,2
-, to_yminterval('+01-06')
-, 102062
-, 'orderable'
-, 85
-, 75
-, 'http://www.supp-102062.com/cat/hw/p3391.html');
-INSERT INTO product_information VALUES (3124
-, 'PS 110V /T'
-, 'Power supply for tower PC, 110V'
-, 19,2
-, to_yminterval('+01-00')
-, 102062
-, 'orderable'
-, 84
-, 70
-, 'http://www.supp-102062.com/cat/hw/p3124.html');
-INSERT INTO product_information VALUES (1738
-, 'PS 110V /US'
-, '110 V Power Supply - US compatible'
-, 19,2
-, to_yminterval('+01-00')
-, 102062
-, 'orderable'
-, 86
-, 70
-, 'http://www.supp-102062.com/cat/hw/p1738.html');
-INSERT INTO product_information VALUES (2377
-, 'PS 110V HS/US'
-, '110 V hot swappable power supply - US compatible'
-, 19,2
-, to_yminterval('+01-00')
-, 102062
-, 'orderable'
-, 97
-, 82
-, 'http://www.supp-102062.com/cat/hw/p2377.html');
-INSERT INTO product_information VALUES (2299
-, 'PS 12V /P'
-, 'Power Supply - 12v portable'
-, 19,2
-, to_yminterval('+01-00')
-, 102062
-, 'orderable'
-, 76
-, 64
-, 'http://www.supp-102062.com/cat/hw/p2299.html');
-INSERT INTO product_information VALUES (3123
-, 'PS 220V /D'
-, 'Standard power supply, 220V, for desktop computers.'
-, 19,2
-, to_yminterval('+01-00')
-, 102062
-, 'orderable'
-, 81
-, 65
-, 'http://www.supp-102062.com/cat/hw/p3123.html');
-INSERT INTO product_information VALUES (1748
-, 'PS 220V /EUR'
-, '220 Volt Power supply type - Europe'
-, 19,2
-, to_yminterval('+01-00')
-, 102053
-, 'orderable'
-, 83
-, 70
-, 'http://www.supp-102053.com/cat/hw/p1748.html');
-INSERT INTO product_information VALUES (2387
-, 'PS 220V /FR'
-, '220V Power supply type - France'
-, 19,2
-, to_yminterval('+01-00')
-, 102053
-, 'orderable'
-, 83
-, 66
-, 'http://www.supp-102053.com/cat/hw/p2387.html');
-INSERT INTO product_information VALUES (2370
-, 'PS 220V /HS/FR'
-, '220V hot swappable power supply, for France.'
-, 19,2
-, to_yminterval('+00-09')
-, 102053
-, 'orderable'
-, 91
-, 75
-, 'http://www.supp-102053.com/cat/hw/p2370.html');
-INSERT INTO product_information VALUES (2311
-, 'PS 220V /L'
-, 'Power supply for laptop computers, 220V'
-, 19,2
-, to_yminterval('+00-09')
-, 102053
-, 'orderable'
-, 95
-, 79
-, 'http://www.supp-102053.com/cat/hw/p2311.html');
-INSERT INTO product_information VALUES (1733
-, 'PS 220V /UK'
-, '220V Power supply type - United Kingdom'
-, 19,2
-, to_yminterval('+00-09')
-, 102080
-, 'orderable'
-, 89
-, 76
-, 'http://www.supp-102080.com/cat/hw/p1733.html');
-INSERT INTO product_information VALUES (2878
-, 'Router - ASR/2W'
-, 'Special ALS Router - Approved Supplier required item with 2-way match'
-, 19,3
-, to_yminterval('+00-09')
-, 102063
-, 'orderable'
-, 345
-, 305
-, 'http://www.supp-102063.com/cat/hw/p2878.html');
-INSERT INTO product_information VALUES (2879
-, 'Router - ASR/3W'
-, 'Special ALS Router - Approved Supplier required item with 3-way match'
-, 19,3
-, to_yminterval('+00-09')
-, 102063
-, 'orderable'
-, 456
-, 384
-, 'http://www.supp-102063.com/cat/hw/p2879.html');
-INSERT INTO product_information VALUES (2152
-, 'Router - DTMF4'
-, 'DTMF 4 port router'
-, 19,3
-, to_yminterval('+00-09')
-, 102063
-, 'obsolete'
-, 231
-, 191
-, 'http://www.supp-102063.com/cat/hw/p2152.html');
-INSERT INTO product_information VALUES (3301
-, 'Screws <B.28.P>'
-, 'Screws: Brass, size 28mm, Phillips head. Plastic box, contents 500.'
-, 19,2
-, to_yminterval('+00-00')
-, 102071
-, 'orderable'
-, 15
-, 12
-, 'http://www.supp-102071.com/cat/hw/p3301.html');
-INSERT INTO product_information VALUES (3143
-, 'Screws <B.28.S>'
-, 'Screws: Brass, size 28mm, straight. Plastic box, contents 500.'
-, 19,2
-, to_yminterval('+00-00')
-, 102071
-, 'orderable'
-, 16
-, 13
-, 'http://www.supp-102071.com/cat/hw/p3143.html');
-INSERT INTO product_information VALUES (2323
-, 'Screws <B.32.P>'
-, 'Screws: Brass, size 32mm, Phillips head. Plastic box, contents 400.'
-, 19,3
-, to_yminterval('+00-00')
-, 102071
-, 'orderable'
-, 18
-, 14
-, 'http://www.supp-102071.com/cat/hw/p2323.html');
-INSERT INTO product_information VALUES (3134
-, 'Screws <B.32.S>'
-, 'Screws: Brass, size 32mm, straight. Plastic box, contents 400.'
-, 19,3
-, to_yminterval('+00-00')
-, 102071
-, 'orderable'
-, 18
-, 15
-, 'http://www.supp-102071.com/cat/hw/p3134.html');
-INSERT INTO product_information VALUES (3139
-, 'Screws <S.16.S>'
-, 'Screws: Steel, size 16 mm, straight. Carton box, contents 750.'
-, 19,2
-, to_yminterval('+00-00')
-, 102071
-, 'orderable'
-, 21
-, 17
-, 'http://www.supp-102071.com/cat/hw/p3139.html');
-INSERT INTO product_information VALUES (3300
-, 'Screws <S.32.P>'
-, 'Screws: Steel, size 32mm, Phillips head. Plastic box, contents 400.'
-, 19,3
-, to_yminterval('+00-00')
-, 102071
-, 'orderable'
-, 23
-, 19
-, 'http://www.supp-102071.com/cat/hw/p3300.html');
-INSERT INTO product_information VALUES (2316
-, 'Screws <S.32.S>'
-, 'Screws: Steel, size 32mm, straight. Plastic box, contents 500.'
-, 19,3
-, to_yminterval('+00-00')
-, 102074
-, 'orderable'
-, 22
-, 19
-, 'http://www.supp-102074.com/cat/hw/p2316.html');
-INSERT INTO product_information VALUES (3140
-, 'Screws <Z.16.S>'
-, 'Screws: Zinc, length 16mm, straight. Carton box, contents 750.'
-, 19,2
-, to_yminterval('+00-00')
-, 102074
-, 'orderable'
-, 24
-, 19
-, 'http://www.supp-102074.com/cat/hw/p3140.html');
-INSERT INTO product_information VALUES (2319
-, 'Screws <Z.24.S>'
-, 'Screws: Zinc, size 24mm, straight. Carton box, contents 500.'
-, 19,2
-, to_yminterval('+00-00')
-, 102074
-, 'orderable'
-, 25
-, 21
-, 'http://www.supp-102074.com/cat/hw/p2319.html');
-INSERT INTO product_information VALUES (2322
-, 'Screws <Z.28.P>'
-, 'Screws: Zinc, size 28 mm, Phillips head. Carton box, contents 850.'
-, 19,2
-, to_yminterval('+00-00')
-, 102076
-, 'orderable'
-, 23
-, 18
-, 'http://www.supp-102076.com/cat/hw/p2322.html');
-INSERT INTO product_information VALUES (3178
-, 'Spreadsheet - SSP/V 2.0'
-, 'SmartSpread Spreadsheet, Professional Edition Version 2.0, for Vision
-Release 11.1 and 11.2. Shrink wrap includes CD-ROM containing advanced
-software and online documentation, plus printed manual, tutorial, and
-license registration.'
-, 21,2
-, to_yminterval('+00-01')
-, 103080
-, 'orderable'
-, 45
-, 37
-, 'http://www.supp-103080.com/cat/sw/p3178.html');
-INSERT INTO product_information VALUES (3179
-, 'Spreadsheet - SSS/S 2.1'
-, 'SmartSpread Spreadsheet, Standard Edition Version 2.1, for SPNIX Release
-4.0. Shrink wrap includes CD-ROM containing software and online
-documentation, plus printed manual and license registration.'
-, 21,2
-, to_yminterval('+00-01')
-, 103080
-, 'orderable'
-, 50
-, 44
-, 'http://www.supp-103080.com/cat/sw/p3179.html');
-INSERT INTO product_information VALUES (3182
-, 'Word Processing - SWP/V 4.5'
-, 'SmartWord Word Processor, Professional Edition Version 4.5, for Vision
-Release 11.x. Shrink wrap includes CD-ROM, containing advanced software,
-printed manual, and license registration.'
-, 22,2
-, to_yminterval('+00-03')
-, 103093
-, 'orderable'
-, 65
-, 54
-, 'http://www.supp-103093.com/cat/sw/p3182.html');
-INSERT INTO product_information VALUES (3183
-, 'Word Processing - SWS/V 4.5'
-, 'SmartWord Word Processor, Standard Edition Version 4.5, for Vision
-Release 11.x. Shrink wrap includes CD-ROM and license registration.'
-, 22,2
-, to_yminterval('+00-01')
-, 103093
-, 'orderable'
-, 50
-, 40
-, 'http://www.supp-103093.com/cat/sw/p3183.html');
-INSERT INTO product_information VALUES (3197
-, 'Spreadsheet - SSS/V 2.1'
-, 'SmartSpread Spreadsheet, Standard Edition Version 2.1, for Vision
-Release 11.1 and 11.2. Shrink wrap includes CD-ROM containing software
-and online documentation, plus printed manual, tutorial, and license
-registration.'
-, 21,2
-, to_yminterval('+00-01')
-, 103080
-, 'orderable'
-, 45
-, 36
-, 'http://www.supp-103080.com/cat/sw/p3197.html');
-INSERT INTO product_information VALUES (3255
-, 'Spreadsheet - SSS/CD 2.2B'
-, 'SmartSpread Spreadsheet, Standard Edition, Beta Version 2.2, for
-SPNIX Release 4.1. CD-ROM only.'
-, 21,1
-, to_yminterval('+00-01')
-, 103080
-, 'orderable'
-, 35
-, 30
-, 'http://www.supp-103080.com/cat/sw/p3255.html');
-INSERT INTO product_information VALUES (3256
-, 'Spreadsheet - SSS/V 2.0'
-, 'SmartSpread Spreadsheet, Standard Edition Version 2.0, for Vision
-Release 11.0. Shrink wrap includes CD-ROM containing software and
-online documentation, plus printed manual, tutorial, and license
-registration.'
-, 21,2
-, to_yminterval('+00-01')
-, 103080
-, 'orderable'
-, 40
-, 34
-, 'http://www.supp-103080.com/cat/sw/p3256.html');
-INSERT INTO product_information VALUES (3260
-, 'Word Processing - SWP/S 4.4'
-, 'SmartSpread Spreadsheet, Standard Edition Version 2.2, for SPNIX
-Release 4.x. Shrink wrap includes CD-ROM, containing software, plus
-printed manual and license registration.'
-, 22,2
-, to_yminterval('+00-01')
-, 103093
-, 'orderable'
-, 50
-, 41
-, 'http://www.supp-103093.com/cat/sw/p3260.html');
-INSERT INTO product_information VALUES (3262
-, 'Spreadsheet - SSS/S 2.2'
-, 'SmartSpread Spreadsheet, Standard Edition Version 2.2, for SPNIX
-Release 4.1. Shrink wrap includes CD-ROM containing software and
-online documentation, plus printed manual and license registration.'
-, 21,2
-, to_yminterval('+00-01')
-, 103080
-, 'under development'
-, 50
-, 41
-, 'http://www.supp-103080.com/cat/sw/p3262.html');
-INSERT INTO product_information VALUES (3361
-, 'Spreadsheet - SSP/S 1.5'
-, 'SmartSpread Spreadsheet, Standard Edition Version 1.5, for SPNIX
-Release 3.3. Shrink wrap includes CD-ROM containing advanced software and
-online documentation, plus printed manual, tutorial, and license registration.'
-, 21,2
-, to_yminterval('+00-01')
-, 103080
-, 'orderable'
-, 40
-, 34
-, 'http://www.supp-103080.com/cat/sw/p3361.html');
-INSERT INTO product_information VALUES (1799
-, 'SPNIX3.3 - SL'
-, 'Operating System Software: SPNIX V3.3 - Base Server License. Includes
-10 general licenses for system administration, developers, or users. No
-network user licensing. '
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 1000
-, 874
-, 'http://www.supp-103092.com/cat/sw/p1799.html');
-INSERT INTO product_information VALUES (1801
-, 'SPNIX3.3 - AL'
-, 'Operating System Software: SPNIX V3.3 - Additional system
-administrator license, including network access.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 100
-, 88
-, 'http://www.supp-103092.com/cat/sw/p1801.html');
-INSERT INTO product_information VALUES (1803
-, 'SPNIX3.3 - DL'
-, 'Operating System Software: SPNIX V3.3 - Additional developer license.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 60
-, 51
-, 'http://www.supp-103092.com/cat/sw/p1803.html');
-INSERT INTO product_information VALUES (1804
-, 'SPNIX3.3 - UL/N'
-, 'Operating System Software: SPNIX V3.3 - Additional user license with
-network access.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 65
-, 56
-, 'http://www.supp-103092.com/cat/sw/p1804.html');
-INSERT INTO product_information VALUES (1805
-, 'SPNIX3.3 - UL/A'
-, 'Operating System Software: SPNIX V3.3 - Additional user license class A.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 50
-, 42
-, 'http://www.supp-103092.com/cat/sw/p1805.html');
-INSERT INTO product_information VALUES (1806
-, 'SPNIX3.3 - UL/C'
-, 'Operating System Software: SPNIX V3.3 - Additional user license class C.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 50
-, 42
-, 'http://www.supp-103092.com/cat/sw/p1806.html');
-INSERT INTO product_information VALUES (1808
-, 'SPNIX3.3 - UL/D'
-, 'Operating System Software: SPNIX V3.3 - Additional user license class D.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 55
-, 46
-, 'http://www.supp-103092.com/cat/sw/p1808.html');
-INSERT INTO product_information VALUES (1820
-, 'SPNIX3.3 - NL'
-, 'Operating System Software: SPNIX V3.3 - Additional network access license.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 55
-, 45
-, 'http://www.supp-103092.com/cat/sw/p1820.html');
-INSERT INTO product_information VALUES (1822
-, 'SPNIX4.0 - SL'
-, 'Operating System Software: SPNIX V4.0 - Base Server License. Includes
-10 general licenses for system administration, developers, or users. No
-network user licensing. '
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 1500
-, 1303
-, 'http://www.supp-103092.com/cat/sw/p1822.html');
-INSERT INTO product_information VALUES (2422
-, 'SPNIX4.0 - SAL'
-, 'Operating System Software: SPNIX V4.0 - Additional system
-administrator license, including network access.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 150
-, 130
-, 'http://www.supp-103092.com/cat/sw/p2422.html');
-INSERT INTO product_information VALUES (2452
-, 'SPNIX4.0 - DL'
-, 'Operating System Software: SPNIX V4.0 - Additional developer license.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 100
-, 88
-, 'http://www.supp-103092.com/cat/sw/p2452.html');
-INSERT INTO product_information VALUES (2462
-, 'SPNIX4.0 - UL/N'
-, 'Operating System Software: SPNIX V4.0 - Additional user license with
-network access.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 80
-, 71
-, 'http://www.supp-103092.com/cat/sw/p2462.html');
-INSERT INTO product_information VALUES (2464
-, 'SPNIX4.0 - UL/A'
-, 'Operating System Software: SPNIX V4.0 - Additional user license class A.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 70
-, 62
-, 'http://www.supp-103092.com/cat/sw/p2464.html');
-INSERT INTO product_information VALUES (2467
-, 'SPNIX4.0 - UL/D'
-, 'Operating System Software: SPNIX V4.0 - Additional user license class D.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 80
-, 64
-, 'http://www.supp-103092.com/cat/sw/p2467.html');
-INSERT INTO product_information VALUES (2468
-, 'SPNIX4.0 - UL/C'
-, 'Operating System Software: SPNIX V4.0 - Additional user license class C.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 75
-, 67
-, 'http://www.supp-103092.com/cat/sw/p2468.html');
-INSERT INTO product_information VALUES (2470
-, 'SPNIX4.0 - NL'
-, 'Operating System Software: SPNIX V4.0 - Additional network access license.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 80
-, 70
-, 'http://www.supp-103092.com/cat/sw/p2470.html');
-INSERT INTO product_information VALUES (2471
-, 'SPNIX3.3 SU'
-, 'Operating System Software: SPNIX V3.3 - Base Server License Upgrade
-to V4.0.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 500
-, 439
-, 'http://www.supp-103092.com/cat/sw/p2471.html');
-INSERT INTO product_information VALUES (2492
-, 'SPNIX3.3 AU'
-, 'Operating System Software: SPNIX V3.3 - V4.0 upgrade; class A user.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 45
-, 38
-, 'http://www.supp-103092.com/cat/sw/p2492.html');
-INSERT INTO product_information VALUES (2493
-, 'SPNIX3.3 C/DU'
-, 'Operating System Software: SPNIX V3.3 - V4.0 upgrade; class C or D user.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 25
-, 22
-, 'http://www.supp-103092.com/cat/sw/p2493.html');
-INSERT INTO product_information VALUES (2494
-, 'SPNIX3.3 NU'
-, 'Operating System Software: SPNIX V3.3 - V4.0 upgrade network access license.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 25
-, 20
-, 'http://www.supp-103092.com/cat/sw/p2494.html');
-INSERT INTO product_information VALUES (2995
-, 'SPNIX3.3 SAU'
-, 'Operating System Software: SPNIX V3.3 - V4.0 upgrade; system
-administrator license.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 70
-, 62
-, 'http://www.supp-103092.com/cat/sw/p2995.html');
-INSERT INTO product_information VALUES (3290
-, 'SPNIX3.3 DU'
-, 'Operating System Software: SPNIX V3.3 - V4.0 upgrade developer license.'
-, 24,1
-, to_yminterval('+01-00')
-, 103092
-, 'orderable'
-, 65
-, 55
-, 'http://www.supp-103092.com/cat/sw/p3290.html');
-INSERT INTO product_information VALUES (1778
-, 'C for SPNIX3.3 - 1 Seat'
-, 'C programming software for SPNIX V3.3 - single user'
-, 25,1
-, to_yminterval('+00-06')
-, 103092
-, 'orderable'
-, 62
-, 52
-, 'http://www.supp-103092.com/cat/sw/p1778.html');
-INSERT INTO product_information VALUES (1779
-, 'C for SPNIX3.3 - Doc'
-, 'C programming language documentation
-, SPNIX V3.3'
-, 25,2
-, to_yminterval('+10-00')
-, 103092
-, 'orderable'
-, 128
-, 112
-, 'http://www.supp-103092.com/cat/sw/p1779.html');
-INSERT INTO product_information VALUES (1780
-, 'C for SPNIX3.3 - Sys'
-, 'C programming software for SPNIX V3.3 - system compiler,
-libraries, linker'
-, 25,1
-, to_yminterval('+00-06')
-, 103092
-, 'orderable'
-, 450
-, 385
-, 'http://www.supp-103092.com/cat/sw/p1780.html');
-INSERT INTO product_information VALUES (2371
-, 'C for SPNIX4.0 - Doc'
-, 'C programming language documentation, SPNIX V4.0'
-, 25,2
-, to_yminterval('+10-00')
-, 103092
-, 'orderable'
-, 146
-, 119
-, 'http://www.supp-103092.com/cat/sw/p2371.html');
-INSERT INTO product_information VALUES (2423
-, 'C for SPNIX4.0 - 1 Seat'
-, 'C programming software for SPNIX V4.0 - single user'
-, 25,1
-, to_yminterval('+00-06')
-, 103092
-, 'orderable'
-, 84
-, 73
-, 'http://www.supp-103092.com/cat/sw/p2423.html');
-INSERT INTO product_information VALUES (3501
-, 'C for SPNIX4.0 - Sys'
-, 'C programming software for SPNIX V4.0 - system compiler,
-libraries, linker'
-, 25,1
-, to_yminterval('+00-06')
-, 103092
-, 'orderable'
-, 555
-, 448
-, 'http://www.supp-103092.com/cat/sw/p3501.html');
-INSERT INTO product_information VALUES (3502
-, 'C for SPNIX3.3 -Sys/U'
-, 'C programming software for SPNIX V3.3 - 4.0 Upgrade; system compiler, libraries, linker'
-, 25,1
-, to_yminterval('+00-06')
-, 103092
-, 'orderable'
-, 105
-, 88
-, 'http://www.supp-103092.com/cat/sw/p3502.html');
-INSERT INTO product_information VALUES (3503
-, 'C for SPNIX3.3 - Seat/U'
-, 'C programming software for SPNIX V3.3 - 4.0 Upgrade - single user'
-, 25,1
-, to_yminterval('+00-06')
-, 103092
-, 'orderable'
-, 22
-, 18
-, 'http://www.supp-103092.com/cat/sw/p3503.html');
-INSERT INTO product_information VALUES (1774
-, 'Base ISO CP - BL'
-, 'Base ISO Communication Package - Base License'
-, 29,1
-, to_yminterval('+00-00')
-, 103088
-, 'orderable'
-, 110
-, 93
-, 'http://www.supp-103088.com/cat/sw/p1774.html');
-INSERT INTO product_information VALUES (1775
-, 'Client ISO CP - S'
-, 'ISO Communication Package add-on license for additional SPNIX V3.3 client.'
-, 29,1
-, to_yminterval('+00-00')
-, 103087
-, 'orderable'
-, 27
-, 22
-, 'http://www.supp-103087.com/cat/sw/p1775.html');
-INSERT INTO product_information VALUES (1794
-, 'OSI 8-16/IL'
-, 'OSI Layer 8 to 16 - Incremental License'
-, 29,1
-, to_yminterval('+00-00')
-, 103096
-, 'orderable'
-, 128
-, 112
-, 'http://www.supp-103096.com/cat/sw/p1794.html');
-INSERT INTO product_information VALUES (1825
-, 'X25 - 1 Line License'
-, 'X25 network access control system, single user'
-, 29,1
-, to_yminterval('+00-06')
-, 103093
-, 'orderable'
-, 25
-, 21
-, 'http://www.supp-103093.com/cat/sw/p1825.html');
-INSERT INTO product_information VALUES (2004
-, 'IC Browser - S'
-, 'IC Web Browser for SPNIX. Browser with network mail capability.'
-, 29,1
-, to_yminterval('+00-01')
-, 103086
-, 'orderable'
-, 90
-, 80
-, 'http://www.supp-103086.com/cat/sw/p2004.html');
-INSERT INTO product_information VALUES (2005
-, 'IC Browser Doc - S'
-, 'Documentation set for IC Web Browser for SPNIX. Includes Installation
-Manual, Mail Server Administration Guide, and User Quick Reference.'
-, 29,2
-, to_yminterval('+00-00')
-, 103086
-, 'orderable'
-, 115
-, 100
-, 'http://www.supp-103086.com/cat/sw/p2005.html');
-INSERT INTO product_information VALUES (2416
-, 'Client ISO CP - S'
-, 'ISO Communication Package add-on license for additional SPNIX V4.0 client.'
-, 29,1
-, to_yminterval('+00-00')
-, 103088
-, 'orderable'
-, 41
-, 36
-, 'http://www.supp-103088.com/cat/sw/p2416.html');
-INSERT INTO product_information VALUES (2417
-, 'Client ISO CP - V'
-, 'ISO Communication Package add-on license for additional Vision client.'
-, 29,1
-, to_yminterval('+00-00')
-, 103088
-, 'orderable'
-, 33
-, 27
-, 'http://www.supp-103088.com/cat/sw/p2417.html');
-INSERT INTO product_information VALUES (2449
-, 'OSI 1-4/IL'
-, 'OSI Layer 1 to 4 - Incremental License'
-, 29,1
-, to_yminterval('+00-00')
-, 103088
-, 'orderable'
-, 83
-, 72
-, 'http://www.supp-103088.com/cat/sw/p2449.html');
-INSERT INTO product_information VALUES (3101
-, 'IC Browser - V'
-, 'IC Web Browser for Vision with manual. Browser with network mail capability.'
-, 29,2
-, to_yminterval('+00-01')
-, 103086
-, 'orderable'
-, 75
-, 67
-, 'http://www.supp-103086.com/cat/sw/p3101.html');
-INSERT INTO product_information VALUES (3170
-, 'Smart Suite - V/SP'
-, 'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for Vision.
-Spanish language software and user manuals.'
-, 29,2
-, to_yminterval('+00-06')
-, 103089
-, 'orderable'
-, 161
-, 132
-, 'http://www.supp-103089.com/cat/sw/p3170.html');
-INSERT INTO product_information VALUES (3171
-, 'Smart Suite - S3.3/EN'
-, 'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for SPNIX
-Version 3.3. English language software and user manuals.'
-, 29,2
-, to_yminterval('+00-06')
-, 103089
-, 'orderable'
-, 148
-, 120
-, 'http://www.supp-103089.com/cat/sw/p3171.html');
-INSERT INTO product_information VALUES (3172
-, 'Graphics - DIK+'
-, 'Software Kit Graphics: Draw-It Kwik-Plus. Includes extensive clip art
-files and advanced drawing tools for 3-D object manipulation, variable
-shading, and extended character fonts.'
-, 29,1
-, to_yminterval('+00-01')
-, 103094
-, 'orderable'
-, 42
-, 34
-, 'http://www.supp-103094.com/cat/sw/p3172.html');
-INSERT INTO product_information VALUES (3173
-, 'Graphics - SA'
-, 'Software Kit Graphics: SmartArt. Professional graphics package for
-SPNIX with multiple line styles, textures, built-in shapes and common symbols.'
-, 29,1
-, to_yminterval('+00-01')
-, 103094
-, 'orderable'
-, 86
-, 72
-, 'http://www.supp-103094.com/cat/sw/p3173.html');
-INSERT INTO product_information VALUES (3175
-, 'Project Management - S4.0'
-, 'Project Management Software, for SPNIX V4.0. Software includes command
-line and graphical interface with text, graphic, spreadsheet, and
-customizable report formats.'
-, 29,1
-, to_yminterval('+00-01')
-, 103089
-, 'orderable'
-, 37
-, 32
-, 'http://www.supp-103089.com/cat/sw/p3175.html');
-INSERT INTO product_information VALUES (3176
-, 'Smart Suite - V/EN'
-, 'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
-Vision. English language software and user manuals.'
-, 29,2
-, to_yminterval('+00-06')
-, 103089
-, 'orderable'
-, 120
-, 103
-, 'http://www.supp-103089.com/cat/sw/p3176.html');
-INSERT INTO product_information VALUES (3177
-, 'Smart Suite - V/FR'
-, 'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
-Vision. French language software and user manuals.'
-, 29,2
-, to_yminterval('+00-06')
-, 103089
-, 'orderable'
-, 120
-, 102
-, 'http://www.supp-103089.com/cat/sw/p3177.html');
-INSERT INTO product_information VALUES (3245
-, 'Smart Suite - S4.0/FR'
-, 'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
-SPNIX V4.0. French language software and user manuals.'
-, 29,2
-, to_yminterval('+00-06')
-, 103089
-, 'orderable'
-, 222
-, 195
-, 'http://www.supp-103089.com/cat/sw/p3245.html');
-INSERT INTO product_information VALUES (3246
-, 'Smart Suite - S4.0/SP'
-, 'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
-SPNIX V4.0. Spanish language software and user manuals.'
-, 29,2
-, to_yminterval('+00-06')
-, 103089
-, 'orderable'
-, 222
-, 193
-, 'http://www.supp-103089.com/cat/sw/p3246.html');
-INSERT INTO product_information VALUES (3247
-, 'Smart Suite - V/DE'
-, 'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
-Vision. German language software and user manuals.'
-, 29,2
-, to_yminterval('+00-06')
-, 103089
-, 'orderable'
-, 120
-, 96
-, 'http://www.supp-103089.com/cat/sw/p3247.html');
-INSERT INTO product_information VALUES (3248
-, 'Smart Suite - S4.0/DE'
-, 'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
-SPNIX V4.0. German language software and user manuals.'
-, 29,2
-, to_yminterval('+00-06')
-, 103089
-, 'orderable'
-, 222
-, 193
-, 'http://www.supp-103089.com/cat/sw/p3248.html');
-INSERT INTO product_information VALUES (3250
-, 'Graphics - DIK'
-, 'Software Kit Graphics: Draw-It Kwik. Simple graphics package for
-Vision systems, with options to save in GIF, JPG, and BMP formats.'
-, 29,1
-, to_yminterval('+00-01')
-, 103083
-, 'orderable'
-, 28
-, 24
-, 'http://www.supp-103083.com/cat/sw/p3250.html');
-INSERT INTO product_information VALUES (3251
-, 'Project Management - V'
-, 'Project Management Software, for Vision. Software includes command
-line and graphical interface with text, graphic, spreadsheet, and
-customizable report formats.'
-, 29,1
-, to_yminterval('+00-01')
-, 103093
-, 'orderable'
-, 31
-, 26
-, 'http://www.supp-103093.com/cat/sw/p3251.html');
-INSERT INTO product_information VALUES (3252
-, 'Project Management - S3.3'
-, 'Project Management Software, for SPNIX V3.3. Software includes command
-line and graphical interface with text, graphic, spreadsheet, and
-customizable report formats.'
-, 29,1
-, to_yminterval('+00-01')
-, 103093
-, 'orderable'
-, 26
-, 23
-, 'http://www.supp-103093.com/cat/sw/p3252.html');
-INSERT INTO product_information VALUES (3253
-, 'Smart Suite - S4.0/EN'
-, 'Office Suite (SmartWrite, SmartArt, SmartSpread, SmartBrowse) for
-SPNIX V4.0. English language software and user manuals.'
-, 29,2
-, to_yminterval('+00-06')
-, 103089
-, 'orderable'
-, 222
-, 188
-, 'http://www.supp-103089.com/cat/sw/p3253.html');
-INSERT INTO product_information VALUES (3257
-, 'Web Browser - SB/S 2.1'
-, 'Software Kit Web Browser: SmartBrowse V2.1 for SPNIX V3.3. Includes
-context sensitive help files and online documentation.'
-, 29,1
-, to_yminterval('+00-01')
-, 103082
-, 'orderable'
-, 66
-, 58
-, 'http://www.supp-103082.com/cat/sw/p3257.html');
-INSERT INTO product_information VALUES (3258
-, 'Web Browser - SB/V 1.0'
-, 'Software Kit Web Browser: SmartBrowse V2.1 for Vision. Includes
-context sensitive help files and online documentation.'
-, 29,1
-, to_yminterval('+00-01')
-, 103082
-, 'orderable'
-, 80
-, 70
-, 'http://www.supp-103082.com/cat/sw/p3258.html');
-INSERT INTO product_information VALUES (3362
-, 'Web Browser - SB/S 4.0'
-, 'Software Kit Web Browser: SmartBrowse V4.0 for SPNIX V4.0. Includes
-context sensitive help files and online documentation.'
-, 29,1
-, to_yminterval('+00-01')
-, 103082
-, 'orderable'
-, 99
-, 81
-, 'http://www.supp-103082.com/cat/sw/p3362.html');
-INSERT INTO product_information VALUES (2231
-, 'Desk - S/V'
-, 'Standard-sized desk; capitalizable, taxable item. Final finish is from
-veneer in stock at time of order, including oak, ash, cherry, and mahogany.'
-, 31,5
-, to_yminterval('+15-00')
-, 103082
-, 'orderable'
-, 2510
-, 2114
-, 'http://www.supp-103082.com/cat/off/p2231.html');
-INSERT INTO product_information VALUES (2335
-, 'Mobile phone'
-, 'Dual band mobile phone with low battery consumption. Lightweight,
-foldable, with socket for single earphone and spare battery compartment.'
-, 31,1
-, to_yminterval('+01-06')
-, 103088
-, 'orderable'
-, 100
-, 83
-, 'http://www.supp-103088.com/cat/off/p2335.html');
-INSERT INTO product_information VALUES (2350
-, 'Desk - W/48'
-, 'Desk - 48 inch white laminate without return; capitalizable, taxable item.'
-, 31,5
-, to_yminterval('+20-00')
-, 103082
-, 'orderable'
-, 2500
-, 2129
-, 'http://www.supp-103082.com/cat/off/p2350.html');
-INSERT INTO product_information VALUES (2351
-, 'Desk - W/48/R'
-, 'Desk - 60 inch white laminate with 48 inch return; capitalizable,
-taxable item.'
-, 31,5
-, to_yminterval('+20-0')
-, 103082
-, 'orderable'
-, 2900
-, 2386
-, 'http://www.supp-103082.com/cat/off/p2351.html');
-INSERT INTO product_information VALUES (2779
-, 'Desk - OS/O/F'
-, 'Executive-style oversized oak desk with file drawers. Final finish is
-customizable when ordered, light or dark oak stain,
-or natural hand rubbed clear.'
-, 31,5
-, to_yminterval('+25-00')
-, 103082
-, 'orderable'
-, 3980
-, 3347
-, 'http://www.supp-103082.com/cat/off/p2779.html');
-INSERT INTO product_information VALUES (3337
-, 'Mobile Web Phone'
-, 'Mobile phone including monthly fee for Web access. Slimline shape
-with leather-look carrying case and belt clip.'
-, 31,2
-, to_yminterval('+01-06')
-, 103088
-, 'orderable'
-, 800
-, 666
-, 'http://www.supp-103088.com/cat/off/p3337.html');
-INSERT INTO product_information VALUES (2091
-, 'Paper Tablet LW 8 1/2 x 11'
-, 'Paper tablet, lined, white, size 8 1/2 x 11 inch'
-, 32,1
-, to_yminterval('+00-00')
-, 103095
-, 'orderable'
-, 1
-, 0
-, 'http://www.supp-103095.com/cat/off/p2091.html');
-INSERT INTO product_information VALUES (2093
-, 'Pens - 10/FP'
-, 'Permanent ink pen dries quickly and is smear resistant. Provides smooth,
-skip-free writing. Fine point. Single color boxes (black, blue, red) or
-assorted box (6 black, 3 blue, and 1 red).'
-, 32,1
-, to_yminterval('+00-00')
-, 103090
-, 'orderable'
-, 8
-, 7
-, 'http://www.supp-103090.com/cat/off/p2093.html');
-INSERT INTO product_information VALUES (2144
-, 'Card Organizer Cover'
-, 'Replacement cover for desk top style business card holder. Smoke
-grey (original color) or clear plastic.'
-, 32,1
-, to_yminterval('+00-01')
-, 103094
-, 'orderable'
-, 18
-, 14
-, 'http://www.supp-103094.com/cat/off/p2144.html');
-INSERT INTO product_information VALUES (2336
-, 'Business Cards Box - 250'
-, 'Business cards box, capacity 250. Use form BC110-2, Rev. 3/2000
-(hardcopy or online) when ordering and complete all fields marked
-with an asterisk.'
-, 32,1
-, to_yminterval('+00-00')
-, 103091
-, 'orderable'
-, 55
-, 49
-, 'http://www.supp-103091.com/cat/off/p2336.html');
-INSERT INTO product_information VALUES (2337
-, 'Business Cards - 1000/2L'
-, 'Business cards box, capacity 1000, 2-sided with different language on
-each side. Use form BC111-2, Rev. 12/1999 (hardcopy or online) when
-ordering - complete all fields marked with an asterisk and check box for
-second language (English is always on side 1).'
-, 32,1
-, to_yminterval('+00-00')
-, 103091
-, 'orderable'
-, 300
-, 246
-, 'http://www.supp-103091.com/cat/off/p2337.html');
-INSERT INTO product_information VALUES (2339
-, 'Paper - Std Printer'
-, '20 lb. 8.5x11 inch white laser printer paper (recycled),
-ten 500-sheet reams'
-, 32,3
-, to_yminterval('+00-00')
-, 103095
-, 'orderable'
-, 25
-, 21
-, 'http://www.supp-103095.com/cat/off/p2339.html');
-INSERT INTO product_information VALUES (2536
-, 'Business Cards - 250/2L'
-, 'Business cards box, capacity 250, 2-sided with different language on
-each side. Use form BC111-2, Rev. 12/1999 (hardcopy or online) when
-ordering - complete all fields marked with an asterisk and check box for
-second language (English is always on side 1).'
-, 32,1
-, to_yminterval('+00-00')
-, 103091
-, 'orderable'
-, 80
-, 68
-, 'http://www.supp-103091.com/cat/off/p2536.html');
-INSERT INTO product_information VALUES (2537
-, 'Business Cards Box - 1000'
-, 'Business cards box, capacity 1000. Use form BC110-3, Rev. 3/2000
-(hardcopy or online) when ordering and complete all fields marked with
-an asterisk.'
-, 32,1
-, to_yminterval('+00-00')
-, 103091
-, 'orderable'
-, 200
-, 176
-, 'http://www.supp-103091.com/cat/off/p2537.html');
-INSERT INTO product_information VALUES (2783
-, 'Clips - Paper'
-, 'World brand paper clips set the standard for quality.10 boxes with 100
-clips each. #1 regular or jumbo, smooth or non-skid.'
-, 32,2
-, to_yminterval('+00-00')
-, 103080
-, 'orderable'
-, 10
-, 8
-, 'http://www.supp-103080.com/cat/off/p2783.html');
-INSERT INTO product_information VALUES (2808
-, 'Paper Tablet LY 8 1/2 x 11'
-, 'Paper Tablet, Lined, Yellow, size 8 1/2 x 11 inch'
-, 32,1
-, to_yminterval('+00-00')
-, 103098
-, 'orderable'
-, 1
-, 0
-, 'http://www.supp-103098.com/cat/off/p2808.html');
-INSERT INTO product_information VALUES (2810
-, 'Inkvisible Pens'
-, 'Rollerball pen is equipped with a smooth precision tip. See-through
-rubber grip allows for a visible ink supply and comfortable writing.
-4-pack with 1 each, black, blue, red, green.'
-, 32,1
-, to_yminterval('+00-00')
-, 103095
-, 'orderable'
-, 6
-, 4
-, 'http://www.supp-103095.com/cat/off/p2810.html');
-INSERT INTO product_information VALUES (2870
-, 'Pencil - Mech'
-, 'Ergonomically designed mechanical pencil for improved writing comfort.
-Refillable erasers and leads. Available in three lead sizes: .5mm (fine); .7mm (medium); and .9mm (thick).'
-, 32,1
-, to_yminterval('+02-00')
-, 103097
-, 'orderable'
-, 5
-, 4
-, 'http://www.supp-103097.com/cat/off/p2870.html');
-INSERT INTO product_information VALUES (3051
-, 'Pens - 10/MP'
-, 'Permanent ink pen dries quickly and is smear resistant. Provides smooth,
-skip-free writing. Medium point. Single color boxes (black, blue, red) or
-assorted box (6 black, 3 blue, and 1 red).'
-, 32,1
-, to_yminterval('+00-00')
-, 103097
-, 'orderable'
-, 12
-, 10
-, 'http://www.supp-103097.com/cat/off/p3051.html');
-INSERT INTO product_information VALUES (3150
-, 'Card Holder - 25'
-, 'Card Holder; heavy plastic business card holder with embossed corporate
-logo. Holds about 25 of your business cards, depending on card thickness.'
-, 32,1
-, to_yminterval('+00-06')
-, 103089
-, 'orderable'
-, 18
-, 15
-, 'http://www.supp-103089.com/cat/off/p3150.html');
-INSERT INTO product_information VALUES (3208
-, 'Pencils - Wood'
-, 'Box of 2 dozen wooden pencils. Specify lead type when ordering: 2H
-(double hard), H (hard), HB (hard black), B (soft black).'
-, 32,1
-, to_yminterval('+00-00')
-, 103097
-, 'orderable'
-, 2
-, 1
-, 'http://www.supp-103097.com/cat/off/p3208.html');
-INSERT INTO product_information VALUES (3209
-, 'Sharpener - Pencil'
-, 'Electric Pencil Sharpener Rugged steel cutters for long life.
-PencilSaver helps prevent over-sharpening. Non-skid rubber feet.
-Built-in pencil holder.'
-, 32,2
-, to_yminterval('+02-00')
-, 103096
-, 'orderable'
-, 13
-, 11
-, 'http://www.supp-103096.com/cat/off/p3209.html');
-INSERT INTO product_information VALUES (3224
-, 'Card Organizer - 250'
-, 'Portable holder for organizing business cards, capacity 250. Booklet
-style with slip in, transparent pockets for business cards. Optional
-alphabet tabs. Specify cover color when ordering (dark brown, beige,
-burgundy, black, and light grey).'
-, 32,1
-, to_yminterval('+05-00')
-, 103095
-, 'orderable'
-, 32
-, 28
-, 'http://www.supp-103095.com/cat/off/p3224.html');
-INSERT INTO product_information VALUES (3225
-, 'Card Organizer - 1000'
-, 'Holder for organizing business cards with alphabet dividers; capacity
-1000. Desk top style with smoke grey cover and black base. Lid is
-removable for storing inside drawer.'
-, 32,1
-, to_yminterval('+00-02')
-, 103095
-, 'orderable'
-, 47
-, 39
-, 'http://www.supp-103095.com/cat/off/p3225.html');
-INSERT INTO product_information VALUES (3511
-, 'Paper - HQ Printer'
-, 'Quality paper for inkjet and laser printers tested to resist printer
-jams. Acid free for archival purposes. 22lb. weight with brightness of 92.
-Size: 8 1/2 x 11. Single 500-sheet ream.'
-, 32,2
-, to_yminterval('+00-00')
-, 103080
-, 'orderable'
-, 9
-, 7
-, 'http://www.supp-103080.com/cat/off/p3511.html');
-INSERT INTO product_information VALUES (3515
-, 'Lead Replacement'
-, 'Refill leads for mechanical pencils. Each pack contains 25 leads and
-a replacement eraser. Available in three lead sizes: .5mm (fine); .7mm
-(medium); and .9mm (thick).'
-, 32,1
-, to_yminterval('+00-00')
-, 103095
-, 'orderable'
-, 2
-, 1
-, 'http://www.supp-103095.com/cat/off/p3515.html');
-INSERT INTO product_information VALUES (2986
-, 'Manual - Vision OS/2x +'
-, 'Manuals for Vision Operating System V 2.x and Vision Office Suite'
-, 33,3
-, to_yminterval('+00-00')
-, 103095
-, 'orderable'
-, 125
-, 111
-, 'http://www.supp-103095.com/cat/off/p2986.html');
-INSERT INTO product_information VALUES (3163
-, 'Manual - Vision Net6.3/US'
-, 'Vision Networking V6.3 Reference Manual. US version with advanced
-encryption.'
-, 33,2
-, to_yminterval('+00-00')
-, 103083
-, 'orderable'
-, 35
-, 29
-, 'http://www.supp-103083.com/cat/off/p3163.html');
-INSERT INTO product_information VALUES (3165
-, 'Manual - Vision Tools2.0'
-, 'Vision Business Tools Suite V2.0 Reference Manual. Includes installation,
-configuration, and user guide.'
-, 33,2
-, to_yminterval('+00-00')
-, 103083
-, 'orderable'
-, 40
-, 34
-, 'http://www.supp-103083.com/cat/off/p3165.html');
-INSERT INTO product_information VALUES (3167
-, 'Manual - Vision OS/2.x'
-, 'Vision Operating System V2.0/2.1/2/3 Reference Manual. Complete
-installation, configuration, management, and tuning information for Vision
-system administration. Note that this manual replaces the individual
-Version 2.0 and 2.1 manuals.'
-, 33,2
-, to_yminterval('+00-00')
-, 103083
-, 'orderable'
-, 55
-, 47
-, 'http://www.supp-103083.com/cat/off/p3167.html');
-INSERT INTO product_information VALUES (3216
-, 'Manual - Vision Net6.3'
-, 'Vision Networking V6.3 Reference Manual. Non-US version with basic
-encryption.'
-, 33,2
-, to_yminterval('+00-00')
-, 103083
-, 'orderable'
-, 30
-, 26
-, 'http://www.supp-103083.com/cat/off/p3216.html');
-INSERT INTO product_information VALUES (3220
-, 'Manual - Vision OS/1.2'
-, 'Vision Operating System V1.2 Reference Manual. Complete installation,
-configuration, management, and tuning information for Vision system
-administration.'
-, 33,2
-, to_yminterval('+00-00')
-, 103083
-, 'orderable'
-, 45
-, 36
-, 'http://www.supp-103083.com/cat/off/p3220.html');
-INSERT INTO product_information VALUES (1729
-, 'Chemicals - RCP'
-, 'Cleaning Chemicals - 3500 roller clean pads'
-, 39,2
-, to_yminterval('+05-00')
-, 103094
-, 'orderable'
-, 80
-, 66
-, 'http://www.supp-103094.com/cat/off/p1729.html');
-INSERT INTO product_information VALUES (1910
-, 'FG Stock - H'
-, 'Fiberglass Stock - heavy duty, 1 thick'
-, 39,3
-, to_yminterval('+00-00')
-, 103083
-, 'orderable'
-, 14
-, 11
-, 'http://www.supp-103083.com/cat/off/p1910.html');
-INSERT INTO product_information VALUES (1912
-, 'SS Stock - 3mm'
-, 'Stainless steel stock - 3mm. Can be predrilled for standard power
-supplies, motherboard holders, and hard drives. Please use appropriate
-template to identify model number, placement, and size of finished sheet
-when placing order for drilled sheet.'
-, 39,2
-, to_yminterval('+00-00')
-, 103083
-, 'orderable'
-, 15
-, 12
-, 'http://www.supp-103083.com/cat/off/p1912.html');
-INSERT INTO product_information VALUES (1940
-, 'ESD Bracelet/Clip'
-, 'Electro static discharge bracelet with alligator clip for easy
-connection to computer chassis or other ground.'
-, 39,1
-, to_yminterval('+01-06')
-, 103095
-, 'orderable'
-, 18
-, 14
-, 'http://www.supp-103095.com/cat/off/p1940.html');
-INSERT INTO product_information VALUES (2030
-, 'Latex Gloves'
-, 'Latex Gloves for assemblers, chemical handlers, fitters. Heavy duty,
-safety orange, with textured grip on fingers and thumb. Waterproof and
-shock-proof up to 220 volts/2 amps, 110 volts/5 amps. Acid proof for up
-to 5 minutes.'
-, 39,1
-, to_yminterval('+10-00')
-, 103097
-, 'orderable'
-, 12
-, 10
-, 'http://www.supp-103097.com/cat/off/p2030.html');
-INSERT INTO product_information VALUES (2326
-, 'Plastic Stock - Y'
-, 'Plastic Stock - Yellow, standard quality.'
-, 39,1
-, to_yminterval('+00-00')
-, 103093
-, 'orderable'
-, 2
-, 1
-, 'http://www.supp-103093.com/cat/off/p2326.html');
-INSERT INTO product_information VALUES (2330
-, 'Plastic Stock - R'
-, 'Plastic Stock - Red, standard quality.'
-, 39,1
-, to_yminterval('+00-00')
-, 103093
-, 'orderable'
-, 2
-, 1
-, 'http://www.supp-103093.com/cat/off/p2330.html');
-INSERT INTO product_information VALUES (2334
-, 'Resin'
-, 'General purpose synthetic resin.'
-, 39,2
-, to_yminterval('+00-00')
-, 103087
-, 'orderable'
-, 4
-, 3
-, 'http://www.supp-103087.com/cat/off/p2334.html');
-INSERT INTO product_information VALUES (2340
-, 'Chemicals - SW'
-, 'Cleaning Chemicals - 3500 staticide wipes'
-, 39,2
-, to_yminterval('+05-00')
-, 103094
-, 'orderable'
-, 72
-, 59
-, 'http://www.supp-103094.com/cat/off/p2340.html');
-INSERT INTO product_information VALUES (2365
-, 'Chemicals - TCS'
-, 'Cleaning Chemical - 2500 transport cleaning sheets'
-, 39,3
-, to_yminterval('+05-00')
-, 103094
-, 'orderable'
-, 78
-, 69
-, 'http://www.supp-103094.com/cat/off/p2365.html');
-INSERT INTO product_information VALUES (2594
-, 'FG Stock - L'
-, 'Fiberglass Stock - light weight for internal heat shielding, 1/4 thick'
-, 39,2
-, to_yminterval('+00-00')
-, 103098
-, 'orderable'
-, 9
-, 7
-, 'http://www.supp-103098.com/cat/off/p2594.html');
-INSERT INTO product_information VALUES (2596
-, 'SS Stock - 1mm'
-, 'Stainless steel stock - 3mm. Can be predrilled for standard model
-motherboard and battery holders. Please use appropriate template to
-identify model number, placement, and size of finished sheet when placing
-order for drilled sheet.'
-, 39,2
-, to_yminterval('+00-00')
-, 103098
-, 'orderable'
-, 12
-, 10
-, 'http://www.supp-103098.com/cat/off/p2596.html');
-INSERT INTO product_information VALUES (2631
-, 'ESD Bracelet/QR'
-, 'Electro Static Discharge Bracelet: 2 piece lead with quick release
-connector. One piece stays permanently attached to computer chassis with
-screw, the other is attached to the bracelet. Additional permanent
-ends available.'
-, 39,1
-, to_yminterval('+01-06')
-, 103085
-, 'orderable'
-, 15
-, 12
-, 'http://www.supp-103085.com/cat/off/p2631.html');
-INSERT INTO product_information VALUES (2721
-, 'PC Bag - L/S'
-, 'Black Leather Computer Case - single laptop capacity with pockets for
-manuals, additional hardware, and work papers. Adjustable protective straps
-and removable pocket for power supply and cables.'
-, 39,2
-, to_yminterval('+01-00')
-, 103095
-, 'orderable'
-, 87
-, 70
-, 'http://www.supp-103095.com/cat/off/p2721.html');
-INSERT INTO product_information VALUES (2722
-, 'PC Bag - L/D'
-, 'Black Leather Computer Case - double laptop capacity with pockets for
-additional hardware or manuals and work papers. Adjustable protective straps
-and removable pockets for power supplies and cables. Double wide shoulder
-strap for comfort.'
-, 39,2
-, to_yminterval('+01-00')
-, 103095
-, 'orderable'
-, 112
-, 99
-, 'http://www.supp-103095.com/cat/off/p2722.html');
-INSERT INTO product_information VALUES (2725
-, 'Machine Oil'
-, 'Machine Oil for Lubrication of CD-ROM drive doors and slides.
-Self-cleaning adjustable nozzle for fine to medium flow.'
-, 39,1
-, to_yminterval('+00-00')
-, 103098
-, 'orderable'
-, 4
-, 3
-, 'http://www.supp-103098.com/cat/off/p2725.html');
-INSERT INTO product_information VALUES (2782
-, 'PC Bag - C/S'
-, 'Canvas Computer Case - single laptop capacity with pockets for manuals,
-additional hardware, and work papers. Adjustable protective straps and
-removable pocket for power supply and cables. Outside pocket with snap
-closure for easy access while travelling.'
-, 39,2
-, to_yminterval('+00-06')
-, 103095
-, 'orderable'
-, 62
-, 50
-, 'http://www.supp-103095.com/cat/off/p2782.html');
-INSERT INTO product_information VALUES (3187
-, 'Plastic Stock - B/HD'
-, 'Plastic Stock - Blue, high density.'
-, 39,1
-, to_yminterval('+00-00')
-, 103095
-, 'orderable'
-, 3
-, 2
-, 'http://www.supp-103095.com/cat/off/p3187.html');
-INSERT INTO product_information VALUES (3189
-, 'Plastic Stock - G'
-, 'Plastic Stock - Green, standard density.'
-, 39,1
-, to_yminterval('+00-00')
-, 103095
-, 'orderable'
-, 2
-, 1
-, 'http://www.supp-103095.com/cat/off/p3189.html');
-INSERT INTO product_information VALUES (3191
-, 'Plastic Stock - O'
-, 'Plastic Stock - Orange, standard density.'
-, 39,1
-, to_yminterval('+00-00')
-, 103095
-, 'orderable'
-, 2
-, 1
-, 'http://www.supp-103095.com/cat/off/p3191.html');
-INSERT INTO product_information VALUES (3193
-, 'Plastic Stock - W/HD'
-, 'Plastic Stock - White, high density.'
-, 39,1
-, to_yminterval('+00-00')
-, 103095
-, 'orderable'
-, 3
-, 2
-, 'http://www.supp-103095.com/cat/off/p3193.html');
-commit;
-set define on
+COMMIT;
+
+UPDATE customers c SET account_mgr_id = 147 
+ WHERE c.cust_address.country_id IN ('CH','DE','IT','CA');
+
+UPDATE customers c SET account_mgr_id = 145 
+ WHERE c.cust_address.country_id='US' and c.cust_address.state_province='IA';
+
+UPDATE customers c SET account_mgr_id = 145
+ WHERE c.cust_address.country_id='US' and c.cust_address.state_province='IN';
+
+UPDATE customers c SET account_mgr_id = 145
+ WHERE c.cust_address.country_id='US' and c.cust_address.state_province='MD';
+
+UPDATE customers c SET account_mgr_id = 145
+ WHERE c.cust_address.country_id='US' and c.cust_address.state_province='MI';
+
+UPDATE customers c SET account_mgr_id = 145
+ WHERE c.cust_address.country_id='US' and c.cust_address.state_province='MN';
+
+UPDATE customers c SET account_mgr_id = 149
+ WHERE c.cust_address.country_id='US' and c.cust_address.state_province='NY';
+
+UPDATE customers c SET account_mgr_id = 149
+ WHERE c.cust_address.country_id='US' and c.cust_address.state_province='PA';
+
+UPDATE customers c SET account_mgr_id = 145
+ WHERE c.cust_address.country_id='US' and c.cust_address.state_province='WI';
+
+UPDATE customers c SET account_mgr_id = 148
+ WHERE c.cust_address.country_id IN ('CN','IN','JP');
+
+COMMIT;
