@@ -1,13 +1,13 @@
 ----------------------------------------
-Пример использования множества join
+РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РјРЅРѕР¶РµСЃС‚РІР° join
 select first 1000 a.fio
      , trim(b.name)
      ||', '||
       c.typstr||' '||c.name
-     ||', д.'||a.dom||a.korp||
+     ||', Рґ.'||a.dom||a.korp||
      case
         when coalesce(a.kwa,0)>0 then
-         ', кв. '||a.kwa||a.kwabukwa
+         ', РєРІ. '||a.kwa||a.kwabukwa
          else ''
       end address
     , coalesce(d.summa,0)
@@ -26,16 +26,16 @@ select first 1000 a.fio
           left outer join chlgo h on h.shifrabo=a.shifrabo
           left outer join lgoty i on i.shifr=h.shifrlgo
 ----------------------------------------
-Вывести абонентов с указанием фимилии,
- адреса и даты последней оплаты
+Р’С‹РІРµСЃС‚Рё Р°Р±РѕРЅРµРЅС‚РѕРІ СЃ СѓРєР°Р·Р°РЅРёРµРј С„РёРјРёР»РёРё,
+ Р°РґСЂРµСЃР° Рё РґР°С‚С‹ РїРѕСЃР»РµРґРЅРµР№ РѕРїР»Р°С‚С‹
 select first 1000 a.fio
      , trim(b.name)
        ||', '||
        c.typstr||' '||c.name
-       ||', д.'||
+       ||', Рґ.'||
        a.dom||a.korp||
        case
-           when a.kwa>0 then ',кв. '||a.kwa||a.kwabukwa
+           when a.kwa>0 then ',РєРІ. '||a.kwa||a.kwabukwa
            else ''
        end  address
      , (select first 1 e1.data from kvit d1
@@ -54,24 +54,24 @@ select first 1000 a.fio
         left outer join chlgo h   on h.shifrabo=a.shifrabo
         left outer join lgoty i   on h.shifrlgo=i.shifr
 ----------------------------------------
-Подсчитать количесто мужчин по ФИО
+РџРѕРґСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚Рѕ РјСѓР¶С‡РёРЅ РїРѕ Р¤РРћ
 select count(*) from abon b
    where not exists
 (select * from abon a
-  where (a.fio like '%НА'
-     or a.fio like '%ИЧ')
+  where (a.fio like '%РќРђ'
+     or a.fio like '%РР§')
      and b.shifrabo=a.shifrabo)
      and
         (
-          left(fio,position(' ',fio)-1) like '%ОВ'
+          left(fio,position(' ',fio)-1) like '%РћР’'
           or
-          left(fio,position(' ',fio)-1) like '%ИН'
+          left(fio,position(' ',fio)-1) like '%РРќ'
           or
-          left(fio,position(' ',fio)-1) like '%ИЙ'
+          left(fio,position(' ',fio)-1) like '%РР™'
         )
 ----------------------------------------
-Вывести самую длинную фамилию с указанием
-еедлины
+Р’С‹РІРµСЃС‚Рё СЃР°РјСѓСЋ РґР»РёРЅРЅСѓСЋ С„Р°РјРёР»РёСЋ СЃ СѓРєР°Р·Р°РЅРёРµРј
+РµРµРґР»РёРЅС‹
 select fam,l from (
 select
     left(fio,position(' ',a.fio)-1) fam
@@ -87,8 +87,8 @@ where l=(
    )
 )
 ----------------------------------------
-Вывести всех Волковых, которые заплатили
-больше любого Зайцева
+Р’С‹РІРµСЃС‚Рё РІСЃРµС… Р’РѕР»РєРѕРІС‹С…, РєРѕС‚РѕСЂС‹Рµ Р·Р°РїР»Р°С‚РёР»Рё
+Р±РѕР»СЊС€Рµ Р»СЋР±РѕРіРѕ Р—Р°Р№С†РµРІР°
 select a3.shifrabo
      , a3.fam
      from (
@@ -98,8 +98,8 @@ select a3.shifrabo
                   , left(a.fio,position(' ',a.fio)-1) fam
                from abon a
           ) aa
-          where aa.fam like 'ВОЛКОВ_'
-          or  aa.fam like 'ВОЛКОВ'
+          where aa.fam like 'Р’РћР›РљРћР’_'
+          or  aa.fam like 'Р’РћР›РљРћР’'
     ) a3
 
    where (
@@ -117,5 +117,5 @@ select a3.shifrabo
                        from abon a4
 
               )
-            where fam4 like 'ЗАЙЦЕВ%'
+            where fam4 like 'Р—РђР™Р¦Р•Р’%'
          )
