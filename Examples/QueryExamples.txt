@@ -1,0 +1,121 @@
+----------------------------------------
+Пример использования множества join
+select first 1000 a.fio
+     , trim(b.name)
+     ||', '||
+      c.typstr||' '||c.name
+     ||', д.'||a.dom||a.korp||
+     case
+        when coalesce(a.kwa,0)>0 then
+         ', кв. '||a.kwa||a.kwabukwa
+         else ''
+      end address
+    , coalesce(d.summa,0)
+    , e.data
+    , f.name
+    , g.name
+    , i.name
+        from abon a
+          join city b   on b.shifr=a.shifrcit
+          join street c on a.shifrcit=c.shifrcit
+                        and a.shifrstr=c.shifrstr
+          left outer join kvit d   on d.shifrabo=a.shifrabo
+          left outer join reestry e on e.shifr=d.shifrree
+          left outer join banki f on f.shifr=e.shifrban
+          left outer join predp g on g.shifr=d.shifrpre
+          left outer join chlgo h on h.shifrabo=a.shifrabo
+          left outer join lgoty i on i.shifr=h.shifrlgo
+----------------------------------------
+Вывести абонентов с указанием фимилии,
+ адреса и даты последней оплаты
+select first 1000 a.fio
+     , trim(b.name)
+       ||', '||
+       c.typstr||' '||c.name
+       ||', д.'||
+       a.dom||a.korp||
+       case
+           when a.kwa>0 then ',кв. '||a.kwa||a.kwabukwa
+           else ''
+       end  address
+     , (select first 1 e1.data from kvit d1
+                  join reestry e1 on d1.shifrree=e1.shifr
+                  where d1.shifrabo=a.shifrabo
+                    and e1.data=(select max(e2.data)
+                                        from kvit d2
+                                         join reestry e2 on d2.shifrree=e2.shifr
+                                        where d2.shifrabo=d1.shifrabo)
+           )
+     , i.name
+       from abon a
+        join city b on a.shifrcit=b.shifr
+        join street c on a.shifrcit  = c.shifrcit
+                      and a.shifrstr = c.shifrstr
+        left outer join chlgo h   on h.shifrabo=a.shifrabo
+        left outer join lgoty i   on h.shifrlgo=i.shifr
+----------------------------------------
+Подсчитать количесто мужчин по ФИО
+select count(*) from abon b
+   where not exists
+(select * from abon a
+  where (a.fio like '%НА'
+     or a.fio like '%ИЧ')
+     and b.shifrabo=a.shifrabo)
+     and
+        (
+          left(fio,position(' ',fio)-1) like '%ОВ'
+          or
+          left(fio,position(' ',fio)-1) like '%ИН'
+          or
+          left(fio,position(' ',fio)-1) like '%ИЙ'
+        )
+----------------------------------------
+Вывести самую длинную фамилию с указанием
+еедлины
+select fam,l from (
+select
+    left(fio,position(' ',a.fio)-1) fam
+   , position(' ',a.fio)-1 l
+from abon a
+)
+where l=(
+   select max(ll) from (
+     select
+        position(' ',aa.fio)-1 ll
+        from abon aa
+
+   )
+)
+----------------------------------------
+Вывести всех Волковых, которые заплатили
+больше любого Зайцева
+select a3.shifrabo
+     , a3.fam
+     from (
+            select shifrabo,fam from (
+               select
+                    a.shifrabo
+                  , left(a.fio,position(' ',a.fio)-1) fam
+               from abon a
+          ) aa
+          where aa.fam like 'ВОЛКОВ_'
+          or  aa.fam like 'ВОЛКОВ'
+    ) a3
+
+   where (
+          coalesce((
+          select sum(k.summa) from kvit k where k.shifrabo=a3.shifrabo
+          )
+          ,0)
+         )
+         > all (
+          select summa from (
+                 select
+                      left(a4.fio,position(' ',a4.fio)-1) fam4
+                     ,  coalesce((select sum(k3.summa) from kvit k3
+                         where k3.shifrabo=a4.shifrabo),0) summa
+                       from abon a4
+
+              )
+            where fam4 like 'ЗАЙЦЕВ%'
+         )
