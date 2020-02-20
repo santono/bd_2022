@@ -1,0 +1,113 @@
+--С 1 января 2017 года жилищно-коммунальная отрасль страны начала жить по другим правилам — 
+--в силу вступила новая система расчетов общедомовых нужд (ОДН).
+-- Дано потребление электроэнергии абонентами ТСЖ за месяц (abn_value), которое измеряется в киловаттах. 
+-- Требуется распределить начисления ОДН (odn_totalvalue) между абонентами пропорционально их потреблению. 
+--При этом все начисления ОДН должны быть целыми числами. 
+--Сумму погрешностей математического округления (как в +, так и в -) требуется распределить
+-- ровно по одному киловатту по абонентам, начиная с абонентов с наибольшим потреблением,
+-- до исчерпания всей суммы погрешности.
+
+Пример условий:
+
+with consumption(abn_fio, abn_value) as (
+  select 'Галдина Лидия Петровна', 651 from dual union all
+  select 'Венкова Елена Николаевна', 652 from dual union all
+  select 'Конюхов Владимир Иванович', 653 from dual union all
+  select 'Пастушкова Любовь Ивановна', 654 from dual union all
+  select 'Липатова Людмила Михайловна', 655 from dual union all
+  select 'Александрова Любовь Мироновна', 656 from dual union all
+  select 'Воронков Андрей Викторович', 657 from dual union all
+  select 'Горшкова Раиса Борисовна', 658 from dual union all
+  select 'Семик Сергей Викторович', 642 from dual union all
+  select 'Попов Владимир Васильевич', 643 from dual union all
+  select 'Ульянов Валентин Николаеевич', 644 from dual union all
+  select 'Овчинников Андрей Владимирович', 645 from dual union all
+  select 'Клокова Марина Алексеевна', 646 from dual union all
+  select 'Козяков Александр Анатольевич', 647 from dual union all
+  select 'Воскобоева Надежда Федоровна', 650 from dual union all
+  select 'Прохорков Андрей Альбертович', 648 from dual union all
+  select 'Жужин Михаил Николаевич', 649 from dual union all
+  select 'Сакаева Екатерина Павловна', 3561 from dual ) , 
+  odn(odn_totalvalue) as (select '100' from dual)
+  ,
+  v1(abn_fio, abn_value,odn_totalvalue,sumkwt) as (
+     select abn_fio, abn_value,odn_totalvalue,
+     (select sum(abn_value) from consumption) sumkwt
+        from consumption,odn
+  ),
+  v2(abn_fio, abn_value,odn_totalvalue,sumkwt,cenakwt) as (
+     select abn_fio, abn_value,odn_totalvalue,
+     sumkwt,odn_totalvalue/sumkwt cenakwt
+        from v1
+  ),
+  
+  v3(abn_fio, abn_value,odn_totalvalue,sumkwt,cenakwt,summaabo1) as (
+     select abn_fio, abn_value,odn_totalvalue,
+     sumkwt,cenakwt,
+     cenakwt*abn_value summaabo1
+        from v2
+  ),
+  v4(abn_fio, abn_value,odn_totalvalue,sumkwt,cenakwt,summaabo1,summaaborub) as (
+     select abn_fio, abn_value,odn_totalvalue,
+     sumkwt,cenakwt,summaabo1,
+     cast(summaabo1 as integer) summaaborub 
+        from v3
+  ),
+  v5(abn_fio, abn_value,odn_totalvalue,sumkwt,cenakwt,summaabo1,summaaborub,summarubtot) as (
+     select abn_fio, abn_value,odn_totalvalue,
+     sumkwt,cenakwt,summaabo1,summaaborub,
+     (select sum(summaaborub) from v4)  summarubtot
+        from v4
+  ),
+  v6(abn_fio, abn_value,odn_totalvalue,sumkwt,cenakwt,summaabo1,summaaborub,summarubtot,razn) as (
+     select abn_fio, abn_value,odn_totalvalue,
+     sumkwt,cenakwt,summaabo1,summaaborub,summarubtot,
+     odn_totalvalue-summarubtot  razn
+     from v5
+  ),
+  v7 (lineno, abn_fio,abn_value) as (
+   select rownum,abn_fio,abn_value from 
+     ( select abn_fio,abn_value from consumption
+     order by abn_value desc)
+    ),
+    
+  v8(abn_fio, abn_value,odn_totalvalue,sumkwt,cenakwt,summaabo1,summaaborub,summarubtot,razn,lineno) as (
+     select v6.abn_fio, v6.abn_value,odn_totalvalue,
+     sumkwt,cenakwt,summaabo1,summaaborub,summarubtot,razn,
+     lineno
+     from v6 join v7 on v6.abn_fio=v7.abn_fio
+     order by lineno
+  ), 
+  v9(abn_fio, abn_value,odn_totalvalue,sumkwt,cenakwt,summaabo1,summaaborub,summarubtot,razn,lineno,adding) as (
+     select abn_fio, abn_value,odn_totalvalue,
+     sumkwt,cenakwt,summaabo1,summaaborub,summarubtot,razn,lineno,
+     case 
+      when razn<0 then
+         case
+             when lineno<=abs(razn) then -1
+             else 0
+         end
+      else
+         case 
+             when lineno<=razn then 1
+             else 0
+         end
+     end adding 
+     from v8
+     order by lineno
+  ), 
+  v10(abn_fio, abn_value,odn_totalvalue,sumkwt,cenakwt,summaabo1,summaaborub,summarubtot,razn,lineno,adding,finalsum) as (
+     select abn_fio, abn_value,odn_totalvalue,
+     sumkwt,cenakwt,summaabo1,summaaborub,summarubtot,razn,lineno,adding,
+     summaaborub+adding finalsum
+     from v9
+     order by lineno
+  ) 
+    
+     
+  
+  
+  
+  
+  select sum(finalsum) from v10
+ 
